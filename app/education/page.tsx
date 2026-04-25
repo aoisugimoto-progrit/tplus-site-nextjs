@@ -99,7 +99,8 @@ export default function EducationPage() {
                 <p className="mb-4">株価がどのように動くのかを理解することが、投資で成功する鍵です。<br/>ここが最も重要なポイントです。</p>
 
                 <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
-                  <h4 className="text-xl font-semibold mb-2">成長が予想されていれば、すでに織り込み済み</h4>
+                  <span className="section-label label-essence">本質</span>
+                  <h4 className="text-xl font-semibold mb-2 mt-2">成長が予想されていれば、すでに織り込み済み</h4>
                   <p className="mb-2">株価がどのように上がるのか？例えば、会社が成長したとしても、その成長が以前から予想されていたものであれば、<strong>それはすでに株価に織り込まれています</strong>。</p>
                   <p><strong>具体例：</strong>新型iPhoneの発表が決まっている場合、発表日にAppleの株価は上がるでしょうか？答えはNOです。なぜなら、新型iPhoneが出ることは誰もが知っているため、すでに株価に反映されているからです。</p>
                 </div>
