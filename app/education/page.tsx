@@ -1474,6 +1474,25 @@ export default function EducationPage() {
                   </div>
                 </div>
 
+                {/* もっと学びたい人へ */}
+                <h3 className="text-2xl font-semibold mb-4 mt-12">もっと学びたい人へ</h3>
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 mb-8">
+                  <h4 className="text-lg font-semibold mb-3">おすすめ動画</h4>
+                  <div className="aspect-video w-full mb-4">
+                    <iframe
+                      width="100%"
+                      height="100%"
+                      src="https://www.youtube.com/embed/-F-Wt6qz3Bw"
+                      title="ショート取引解説動画"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="rounded-lg"
+                    ></iframe>
+                  </div>
+                  <p className="text-sm text-gray-600">ショート取引の仕組みとリスクについて、さらに詳しく解説されています。</p>
+                </div>
+
                 <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
                   <p className="font-semibold mb-2">T＋では主にロング（買い）を扱います</p>
                   <p>ショートやロングショート戦略は高度な手法であり、初心者にはリスクが高いため、まずは企業の成長を見極めて「買い」で利益を得るファンダメンタルズ分析に集中することをおすすめします。</p>
