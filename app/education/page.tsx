@@ -533,6 +533,168 @@ export default function EducationPage() {
                   <p>この3つの関係は、<strong>数学的に常に成り立つ</strong>美しい式です。<br/>PBRが低い会社は、PERが低いか、ROEが低いかのどちらか。<br/>経営的にPBRを上げるには、ROEを上げるしかありません。</p>
                 </div>
 
+                <h3 className="text-2xl font-semibold mb-4 mt-12">ROE（自己資本利益率）：バフェットが最重視する指標</h3>
+
+                <h4 className="text-xl font-semibold mb-3">① ROEとは何か？</h4>
+                <p className="mb-6"><strong>ROE（Return On Equity：自己資本利益率）</strong>は、純利益が純資産（自己資本）の何%になっているかを示す指標です。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">レンタカー会社の例</h4>
+                  <p className="mb-2"><strong>資本金500万円</strong>でレンタカー会社を立ち上げました。<br/>政策金融公庫から<strong>500万円を借金</strong>して、合計1,000万円で<strong>レンタカー5台</strong>（1台200万円）を購入。</p>
+                  <p className="mb-3">1年後、<strong>純利益50万円</strong>を出しました。</p>
+                  <p className="mb-3"><strong>ROE = 純利益 ÷ 自己資本 = 50万円 ÷ 500万円 = 10%</strong></p>
+                  <p>つまり、<strong>株主が出した500万円を使って、年間10%のリターンを生み出した</strong>ということです。</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">ROEの計算式</h4>
+                  <p className="mb-4"><strong>ROE = 純利益 ÷ 純資産（自己資本）</strong></p>
+                  <p><strong>例：</strong>純利益50万円、純資産500万円の場合、ROE = 50 ÷ 500 = 10%</p>
+                </div>
+
+                <p className="mb-2"><strong>ROEの本質：投資効率</strong></p>
+                <p className="mb-6">ROE10%とは、「株主が出資した資本を使って、年間10%のリターンを生み出している」という意味です。<br/>より少ない資本でより多くの利益を生む企業ほど、ROEが高くなります。</p>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>なぜROE8%が基準なのか？</strong></p>
+                  <p className="mb-3">S&P500のインデックスファンドに投資すれば、平均年率約8%のリターンが得られます。<br/>→ つまり、<strong>ROE8%未満の企業は、インデックスファンド以下のリターン</strong>です。<br/>→ わざわざ個別株のリスクを取る意味がありません。</p>
+                  <p><strong>ROE8%の企業が、ずっとROE8%のままなら、それは債券や不動産と変わりません。<br/>株式投資のリスクを取っているのに、ROEがインデックス以下なら投資妙味がないと言えます。</strong></p>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>ROEの目安</strong></p>
+                  <ul className="list-disc ml-6 space-y-1">
+                    <li><strong>8%以上：</strong>優良企業（S&P500の平均リターンが約8%のため、これを上回る必要がある）</li>
+                    <li><strong>10%以上：</strong>非常に優良（日本企業の平均は8%前後）</li>
+                    <li><strong>15%以上：</strong>超優良（バフェットの投資基準）</li>
+                    <li><strong>30%以上：</strong>異常値（ZOZOのROE60%など、特殊なビジネスモデル）</li>
+                  </ul>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">② ROEの分解：デュポン分析で構造を理解する</h4>
+                <p className="mb-6">ROEは以下の3つの要素に分解できます。これを「デュポン分析」と呼びます。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <p className="formula-inline mb-4">
+                    <strong>ROE = </strong>
+                    <span className="fraction">
+                      <span className="numerator">純利益</span>
+                      <span className="denominator">自己資本</span>
+                    </span>
+                  </p>
+
+                  <p className="text-center text-xl mb-4">↓</p>
+
+                  <p className="formula-inline">
+                    <strong>ROE = </strong>
+                    <span className="fraction">
+                      <span className="numerator">純利益</span>
+                      <span className="denominator">売上高</span>
+                    </span>
+                    {" × "}
+                    <span className="fraction">
+                      <span className="numerator">売上高</span>
+                      <span className="denominator">総資産</span>
+                    </span>
+                    {" × "}
+                    <span className="fraction">
+                      <span className="numerator">総資産</span>
+                      <span className="denominator">自己資本</span>
+                    </span>
+                  </p>
+                </div>
+
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                  <span className="section-label label-essence">本質</span>
+                  <h4 className="text-xl font-semibold mb-2">この式は何を意味するのか？</h4>
+                  <p className="mb-3">分子と分母で「売上高」と「総資産」が約分されるため、最終的に「純利益 ÷ 自己資本」に戻ります。</p>
+
+                  <p className="mb-2"><strong>計算例：</strong></p>
+                  <ul className="list-disc ml-6 space-y-1 mb-4">
+                    <li>純利益：100億円</li>
+                    <li>売上高：1000億円</li>
+                    <li>総資産：2000億円</li>
+                    <li>自己資本：500億円</li>
+                  </ul>
+
+                  <p className="mb-2"><strong>①売上高純利益率 = 100 ÷ 1000 = 10%</strong><br/>
+                  売上に対してどれだけ利益を出せるか（収益性）</p>
+
+                  <p className="mb-2"><strong>②総資産回転率 = 1000 ÷ 2000 = 0.5回</strong><br/>
+                  資産をどれだけ効率的に使って売上を生んでいるか（効率性）</p>
+
+                  <p className="mb-2"><strong>③財務レバレッジ = 2000 ÷ 500 = 4倍</strong><br/>
+                  自己資本に対してどれだけ総資産（借入含む）を使っているか（安全性）</p>
+
+                  <p className="mb-3"><strong>ROE = 10% × 0.5 × 4 = 20%</strong></p>
+
+                  <p>直接計算：ROE = 100 ÷ 500 = 20%（一致）</p>
+                </div>
+
+                <p className="mb-6"><strong>デュポン分析の意義</strong><br/>
+                ROEが高い企業は、①利益率が高いか、②資産効率が良いか、③借入を活用しているか、のいずれか（または複数）が優れています。この分解により、企業の強みがどこにあるのかを見極められます。</p>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">③ ROEの落とし穴：借金で膨らませたROE</h4>
+
+                <p className="mb-4"><strong>財務レバレッジの罠</strong></p>
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">借金を増やせばROEは上がる</h4>
+                  <p className="mb-2">レンタカー会社が、資本金100万円、借金900万円でスタートしたとします。<br/>同じく純利益50万円を出した場合、<br/><strong>ROE = 50万円 ÷ 100万円 = 50%</strong></p>
+                  <p className="mb-2">一見すごいですが、実際は借金に依存しているだけ。<br/>景気悪化時に返済できなくなるリスクが高い。</p>
+                  <p><strong>対策：</strong>自己資本比率もチェックする。40%以上なら安全。</p>
+                </div>
+
+                <p className="mb-4"><strong>自社株買いの罠</strong></p>
+                <p className="mb-6">自社株買いで自己資本を減らせば、ROEは機械的に上がります。しかし、これは本質的な成長ではありません。</p>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>例：</strong>純利益50万円、純資産500万円（ROE10%）<br/>→ 自社株買いで純資産を250万円に削減<br/>→ ROE = 50 ÷ 250 = 20%</p>
+                  <p><strong>対策：</strong>ROEが上がった理由を確認する。利益が増えたのか、資本が減っただけなのか。</p>
+                </div>
+
+                <p className="mb-6">ROEが急に上がった会社を見たら、<strong>「借金を増やしたのか？自社株買いをしたのか？それとも本当に利益が増えたのか？」</strong>を必ずチェックする必要があります。<br/>財務レバレッジやかさ上げでROEを高めても、リスクが高まるだけです。</p>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">④ ROEの具体例：ZOZOとセブンイレブン</h4>
+
+                <p className="mb-4"><strong>ケース1：ZOZO（ROE60%）</strong></p>
+                <p className="mb-6">ZOZOは、ROE60%という異常値を達成しています。なぜか？</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">ZOZOのビジネスモデル：在庫を持たない</h4>
+                  <p className="mb-2">ZOZOは、ブランドから商品を<strong>預かって販売</strong>する「コンシグメント型」ビジネスモデル。<br/>→ 在庫リスクがなく、少ない資本で大きな利益を生む。<br/>→ 結果、ROE60%という異常値を達成。</p>
+                  <p>外部から資金を調達しないで済むビジネスモデルを構築することで、<strong>自己資本が膨らまず、ROEが異常に高くなる</strong>という好循環を生み出しています。</p>
+                </div>
+
+                <p className="mb-4"><strong>ケース2：セブンイレブンのFCモデル</strong></p>
+                <p className="mb-6">セブンイレブンは、フランチャイズチェーン（FC）モデルでROEを高めています。</p>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>FCモデルの仕組み</strong></p>
+                  <p className="mb-3">店舗を自分で持たず、FC加盟店に運営を任せる。<br/>→ 店舗の資産はBS（貸借対照表）に乗らない。<br/>→ 少ない資本で、大きな利益を得られる。</p>
+                  <p>一方、店長は「自分の店」だと思って一生懸命掃除をする。<br/>→ 直営店より、FCの方が効率が良い。</p>
+                </div>
+
+                <p className="mb-2"><strong>ケース3：地銀（ROE2〜3%）</strong></p>
+                <p className="mb-4">地方銀行は、低成長・過当競争で、ROEが非常に低い。<br/>→ 市場から「資本を有効活用できていない」と評価される。<br/>→ PBR1倍割れの企業が多い。</p>
+
+                <p className="mb-6">地銀の場合、儲からないビジネスでも撤退できない場合があります。<br/>地域に根ざしたサービスを提供する責任がある一方で、それが株主にとっての価値向上と一致しないこともあります。</p>
+
+                <h3 className="text-2xl font-semibold mb-4 mt-12">まとめ：指標は「道具」であり、100%信じてはいけない</h3>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">PBR = PER × ROE</h4>
+                  <p className="mb-2">この式は、3つの指標が密接に関係していることを示しています。</p>
+                  <p className="mb-2"><strong>良い企業の条件：</strong></p>
+                  <ul className="list-disc ml-6 space-y-1 mb-4">
+                    <li>PER：適正水準（15〜25倍）で、成長性が評価されている</li>
+                    <li>PBR：1倍以上で、経営が評価されている</li>
+                    <li>ROE：8%以上で、資本を効率的に使っている</li>
+                  </ul>
+                  <p><strong>重要：</strong>指標は「道具」であり、使い方次第。複数指標を組み合わせて総合的に判断することが重要です。</p>
+                </div>
+
+                <p className="mb-6">指標は「道具」です。100%信じられる指標は存在しません。<br/>PERが低いから買う、というだけでは勝てません。<br/>重要なのは、<strong>指標の構造を理解し、なぜその指標が高いのか・低いのかを見抜く力</strong>です。<br/>ケースバイケースで判断する。それが株式投資の本質です。</p>
+
                 {/* 参考書籍 */}
                 <div className="mt-12">
                   <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
