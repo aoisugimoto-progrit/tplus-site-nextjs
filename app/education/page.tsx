@@ -330,30 +330,106 @@ export default function EducationPage() {
                   <p className="mt-3"><strong>重要：</strong>業界によって適正PERは大きく異なります。単純にPERが低いから買う、という判断は危険です。</p>
                 </div>
 
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold mb-3">PER（株価収益率）</h4>
-                    <p className="mb-2"><strong>計算式：</strong>株価 ÷ 1株あたり利益（EPS）</p>
-                    <p className="mb-2"><strong>意味：</strong>株価が利益の何倍で評価されているか</p>
-                    <p className="mb-2"><strong>目安：</strong>一般的に15倍前後が適正とされる</p>
-                    <p><strong>注意点：</strong>業界によって水準が異なる。成長企業は高PERでも正当化される場合がある。</p>
-                  </div>
+                <h4 className="text-xl font-semibold mb-3 mt-8">② 株価 = EPS × PER：プロが使う公式</h4>
+                <p className="mb-4">株価を決める要素を分解すると、次の式になります。</p>
 
-                  <div className="bg-gradient-to-br from-green-50 to-teal-50 border-2 border-green-300 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold mb-3">PBR（株価純資産倍率）</h4>
-                    <p className="mb-2"><strong>計算式：</strong>株価 ÷ 1株あたり純資産（BPS）</p>
-                    <p className="mb-2"><strong>意味：</strong>株価が純資産の何倍で評価されているか</p>
-                    <p className="mb-2"><strong>目安：</strong>1倍を下回ると割安とされる</p>
-                    <p><strong>注意点：</strong>1倍未満でも業績が悪化している企業は要注意。資産価値の裏付けを確認。</p>
-                  </div>
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">株価 = EPS × PER</h4>
+                  <p className="mb-2"><strong>EPS（1株あたり利益）</strong>と<strong>PER（倍率）</strong>の掛け算で株価が決まる。</p>
+                  <p><strong>例：</strong>EPS250円、PER20倍なら、株価 = 250円 × 20 = 5,000円</p>
+                </div>
 
-                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-300 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold mb-3">ROE（自己資本利益率）</h4>
-                    <p className="mb-2"><strong>計算式：</strong>純利益 ÷ 自己資本 × 100（%）</p>
-                    <p className="mb-2"><strong>意味：</strong>株主資本をどれだけ効率的に利益に変えているか</p>
-                    <p className="mb-2"><strong>目安：</strong>10%以上が優良、15%以上が非常に優秀</p>
-                    <p><strong>注意点：</strong>借入を増やすことでROEを高く見せることも可能。財務健全性も確認。</p>
+                <p className="mb-2"><strong>株価が上がる2つの方法</strong></p>
+                <ol className="list-decimal ml-6 mb-4 space-y-1">
+                  <li><strong>EPS（利益）が増える</strong> → 会社の実力が上がる</li>
+                  <li><strong>PER（倍率）が上がる</strong> → 市場の評価が上がる</li>
+                </ol>
+
+                <p className="mb-4">プロの投資家は、この2つを常に分解して考えます。<br/>「この銘柄が上がるとしたら、EPSが上がるからか？PERが上がるからか？」</p>
+
+                <p className="mb-4"><strong>株価が上昇する時の最大の動力は、マルチプル（PER）の拡大</strong>です。EPSが爆発的に伸びる会社もありますが、マルチプルが上がることの方が大きいインパクトを持ちます。</p>
+
+                <p className="mb-2"><strong>具体例：PERの拡大で株価が3倍になる</strong></p>
+                <p className="mb-6">EPS100円、PER10倍の株（株価1,000円）があるとします。<br/>→ 3年後、EPSが140円に成長（年率12%成長）。<br/>→ 同時に、市場がこの会社を再評価し、PERが30倍に拡大。<br/>→ 株価 = 140円 × 30 = 4,200円（4倍以上）</p>
+
+                <p className="mb-6">このように、EPSの成長だけでなく、<strong>PERが上がるかどうか</strong>が株価上昇の鍵を握ります。</p>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">③ PEGレシオ：成長率とのバランスを見る</h4>
+                <p className="mb-6">PERだけでは、成長企業を正しく評価できません。<br/>そこで登場するのが<strong>PEGレシオ</strong>です。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">PEGレシオ = PER ÷ 利益成長率（%）</h4>
+                  <p className="mb-2"><strong>目安：</strong></p>
+                  <ul className="list-disc ml-6 space-y-1 mb-4">
+                    <li><strong>1.0以下：</strong>割安（成長率に対してPERが低い）</li>
+                    <li><strong>1.0〜2.0：</strong>適正水準</li>
+                    <li><strong>2.0以上：</strong>割高（成長率に対してPERが高い）</li>
+                  </ul>
+                  <p><strong>例：</strong>PER50倍、利益成長率50%の企業 → PEGレシオ = 50 ÷ 50 = 1.0（適正）<br/>PER50倍、利益成長率20%の企業 → PEGレシオ = 50 ÷ 20 = 2.5（割高）</p>
+                </div>
+
+                <p className="mb-2"><strong>PEGレシオの使い方</strong></p>
+                <p className="mb-6">例えば、弁護士ドットコムという会社がPER50倍だとします。<br/>これは一見割高に見えますが、利益成長率が50%なら、PEGレシオは1.0で適正です。<br/>しかし、利益成長率が20%しかないなら、PEGレシオは2.5で割高と判断されます。</p>
+
+                <p className="mb-2"><strong>具体例：インフォリッチ</strong></p>
+                <p className="mb-6">インフォリッチの場合、PER26.8倍。<br/>一方、利益成長率は100%以上で増益。<br/>→ PEGレシオ = 26.8 ÷ 100 = 0.27（超割安）<br/>→ この銘柄は、PERだけ見ると「普通」ですが、成長率を考慮すると「超割安」だと分かります。</p>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">④ PERの落とし穴：高PERの罠と低PERの罠</h4>
+
+                <p className="mb-2"><strong>高PER株の「がっかり売り」リスク</strong></p>
+                <p className="mb-6">PER100倍の株は、「毎年100%成長する」という期待が織り込まれています。<br/>しかし、実際には50%しか成長しなかった場合、<strong>期待外れで売られる</strong>のです。</p>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-4">PER50倍以上の株は、常に<strong>100点満点を取り続けないといけない優等生</strong>のようなものです。<br/>85点を取っただけで、期待を下回ったとして売られることがあります。</p>
+                  <p>好決算なのに株価が下がる理由は、<strong>市場の期待値を下回ったから</strong>です。<br/>決算前に株価が上昇していた場合、それは期待が織り込まれた結果である可能性があります。</p>
+                </div>
+
+                <p className="mb-4"><strong>高PERが正当化されるケース</strong></p>
+                <div className="space-y-4 mb-6">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">①超高成長企業</h4>
+                    <p className="mb-2">利益が毎年2倍になる企業なら、PER100倍でも3年後には事後的にPER12.5倍になる。</p>
+                    <p><strong>例：</strong>Amazon初期、Facebook上場直後、弁護士ドットコム</p>
                   </div>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">②ディフェンシブ銘柄</h4>
+                    <p>景気に左右されず安定利益を出す企業（P&G、ユニ・チャームなど）は、リスクが低いためPERが高くても正当化される。</p>
+                  </div>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">③ネットワーク効果がある企業</h4>
+                    <p>GoogleやFacebookのように、ユーザーが増えるほど価値が高まる企業は、将来の成長余地が大きいためPERが高くても許容される。</p>
+                  </div>
+                </div>
+
+                <p className="mb-4"><strong>低PER株の罠：なぜPER5倍の株は危険なのか？</strong></p>
+                <p className="mb-6">PER5倍は一見「超割安」に見えますが、実は<strong>市場が「この利益は続かない」と判断している</strong>証拠です。</p>
+
+                <div className="space-y-4 mb-6">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">①利益が一時的</h4>
+                    <p>不動産売却や政府補助金など、一過性の利益でPERが低く見えるだけ。翌年には元に戻る。</p>
+                  </div>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">②赤字スレスレ</h4>
+                    <p className="mb-2">利益100万円の企業は、PERが数百倍になることもあり、指標として機能しない。</p>
+                    <p><strong>例：</strong>スノーピークが直近で利益100万円しか出せなかった時、PERは無限大に近い数字になった。</p>
+                  </div>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">③衰退産業</h4>
+                    <p className="mb-2">市場が縮小している業界は、利益があってもPERが低い。</p>
+                    <p><strong>例：</strong>グリー、DeNAなどガラケー時代のゲーム会社は、PER10倍を切っていたが、スマホ時代に利益が激減した。</p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>業界ごとのPER水準の違い</strong></p>
+                  <p className="mb-3">業界によって「適正PER」は大きく異なります。</p>
+                  <ul className="list-disc ml-6 space-y-2 mb-4">
+                    <li><strong>ディフェンシブ銘柄（食品、日用品）：</strong>PER15〜25倍 → 業績が安定しているため、投資家は高いPERを払っても安心して保有できる</li>
+                    <li><strong>景気敏感株（自動車、鉄鋼、海運）：</strong>PER5〜10倍 → 業績が大きく変動するため、リスクを織り込んでPERが低い</li>
+                    <li><strong>グロース株（IT、バイオ）：</strong>PER30〜100倍以上 → 高成長期待があるため、高PERが許容される</li>
+                  </ul>
+                  <p><strong>重要：</strong>業界平均と比較せずに、PERだけで割安・割高を判断してはいけません。</p>
                 </div>
 
                 {/* 参考書籍 */}
