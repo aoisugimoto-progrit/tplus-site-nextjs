@@ -42,6 +42,7 @@ export default function EducationPage() {
     { title: '内部環境分析編', id: 'internal' },
     { title: 'イベントドリブン編', id: 'event-driven' },
     { title: '19の隠れたインサイト', id: 'insights' },
+    { title: 'ちなみに：ショートという手法', id: 'short-selling' },
     { title: '理解度チェックテスト', id: 'quiz' },
     { title: 'おすすめの映画', id: 'movies' },
   ];
@@ -1151,6 +1152,76 @@ export default function EducationPage() {
                       </div>
                     </div>
                   ))}
+                </div>
+              </Accordion>
+            </section>
+
+            <section id="short-selling" className="mt-16">
+              <Accordion title="ちなみに：ショートという手法" defaultOpen={false}>
+                <p className="mb-6">ここまで株式投資の基本として「買い」（ロング）について学んできましたが、実は株価が下がると予想したときに利益を得る「ショート」という手法も存在します。</p>
+
+                <h3 className="text-2xl font-semibold mb-4">ショート（空売り）とは？</h3>
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <p className="mb-3"><strong>ショート＝株を借りて売り、後で買い戻す取引</strong></p>
+                  <p className="mb-2">通常の株式投資は「安く買って高く売る」ことで利益を得ますが、ショートは<strong>「高く売って安く買い戻す」</strong>ことで利益を得る手法です。</p>
+                  <p>株を持っていないのに売る、というと不思議に聞こえますが、証券会社から株を借りて売却し、後で買い戻して返却する仕組みです。</p>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">ショートの仕組み</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <div className="text-center mb-3">
+                      <div className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-bold">STEP 1</div>
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-center">株を借りて売る</h4>
+                    <p className="text-sm text-gray-600">証券会社から株を借りて、現在の価格（例：1000円）で売却する</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <div className="text-center mb-3">
+                      <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold">STEP 2</div>
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-center">株価が下落</h4>
+                    <p className="text-sm text-gray-600">予想通り株価が下がる（例：1000円 → 800円）</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <div className="text-center mb-3">
+                      <div className="inline-block bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-bold">STEP 3</div>
+                    </div>
+                    <h4 className="text-lg font-semibold mb-2 text-center">買い戻して返却</h4>
+                    <p className="text-sm text-gray-600">安くなった株（800円）を買い戻して証券会社に返却。差額（200円）が利益</p>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">ショートのリスク</h3>
+                <div className="bg-gradient-to-br from-red-50 to-orange-50 border-l-4 border-red-500 p-6 rounded-lg mb-6">
+                  <p className="font-semibold mb-3">通常の買い（ロング）よりリスクが高い</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>損失が無限大：</strong>買いの場合、最大損失は投資額までですが、ショートの場合、株価が上昇すれば損失は理論上無限大になります。</li>
+                    <li><strong>借株コスト：</strong>株を借りるため、貸株料や逆日歩などのコストがかかります。</li>
+                    <li><strong>踏み上げリスク：</strong>多くの投資家がショートしている銘柄で株価が急騰すると、ショート勢が一斉に買い戻し（損切り）を行い、さらに株価が上がる「踏み上げ」が発生することがあります。</li>
+                  </ul>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">ショートが使われる場面</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">①下落相場での利益確保</h4>
+                    <p className="text-sm text-gray-600 mb-2">企業の業績悪化や市場全体の下落局面で、株価下落を予想して利益を狙う。</p>
+                    <p className="text-sm text-gray-600"><strong>例：</strong>決算が悪化している企業、構造的な問題を抱える業界</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">②ヘッジ（リスク回避）</h4>
+                    <p className="text-sm text-gray-600 mb-2">保有している株式のリスクを軽減するため、別の銘柄や指数をショートする。</p>
+                    <p className="text-sm text-gray-600"><strong>例：</strong>個別株をロング、日経平均をショートして市場リスクを相殺</p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <p className="font-semibold mb-2">T＋では主にロング（買い）を扱います</p>
+                  <p>ショートは高度な手法であり、初心者にはリスクが高いため、まずは企業の成長を見極めて「買い」で利益を得るファンダメンタルズ分析に集中することをおすすめします。</p>
                 </div>
               </Accordion>
             </section>
