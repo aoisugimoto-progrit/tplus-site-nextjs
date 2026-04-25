@@ -1223,18 +1223,33 @@ export default function EducationPage() {
                 <h3 className="text-3xl font-bold mb-6 text-[#1E4535]">3. ロングショート戦略</h3>
 
                 <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-8 rounded-lg mb-8">
-                  <p className="mb-4 text-lg"><strong>ロングショート＝同じ市場で2社を取り、片方でもう片方を打ち消す</strong></p>
-                  <p className="mb-6 text-lg">ロングショート戦略は、ヘッジファンドなどのプロ投資家が多用する手法で、<strong>同じ業界内で優良株を買い（ロング）、ダメな株を売る（ショート）</strong>ことで、<strong>市場全体の影響をB社のショートで打ち消す</strong>戦略です。</p>
+                  <p className="mb-4 text-lg"><strong>ロングショート＝ベータを打ち消し、アルファのみを掬う</strong></p>
+                  <p className="mb-6 text-lg">ロングショート戦略は、ヘッジファンドなどのプロ投資家が多用する手法で、<strong>同じ業界内で優良株を買い（ロング）、ダメな株を売る（ショート）</strong>ことで、<strong>市場全体の動き（ベータ）をB社のショートで打ち消し、銘柄選択の優位性（アルファ）のみ</strong>で利益を狙う戦略です。</p>
+
+                  <div className="bg-white rounded-lg p-6 mb-6 border-2 border-gray-200">
+                    <h5 className="font-bold text-lg mb-3">投資用語の解説</h5>
+                    <div className="space-y-3">
+                      <div>
+                        <p className="font-bold text-blue-700">ベータ（β）= 市場全体の動き</p>
+                        <p className="text-sm text-gray-600">市場全体が上がれば個別株も上がり、市場全体が下がれば個別株も下がる。この<strong>市場に連動する部分</strong>をベータと呼ぶ。</p>
+                      </div>
+                      <div>
+                        <p className="font-bold text-green-700">アルファ（α）= 銘柄選択のスキル</p>
+                        <p className="text-sm text-gray-600">市場全体の動きとは無関係に、<strong>その銘柄固有の強さ</strong>で得られる超過リターン。「良い銘柄を選んだ」ことによる利益。</p>
+                      </div>
+                    </div>
+                  </div>
 
                   <h4 className="text-xl font-semibold mb-4">基本的な考え方</h4>
-                  <p className="mb-4">通常の株式投資（ロングのみ）では、市場全体が下落すると保有株も連れ安して損失を被ります。しかし、ロングショート戦略では：</p>
+                  <p className="mb-4">通常の株式投資（ロングのみ）では、どんなに良い銘柄を選んでも、市場全体が下落すると保有株も連れ安して損失を被ります。つまり、<strong>アルファ（銘柄選択のスキル）とベータ（市場リスク）が混ざっている</strong>状態です。</p>
+                  <p className="mb-4">しかし、ロングショート戦略では：</p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li className="text-lg"><strong>同じ業界内で2社を選ぶ</strong></li>
                     <li className="text-lg"><strong>A社（優良株）をロング</strong> - 業界内で相対的に強い企業</li>
                     <li className="text-lg"><strong>B社（問題株）をショート</strong> - 業界内で相対的に弱い企業</li>
                   </ul>
-                  <p className="text-lg mb-4"><strong>重要：</strong>同じ業界なので、市場全体が動いてもA社とB社は同じ方向に動きます。しかし、<strong>優良なA社の方が相対的に有利に動く</strong>ため、その差分で利益を得ます。</p>
-                  <p className="text-lg">つまり、<strong>B社のショートでA社の市場リスクを打ち消し</strong>、「A社がB社より優れている」という<strong>相対的な強さだけ</strong>に賭けることができます。</p>
+                  <p className="text-lg mb-4"><strong>重要：</strong>同じ業界なので、A社とB社は市場全体の動き（ベータ）に対して<strong>同じように反応</strong>します。つまり、<strong>B社のショートでA社のベータを打ち消す</strong>ことができます。</p>
+                  <p className="text-lg">結果として、「A社がB社より優れている」という<strong>相対的な強さ（アルファ）のみ</strong>を掬い取ることができます。</p>
                 </div>
 
                 <h4 className="text-xl font-semibold mb-4">具体例：小売業界でのロングショート</h4>
@@ -1262,7 +1277,7 @@ export default function EducationPage() {
                       <p>• A社：-5%（業界平均より下落幅が<strong>小さい</strong>）→ <span className="text-red-600 font-bold">-50万円の損失</span></p>
                       <p>• B社：-15%（業界平均より下落幅が<strong>大きい</strong>）→ <span className="text-green-600 font-bold">+150万円の利益</span></p>
                       <p className="text-lg font-bold mt-4">→ <span className="text-green-600">合計 +100万円の利益</span></p>
-                      <p className="text-sm text-gray-600 mt-2"><strong>ポイント：</strong>市場全体が下落しても、B社のショートでA社の損失を<strong>打ち消して</strong>利益が出る</p>
+                      <p className="text-sm text-gray-600 mt-2"><strong>ポイント：</strong>市場全体が下落しても、B社のショートでA社の<strong>ベータ（市場リスク）を打ち消し</strong>、<strong>アルファ（相対的な強さ）のみ</strong>で利益が出る</p>
                     </div>
                   </div>
 
@@ -1273,16 +1288,23 @@ export default function EducationPage() {
                       <p>• A社：+15%（業界平均より上昇幅が<strong>大きい</strong>）→ <span className="text-green-600 font-bold">+150万円の利益</span></p>
                       <p>• B社：+5%（業界平均より上昇幅が<strong>小さい</strong>）→ <span className="text-red-600 font-bold">-50万円の損失</span></p>
                       <p className="text-lg font-bold mt-4">→ <span className="text-green-600">合計 +100万円の利益</span></p>
-                      <p className="text-sm text-gray-600 mt-2"><strong>ポイント：</strong>市場全体が上昇しても、B社のショートで市場リスクを<strong>打ち消し</strong>、A社とB社の<strong>相対的な差</strong>だけで利益が出る</p>
+                      <p className="text-sm text-gray-600 mt-2"><strong>ポイント：</strong>市場全体が上昇しても、B社のショートで<strong>ベータを打ち消し</strong>、<strong>アルファ（相対的な差）のみ</strong>で利益が出る</p>
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
-                  <p className="font-bold mb-3 text-lg">ロングショート戦略の本質</p>
-                  <p className="mb-2"><strong>「市場全体の上げ下げ」に賭けるのではなく、</strong></p>
-                  <p className="mb-4"><strong>「A社がB社より優れている」という相対的な強さ</strong>に賭ける。</p>
-                  <p className="text-sm text-gray-700">B社のショートがA社の市場リスクを打ち消すため、市場が上がっても下がっても、A社とB社の<strong>差分（スプレッド）</strong>さえ広がれば利益が出ます。</p>
+                  <p className="font-bold mb-3 text-xl">ロングショート戦略の本質</p>
+                  <div className="space-y-3">
+                    <p className="text-lg"><strong>ベータ（市場全体の動き）を打ち消す</strong></p>
+                    <p className="text-gray-700">→ B社のショートでA社のベータを相殺</p>
+
+                    <p className="text-lg mt-4"><strong>アルファ（銘柄選択のスキル）のみを掬う</strong></p>
+                    <p className="text-gray-700">→ 「A社がB社より優れている」という相対的な強さだけで利益を得る</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg mt-4">
+                    <p className="text-sm text-gray-700"><strong>結果：</strong>市場が上がっても下がっても関係なく、A社とB社の<strong>差分（スプレッド）</strong>さえ広がれば利益が出る。これが「ベータを打ち消し、アルファのみを掬う」という意味です。</p>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -1306,9 +1328,9 @@ export default function EducationPage() {
 
                 <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-l-4 border-purple-500 p-6 rounded-lg mb-12">
                   <h4 className="text-xl font-semibold mb-3">マーケットニュートラル戦略</h4>
-                  <p className="mb-3"><strong>マーケットニュートラル＝ロングとショートを同額にして市場リスクをゼロにする</strong></p>
-                  <p className="mb-4">ロングショート戦略の一種で、<strong>ロングポジションとショートポジションの金額を同じにする</strong>ことで、市場全体の動き（ベータリスク）を完全に排除し、<strong>銘柄選択のスキル（アルファ）のみ</strong>で利益を狙う戦略です。</p>
-                  <p className="text-sm text-gray-600"><strong>例：</strong>100万円分のA社株を買い（ロング）、100万円分のB社株を売り（ショート）→ 市場全体が±10%動いても、ロングとショートが相殺されて影響を受けない</p>
+                  <p className="mb-3"><strong>マーケットニュートラル＝ベータを完全にゼロにする</strong></p>
+                  <p className="mb-4">ロングショート戦略の一種で、<strong>ロングポジションとショートポジションの金額を同じにする</strong>ことで、<strong>ベータ（市場リスク）を完全に排除し、アルファ（銘柄選択のスキル）のみ</strong>で利益を狙う戦略です。</p>
+                  <p className="text-sm text-gray-600"><strong>例：</strong>100万円分のA社株を買い（ロング）、100万円分のB社株を売り（ショート）→ 市場全体が±10%動いても、ロングとショートが相殺されてベータの影響を受けない</p>
                 </div>
 
                 {/* ========== 4. その他の知識（補足） ========== */}
