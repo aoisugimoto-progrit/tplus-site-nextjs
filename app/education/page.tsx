@@ -1223,37 +1223,66 @@ export default function EducationPage() {
                 <h3 className="text-3xl font-bold mb-6 text-[#1E4535]">3. ロングショート戦略</h3>
 
                 <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-8 rounded-lg mb-8">
-                  <p className="mb-4 text-lg"><strong>ロングショート＝買いと売りを同時に組み合わせる投資戦略</strong></p>
-                  <p className="mb-6 text-lg">ロングショート戦略は、ヘッジファンドなどのプロ投資家が多用する手法で、<strong>上昇が期待できる銘柄を買い（ロング）、下落が予想される銘柄を売る（ショート）</strong>ことで、市場全体の動きに左右されにくいポートフォリオを構築します。</p>
+                  <p className="mb-4 text-lg"><strong>ロングショート＝同じ市場で2社を取り、片方でもう片方を打ち消す</strong></p>
+                  <p className="mb-6 text-lg">ロングショート戦略は、ヘッジファンドなどのプロ投資家が多用する手法で、<strong>同じ業界内で優良株を買い（ロング）、ダメな株を売る（ショート）</strong>ことで、<strong>市場全体の影響をB社のショートで打ち消す</strong>戦略です。</p>
 
                   <h4 className="text-xl font-semibold mb-4">基本的な考え方</h4>
                   <p className="mb-4">通常の株式投資（ロングのみ）では、市場全体が下落すると保有株も連れ安して損失を被ります。しかし、ロングショート戦略では：</p>
-                  <ul className="list-disc pl-6 space-y-2 mb-6">
-                    <li className="text-lg"><strong>割安な優良株をロング</strong>（成長が期待できる銘柄）</li>
-                    <li className="text-lg"><strong>割高な問題株をショート</strong>（業績悪化や構造的問題がある銘柄）</li>
+                  <ul className="list-disc pl-6 space-y-2 mb-4">
+                    <li className="text-lg"><strong>同じ業界内で2社を選ぶ</strong></li>
+                    <li className="text-lg"><strong>A社（優良株）をロング</strong> - 業界内で相対的に強い企業</li>
+                    <li className="text-lg"><strong>B社（問題株）をショート</strong> - 業界内で相対的に弱い企業</li>
                   </ul>
-                  <p className="text-lg">この組み合わせにより、市場全体が下落しても、ショートで利益を出すことで損失を相殺できます。</p>
+                  <p className="text-lg mb-4"><strong>重要：</strong>同じ業界なので、市場全体が動いてもA社とB社は同じ方向に動きます。しかし、<strong>優良なA社の方が相対的に有利に動く</strong>ため、その差分で利益を得ます。</p>
+                  <p className="text-lg">つまり、<strong>B社のショートでA社の市場リスクを打ち消し</strong>、「A社がB社より優れている」という<strong>相対的な強さだけ</strong>に賭けることができます。</p>
                 </div>
 
-                <h4 className="text-xl font-semibold mb-4">具体例：同業他社でのロングショート</h4>
+                <h4 className="text-xl font-semibold mb-4">具体例：小売業界でのロングショート</h4>
                 <div className="bg-white border-2 border-gray-200 rounded-xl p-6 mb-8">
-                  <p className="mb-4 text-lg"><strong>シナリオ：</strong>小売業界で2社を比較</p>
+                  <p className="mb-4 text-lg"><strong>同じ小売業界で2社を比較：</strong></p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div className="bg-blue-50 p-4 rounded-lg">
+                    <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
                       <h5 className="font-bold text-lg mb-2 text-blue-800">A社（ロング）</h5>
-                      <p>EC強化で売上拡大中、新規出店も好調</p>
+                      <p className="mb-2">✓ EC事業で売上拡大中</p>
+                      <p className="mb-2">✓ 新規出店も好調</p>
+                      <p className="text-sm text-gray-600">→ 業界内で<strong>相対的に強い</strong></p>
                     </div>
-                    <div className="bg-red-50 p-4 rounded-lg">
+                    <div className="bg-red-50 p-4 rounded-lg border-2 border-red-300">
                       <h5 className="font-bold text-lg mb-2 text-red-800">B社（ショート）</h5>
-                      <p>既存店舗の売上減少、経営陣の刷新なし</p>
+                      <p className="mb-2">✗ 既存店舗の売上減少</p>
+                      <p className="mb-2">✗ 経営陣の刷新なし</p>
+                      <p className="text-sm text-gray-600">→ 業界内で<strong>相対的に弱い</strong></p>
                     </div>
                   </div>
-                  <p className="font-bold mb-3 text-lg">市場全体が下落した場合：</p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li>A社：-5%（業界平均より下落幅が小さい）→ <span className="text-red-600">損失</span></li>
-                    <li>B社：-15%（業界平均より大きく下落）→ <span className="text-green-600">利益</span></li>
-                    <li><strong>結果：</strong>市場下落局面でも、B社のショートで利益を出してA社の損失を相殺</li>
-                  </ul>
+
+                  <div className="bg-gray-50 p-6 rounded-lg mb-4">
+                    <p className="font-bold mb-3 text-lg">パターン①：市場全体が下落した場合</p>
+                    <div className="space-y-2">
+                      <p>小売業界全体が不調 → 両社とも株価下落</p>
+                      <p>• A社：-5%（業界平均より下落幅が<strong>小さい</strong>）→ <span className="text-red-600 font-bold">-50万円の損失</span></p>
+                      <p>• B社：-15%（業界平均より下落幅が<strong>大きい</strong>）→ <span className="text-green-600 font-bold">+150万円の利益</span></p>
+                      <p className="text-lg font-bold mt-4">→ <span className="text-green-600">合計 +100万円の利益</span></p>
+                      <p className="text-sm text-gray-600 mt-2"><strong>ポイント：</strong>市場全体が下落しても、B社のショートでA社の損失を<strong>打ち消して</strong>利益が出る</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <p className="font-bold mb-3 text-lg">パターン②：市場全体が上昇した場合</p>
+                    <div className="space-y-2">
+                      <p>小売業界全体が好調 → 両社とも株価上昇</p>
+                      <p>• A社：+15%（業界平均より上昇幅が<strong>大きい</strong>）→ <span className="text-green-600 font-bold">+150万円の利益</span></p>
+                      <p>• B社：+5%（業界平均より上昇幅が<strong>小さい</strong>）→ <span className="text-red-600 font-bold">-50万円の損失</span></p>
+                      <p className="text-lg font-bold mt-4">→ <span className="text-green-600">合計 +100万円の利益</span></p>
+                      <p className="text-sm text-gray-600 mt-2"><strong>ポイント：</strong>市場全体が上昇しても、B社のショートで市場リスクを<strong>打ち消し</strong>、A社とB社の<strong>相対的な差</strong>だけで利益が出る</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+                  <p className="font-bold mb-3 text-lg">ロングショート戦略の本質</p>
+                  <p className="mb-2"><strong>「市場全体の上げ下げ」に賭けるのではなく、</strong></p>
+                  <p className="mb-4"><strong>「A社がB社より優れている」という相対的な強さ</strong>に賭ける。</p>
+                  <p className="text-sm text-gray-700">B社のショートがA社の市場リスクを打ち消すため、市場が上がっても下がっても、A社とB社の<strong>差分（スプレッド）</strong>さえ広がれば利益が出ます。</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
