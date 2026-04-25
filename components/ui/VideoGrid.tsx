@@ -10,6 +10,8 @@ interface VideoGridProps {
   videos: Video[];
 }
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function VideoGrid({ videos }: VideoGridProps) {
   return (
     <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-4 mt-5">
@@ -23,7 +25,7 @@ export default function VideoGrid({ videos }: VideoGridProps) {
         >
           <div className="relative">
             <img
-              src={`/images/tabata-videos/${video.id}.jpg`}
+              src={`${BASE_PATH}/images/tabata-videos/${video.id}.jpg`}
               alt={video.title}
               className="w-full h-auto block transition-transform duration-300 hover:scale-105"
             />

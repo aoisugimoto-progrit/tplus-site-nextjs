@@ -2,13 +2,18 @@ import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import ScrollFade from '@/components/ui/ScrollFade';
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function HomePage() {
   return (
     <>
       <Header />
 
       {/* ヒーローセクション */}
-      <section className="relative h-screen bg-[url('/hero-bg.jpg')] bg-cover bg-center flex items-center justify-center overflow-hidden">
+      <section
+        className="relative h-screen bg-cover bg-center flex items-center justify-center overflow-hidden"
+        style={{ backgroundImage: `url('${BASE_PATH}/hero-bg.jpg')` }}
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)]"></div>
 
         <div className="relative z-10 text-center">

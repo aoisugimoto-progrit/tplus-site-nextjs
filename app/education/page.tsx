@@ -11,6 +11,8 @@ import CompletionPopup from '@/components/ui/CompletionPopup';
 import VideoGrid from '@/components/ui/VideoGrid';
 import BookGrid from '@/components/ui/BookGrid';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function EducationPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
@@ -55,8 +57,13 @@ export default function EducationPage() {
       <div className="transition-all duration-300" style={{ marginLeft: sidebarOpen ? '260px' : '0' }}>
         <div className="pt-[70px]">
           {/* ページヒーロー */}
-          <section id="hero" className="relative h-[400px] bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)] flex items-center justify-center">
-            <h1 className="text-6xl font-bold text-white">Education</h1>
+          <section
+            id="hero"
+            className="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+            style={{ backgroundImage: `url('${basePath}/hero-bg.jpg')` }}
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)]"></div>
+            <h1 className="relative z-10 text-6xl font-bold text-white">Education</h1>
           </section>
 
           {/* コンテンツ */}
@@ -1156,7 +1163,7 @@ export default function EducationPage() {
                   <div className="quiz-card">
                     <h3>小テスト①</h3>
                     <p>市場の基礎知識と四季報の読み方、簡単なスクリーニング手法の理解度が問われています。</p>
-                    <a href="/quiz1.pdf" target="_blank" className="quiz-button">
+                    <a href={`${basePath}/quiz1.pdf`} target="_blank" className="quiz-button">
                       テストを受ける
                     </a>
                   </div>
@@ -1164,7 +1171,7 @@ export default function EducationPage() {
                   <div className="quiz-card">
                     <h3>小テスト②</h3>
                     <p>財務諸表の読み方とスクリーニング手法の本質的な理解度が問われています。</p>
-                    <a href="/quiz2.pdf" target="_blank" className="quiz-button">
+                    <a href={`${basePath}/quiz2.pdf`} target="_blank" className="quiz-button">
                       テストを受ける
                     </a>
                   </div>
@@ -1179,7 +1186,7 @@ export default function EducationPage() {
                   {[1, 2, 3, 4, 5].map((num) => (
                     <div key={num} className="relative aspect-[2/3] bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                       <img
-                        src={`/images/movie${num}.png`}
+                        src={`${basePath}/images/movie${num}.png`}
                         alt={`映画${num}`}
                         className="w-full h-full object-cover"
                         onError={(e) => {

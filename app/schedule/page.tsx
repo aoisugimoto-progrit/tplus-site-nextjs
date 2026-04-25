@@ -1,13 +1,19 @@
 import Header from '@/components/layout/Header';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function SchedulePage() {
   return (
     <>
       <Header />
 
       <div className="pt-[70px]">
-        <section className="relative h-[400px] bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)] flex items-center justify-center">
-          <h1 className="text-6xl font-bold text-white">活動予定</h1>
+        <section
+          className="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+          style={{ backgroundImage: `url('${basePath}/hero-bg.jpg')` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)]"></div>
+          <h1 className="relative z-10 text-6xl font-bold text-white">活動予定</h1>
         </section>
 
         <div className="max-w-5xl mx-auto px-8 py-16">

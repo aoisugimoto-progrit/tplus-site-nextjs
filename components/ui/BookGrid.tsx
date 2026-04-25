@@ -10,6 +10,8 @@ interface BookGridProps {
   books: Book[];
 }
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function BookGrid({ books }: BookGridProps) {
   const getStars = (priority: number) => {
     switch(priority) {
@@ -30,7 +32,7 @@ export default function BookGrid({ books }: BookGridProps) {
           style={{ order: book.priority }}
         >
           <img
-            src={book.image}
+            src={`${BASE_PATH}${book.image}`}
             alt={book.description}
             className="w-full h-auto rounded shadow-md transition-transform duration-300 group-hover:scale-105"
           />
