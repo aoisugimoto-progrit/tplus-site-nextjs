@@ -1077,8 +1077,33 @@ export default function EducationPage() {
                 <h3 className="text-2xl font-semibold mb-4">「隠れたインサイト」を知り、いい銘柄の見逃しを防ぐ</h3>
                 <p className="mb-6">「隠れたインサイト」とは、まだ多くの人が知らないその会社の本当の強みのこと。<br/>「実は○○」と説明できるストーリーです。</p>
 
-                <h3 className="text-2xl font-semibold mb-4">19の「隠れたインサイト」マトリックス</h3>
-                <p className="mb-6">利益成長（市場拡大・シェア拡大・利益率向上）と、<br/>分析の切り口（外部環境・ビジネスモデル・経営資源）を組み合わせた19のパターンを理解することで、<br/>銘柄の見逃しを防ぎます。</p>
+                <h3 className="text-2xl font-semibold mb-4">
+                  <span
+                    className="inline-block text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mr-2"
+                    style={{
+                      animation: 'countUp 2s ease-out forwards'
+                    }}
+                  >
+                    19
+                  </span>
+                  <span>の「隠れたインサイト」マトリックス</span>
+                </h3>
+                <p className="mb-6">利益成長（市場拡大・シェア拡大・利益率向上）と、<br/>分析の切り口（外部環境・ビジネスモデル・経営資源）を組み合わせた<strong className="text-xl text-blue-600">19</strong>のパターンを理解することで、<br/>銘柄の見逃しを防ぎます。</p>
+                <style jsx>{`
+                  @keyframes countUp {
+                    0% {
+                      opacity: 0;
+                      transform: scale(0.5) translateY(20px);
+                    }
+                    50% {
+                      transform: scale(1.2);
+                    }
+                    100% {
+                      opacity: 1;
+                      transform: scale(1) translateY(0);
+                    }
+                  }
+                `}</style>
 
                 {/* マトリックス図解 */}
                 <div className="insight-matrix-v4">
@@ -1117,7 +1142,33 @@ export default function EducationPage() {
                   <div className="mx-cell mx-item" style={{gridColumn: '16', gridRow: '4'}}><span className="mx-title">徹底的な仕組み化</span></div>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">19の成長戦略</h3>
+                <h3 className="text-2xl font-semibold mb-4 mt-8">
+                  <span
+                    className="inline-block text-5xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent mr-2"
+                    style={{
+                      animation: 'countUp 2s ease-out 0.5s forwards',
+                      opacity: 0
+                    }}
+                  >
+                    19
+                  </span>
+                  <span>の成長戦略</span>
+                </h3>
+                <style jsx>{`
+                  @keyframes countUp {
+                    0% {
+                      opacity: 0;
+                      transform: scale(0.5) translateY(20px);
+                    }
+                    50% {
+                      transform: scale(1.2);
+                    }
+                    100% {
+                      opacity: 1;
+                      transform: scale(1) translateY(0);
+                    }
+                  }
+                `}</style>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
                     { num: '①', title: '市場の構造的な伸び', desc: '外部環境の変化により、市場全体が成長している' },
