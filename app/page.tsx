@@ -31,7 +31,7 @@ export default function HomePage() {
       <section className="py-24 px-8 md:px-20 bg-gradient-to-br from-[#0A0F14] to-[#050A0F]">
         <div className="max-w-4xl mx-auto">
           <ScrollFade>
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">Only outliers can outperform</h2>
+            <h2 className="text-4xl font-bold mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent pb-2 border-b-2 border-gray-700 inline-block w-full">Only outliers can outperform</h2>
           </ScrollFade>
 
           <ScrollFade delay={100}>
@@ -47,7 +47,7 @@ export default function HomePage() {
         {/* ゼミ生の責務 */}
         <div className="mt-24 max-w-6xl mx-auto">
           <ScrollFade delay={200}>
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">ゼミ生の責務</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">ゼミ生の責務</h2>
           </ScrollFade>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
@@ -68,7 +68,7 @@ export default function HomePage() {
         {/* 本サイトの目的 */}
         <ScrollFade delay={300}>
           <div className="mt-24 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">本サイトの目的について</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">本サイトの目的について</h2>
             <div className="text-white/80 space-y-4 text-center leading-relaxed">
               <p>本サイトは「投資について何から勉強すればいいかわからない」という<br/>超初心者向けのガイドです。<br/>投資の全体像を把握し、将来の見通しを立てる一助となることを目的に、<br/>初歩的な全体像を描きました。</p>
               <p>あくまで全体像であり、投資の醍醐味は本来、<br/>一社一社や各業界を詳細に分析していくプロセスにあります。<br/>本資料は投資の「基礎」としてご活用ください。</p>
