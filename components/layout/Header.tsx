@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === '/';
@@ -39,7 +41,7 @@ export default function Header() {
         {isHome && (
           <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
             <Image
-              src="/logo.png"
+              src={`${BASE_PATH}/logo.png`}
               alt="瀧本ゼミ T＋"
               width={45}
               height={45}
