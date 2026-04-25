@@ -958,38 +958,82 @@ export default function EducationPage() {
             </section>
 
             <section id="event-driven">
-              <Accordion title="企業分析詳細編④イベントドリブン編 読了時間 5分" defaultOpen={false}>
-                <p className="mb-6">企業の特定のイベントをきっかけとした、短期的な株価変動の機会を捉える手法です。</p>
+              <Accordion title="企業分析詳細編④イベントドリブン編 読了時間 6分" defaultOpen={false}>
+                <p className="mb-6">企業の特定のイベントを契機とした投資機会を捉える手法です。</p>
+
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-6">
+                  <h3 className="text-xl font-semibold mb-3">イベントドリブンとは？</h3>
+                  <p className="mb-2">企業に起こる特定のイベントをきっかけに、短期的な株価変動を狙う投資手法です。</p>
+                  <p><strong>ファンダメンタルズ分析</strong>が「長期的な企業価値」を見るのに対し、<br/><strong>イベントドリブン</strong>は「短期的な株価変動」を狙います。</p>
+                </div>
 
                 <h3 className="text-2xl font-semibold mb-4">主なイベントの種類</h3>
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-300 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold mb-3">M&A（合併・買収）</h4>
-                    <p className="mb-2"><strong>買収される側：</strong>通常、株価が上昇（買収プレミアム）</p>
-                    <p className="mb-2"><strong>買収する側：</strong>短期的には下落することも（高値掴みのリスク）</p>
-                    <p><strong>注目ポイント：</strong>シナジー効果、統合コスト、文化の違いによる失敗リスク</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">M&A（合併・買収）</h4>
+                    <p className="mb-2">企業が他社を買収すると、買収される側の株価は急騰することが多い。買収する側の株価は下がることも。</p>
+                    <p><strong>例：</strong>A社がB社を買収すると発表。B社の株価は買収価格に向かって上昇する。</p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-green-50 to-teal-50 border-2 border-green-300 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold mb-3">決算発表</h4>
-                    <p className="mb-2"><strong>サプライズ決算：</strong>市場予想を大きく上回る/下回ると急騰/急落</p>
-                    <p className="mb-2"><strong>ガイダンス修正：</strong>業績予想の上方/下方修正で株価が動く</p>
-                    <p><strong>注目ポイント：</strong>コンセンサス予想との乖離、経営陣のコメント</p>
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">TOB（株式公開買付）</h4>
+                    <p className="mb-2">特定の価格で株を買い取るオファー。TOB価格は通常、市場価格より高く設定される。</p>
+                    <p><strong>例：</strong>1株1000円の株に対し、1株1200円でTOBが発表されると、株価は1200円に向かって上昇。</p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-300 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold mb-3">株式分割・自社株買い</h4>
-                    <p className="mb-2"><strong>株式分割：</strong>流動性向上で個人投資家が買いやすくなる</p>
-                    <p className="mb-2"><strong>自社株買い：</strong>1株あたり利益が増加、株主還元姿勢の表明</p>
-                    <p><strong>注目ポイント：</strong>規模、タイミング、経営陣の意図</p>
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">MBO（経営陣による買収）</h4>
+                    <p className="mb-2">経営陣が自社の株を買い取って非上場化する。株主にプレミアムが支払われる。</p>
+                    <p><strong>例：</strong>創業者が「会社を非上場にしたい」と考え、株主から株を買い取る。</p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-300 rounded-xl p-6">
-                    <h4 className="text-xl font-semibold mb-3">政治・規制イベント</h4>
-                    <p className="mb-2"><strong>政策変更：</strong>補助金、規制緩和/強化が業界全体に影響</p>
-                    <p className="mb-2"><strong>金利変動：</strong>中央銀行の政策金利決定で市場全体が動く</p>
-                    <p><strong>注目ポイント：</strong>政治的リスク、法改正の影響、国際情勢</p>
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">株式分割</h4>
+                    <p className="mb-2">1株を複数株に分割することで、株価が下がり流動性が向上。個人投資家が買いやすくなる。</p>
+                    <p><strong>例：</strong>1株10,000円の株を1:10に分割すると、1株1,000円になり買いやすくなる。分割発表後に株価が上昇することも。</p>
                   </div>
+
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">増配・減配</h4>
+                    <p className="mb-2">配当金の増額は好材料、減額は悪材料として株価に影響する。</p>
+                    <p><strong>例：</strong>配当を年間100円から150円に増やすと発表すると、配当目当ての投資家が買いを入れ株価が上昇。逆に減配発表は売りを誘う。</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">指数組入</h4>
+                    <p className="mb-2">日経平均やTOPIXなどの指数に新たに組み入れられると、インデックスファンドの買いが入り株価が上昇。</p>
+                    <p><strong>例：</strong>東証プライム市場に昇格した企業がTOPIXに組み入れられると、機械的な買いが発生する。</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">親子上場解消</h4>
+                    <p className="mb-2">親会社が子会社株を完全取得して非上場化。子会社株主にプレミアムが支払われる。</p>
+                    <p><strong>例：</strong>トヨタが子会社のダイハツを完全子会社化すると発表。ダイハツ株主には市場価格より高い価格で株を買い取る提案がなされる。</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">株主提案</h4>
+                    <p className="mb-2">株主が経営陣に対して提案を行う。配当増額や自社株買い、経営陣の交代などが含まれる。</p>
+                    <p><strong>例：</strong>アクティビスト（物言う株主）が「配当性向を50%に引き上げよ」と提案し、実現すれば株価が上昇する。</p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>粉飾決算の見極め方</strong></p>
+                  <p className="mb-3">粉飾決算（会計不正）を見抜くことも重要なスキルです。以下のサインに注意：</p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>売上が急増しているのに、キャッシュフローが増えていない</li>
+                    <li>売掛金や在庫が異常に増えている</li>
+                    <li>営業キャッシュフローがマイナスなのに、利益は黒字</li>
+                    <li>監査法人が交代している</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+                  <h3 className="text-xl font-semibold mb-3">イベントドリブンの活用法</h3>
+                  <p className="mb-2">イベントドリブンは短期トレード向きですが、<strong>ファンダメンタルズ分析と組み合わせる</strong>ことで威力を発揮します。</p>
+                  <p><strong>例：</strong>良い企業を見つけた後、決算発表のタイミングで買うことで、より高いリターンを狙えます。</p>
                 </div>
 
                 {/* 参考書籍 */}
