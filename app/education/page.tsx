@@ -84,6 +84,9 @@ export default function EducationPage() {
                 <p className="mb-4"><strong>配当：今後生み出される利益</strong></p>
                 <p className="mb-6">株を保有していれば、その会社が今後生み出す純利益を配当という形で受け取ることができます。株を保有し続ける限り、その会社が存在する限り、配当が出続けると考えることができます。</p>
 
+                <p className="mb-2"><strong>株価とは何か？</strong></p>
+                <p className="mb-6"><span className="glossary-term" data-definition="株式市場で取引される株式1株あたりの価格。需要と供給で決まります。">株価</span>とは、<strong>今後その会社が生み出す利益の現在価値</strong>です。今後生み出す利益が増えそうだと判断されれば株価は上がり、そうでない場合は株価は下がります。</p>
+
                 <h3 className="text-2xl font-semibold mb-4 mt-8">② どうやって儲けるのか？ ー 2つの方法</h3>
                 <p className="mb-4">株の本質を理解したところで、次は「どうやって儲けるのか？」を学びましょう。</p>
                 <p className="mb-6">
@@ -109,6 +112,9 @@ export default function EducationPage() {
                   <p className="mb-2">という市場とのギャップが、株価にすべて反映されてきます。</p>
                   <p><strong>具体例：</strong>みんなが「売上10%増」と予想している中、実際には「売上30%増」になる企業を見つける。このギャップが利益になります。</p>
                 </div>
+
+                <p className="mb-6"><strong>市場との差分をどう見つけるか？</strong><br/>
+                市場との差分を見つけるためには、<strong>事業を他のどの投資家よりも完全に理解し、真相にたどり着くこと</strong>が必要です。表面的な部分を見るのではなく、本当に何が重要なのかを見極めることが非常に大切になります。</p>
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8">株価予想の二つの手段</h3>
                 <p className="mb-6">株価を予想する手法は大きく2つに分かれます。<strong>どちらも重要であり、ヘッジファンドは両方を見ています</strong>。</p>
@@ -174,6 +180,9 @@ export default function EducationPage() {
 
                 <p className="mb-6"><strong>収益構造を深く分析する</strong><br/>
                 次に、収益構造を深く分析します。例えば、この会社が成長していくとなったとしても、売上が成長していくのか、それとも売上原価が下がったり、販管費が下がっていくのか、という点です。純利益は株価に非常にダイレクトに影響しますが、その純利益が<strong>何がきっかけで、どの収益構造が変わって伸びるのか</strong>を見ていきたいです。</p>
+
+                <p className="mb-6"><strong>良いマクロトレンドの中で一番良い企業を見つける</strong><br/>
+                外部環境の分析をした後、その外部環境の中でもさらにどの企業が強いか、<strong>良いマクロトレンドの中でどの企業が一番良いのか</strong>を見ていきたいです。</p>
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8">STEP4: イベントドリブン ー タイミングを見極める</h3>
                 <p className="mb-6"><strong>目的：</strong>短期的な株価変動の機会を捉える<br/>
