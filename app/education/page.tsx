@@ -432,6 +432,107 @@ export default function EducationPage() {
                   <p><strong>重要：</strong>業界平均と比較せずに、PERだけで割安・割高を判断してはいけません。</p>
                 </div>
 
+                <h3 className="text-2xl font-semibold mb-4 mt-12">PBR（株価純資産倍率）：「財布の値段」理論</h3>
+
+                <h4 className="text-xl font-semibold mb-3">① PBRとは何か？ ー 「8,000円の財布に1万円入っていた」</h4>
+                <p className="mb-6"><strong>PBR（Price Book-value Ratio：株価純資産倍率）</strong>は、株価が1株あたり純資産（BPS）の何倍になっているかを示す指標です。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">PBRの計算式</h4>
+                  <p className="formula-inline mb-2">
+                    <strong>PBR = </strong>
+                    <span className="fraction">
+                      <span className="numerator">株価</span>
+                      <span className="denominator">1株あたり純資産（BPS）</span>
+                    </span>
+                  </p>
+                  <p className="mb-2">または</p>
+                  <p className="mb-4"><strong>PBR = 時価総額 ÷ 純資産</strong></p>
+                  <p><strong>例：</strong>株価800円、BPS1,000円の場合、PBR = 800 ÷ 1,000 = 0.8倍</p>
+                </div>
+
+                <p className="mb-2"><strong>PBRの本質：「財布の値段」理論</strong></p>
+                <p className="mb-6">PBRは「財布理論」で理解できます。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">8,000円の財布に1万円入っていた</h4>
+                  <p className="mb-2">PBR0.8倍とは、「8,000円で売られている財布を買ったら、中に現金1万円入っていた」状態です。<br/>財布（会社）はどうでもいいから捨てて、中の1万円（純資産）をビッと取ってポイ。<br/>これで2,000円の利益が出ます。</p>
+                  <p>これがPBR1倍割れの意味です。</p>
+                </div>
+
+                <p className="mb-2"><strong>札幌ビールの例</strong></p>
+                <p className="mb-4">札幌ビールは、恵比寿ガーデンプレースなどの不動産を保有しています。<br/>帳簿上の純資産（簿価）は控えめに計上されていますが、実際の時価は4,000億円規模。<br/>しかし、札幌ビールの時価総額は1,000〜2,000億円程度。<br/>→ つまり、<strong>「会社を丸ごと買って、不動産を売れば儲かる」</strong>状態です。</p>
+
+                <p className="mb-6">アクティビストファンドが目をつけて、「不動産を売って株主に配当しろ」とプレッシャーをかけています。</p>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>PBRの目安</strong></p>
+                  <ul className="list-disc ml-6 space-y-1">
+                    <li><strong>PBR1倍：</strong>株価 = 解散価値（会社を解散して資産を売却した場合の価値）</li>
+                    <li><strong>PBR1倍以下：</strong>割安、または経営が評価されていない</li>
+                    <li><strong>PBR1〜2倍：</strong>標準的な水準</li>
+                    <li><strong>PBR3倍以上：</strong>高い成長性や収益性が評価されている</li>
+                  </ul>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">② 東証改革：PBR1倍割れ企業への圧力</h4>
+                <p className="mb-6">2023年、東京証券取引所は<strong>「PBR1倍割れ企業に対し、改善計画を開示するよう要請」</strong>しました。<br/>これは、日本の株式市場にとって画期的な出来事です。</p>
+
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">PBR1倍割れが問題な理由</h4>
+                  <p className="mb-2">PBR1倍割れとは、<strong>「経営陣がいない方が価値がある」</strong>と市場が判断している状態です。</p>
+                  <p className="mb-3"><strong>例：</strong>純資産100億円の会社の時価総額が80億円の場合、<br/>→ 会社を解散して資産を売却すれば100億円になるのに、今の株価は80億円。<br/>→ つまり、経営陣の存在がマイナス20億円の価値しかない。</p>
+                  <p>PBR1倍割れは、<strong>野球チームの監督が「うちのチーム弱くて応援できない」と言っているようなもの</strong>です。経営陣が自社の成長を信じていないことの表れとも言えます。</p>
+                </div>
+
+                <p className="mb-4"><strong>なぜ外資系ファンドや村上ファンドが騒いでいたのに、今まで変わらなかったのか？</strong></p>
+                <p className="mb-4">日本企業は、株の持ち合いで「お互いに賛成票を入れ合う」文化がありました。<br/>外資系ファンドが5%の株を買って株主総会でワーワー言っても、残り95%が「まあまあ」と言って否決。<br/>→ 結果、何も変わらなかった。</p>
+
+                <p className="mb-6">しかし、<strong>東証（お上）が言い出したことで、企業は一斉に動き始めました</strong>。<br/>日本企業はお上に弱いのです。</p>
+
+                <p className="mb-4"><strong>PBRを上げる3つの方法</strong></p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-white border-2 border-blue-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">①ROEを上げる</h4>
+                    <p>純資産を有効活用して利益を増やす。<br/>PBR = PER × ROE の関係があるため、ROEを上げればPBRも上がる。</p>
+                  </div>
+                  <div className="bg-white border-2 border-green-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">②配当・自社株買い</h4>
+                    <p>余剰資金を株主に還元することで、純資産を減らし、PBRを上げる。<br/>この春、日本企業は16兆円の配当を出す予定（10年前の2倍以上）。</p>
+                  </div>
+                  <div className="bg-white border-2 border-purple-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">③不要資産の売却</h4>
+                    <p>持ち合い株式や不動産など、本業に不要な資産を売却し、株主に還元する。<br/><strong>例：</strong>東急電鉄のオリエンタルランド株売却</p>
+                  </div>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">③ PBRの落とし穴：1倍割れ≠割安</h4>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">PBR1倍割れでも割安とは限らない</h4>
+                    <p className="mb-2"><strong>①簿価と時価の乖離：</strong>不動産や有価証券の簿価が、実際の時価より高い場合、見かけ上PBRが低く見えるだけ。</p>
+                    <p className="mb-2"><strong>②低ROE企業：</strong>純資産はあるが、利益を生み出せない企業は、PBR1倍割れでも割安ではない。<br/>地銀の多くがこのパターン。</p>
+                    <p><strong>③衰退産業：</strong>市場が縮小している業界では、資産があっても評価されない。</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">PBR高い ≠ 割高とは限らない</h4>
+                    <p className="mb-2"><strong>①高ROE企業：</strong>少ない資本で大きな利益を生む企業（ソフトウェア、プラットフォーム企業など）は、PBR10倍でも割安なことがある。</p>
+                    <p><strong>②無形資産：</strong>ブランド、技術、特許などはBSに計上されないため、PBRが高くなる。<br/><strong>例：</strong>AppleのブランドはBS上ゼロだが、実際には数兆円の価値がある。</p>
+                  </div>
+                </div>
+
+                <h4 className="text-xl font-semibold mb-3 mt-8">④ PBR = PER × ROE：3兄弟の美しい関係</h4>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">PBR = PER × ROE</h4>
+                  <p className="mb-2">この式は、PBR、PER、ROEの3つが密接に関係していることを示しています。</p>
+                  <p className="mb-3"><strong>例：</strong>PER20倍、ROE10%の企業 → PBR = 20 × 0.1 = 2倍</p>
+                  <p className="mb-3"><strong>重要：</strong>PBRを上げたければ、ROEを上げるか、PERを上げる（市場の評価を高める）必要がある。</p>
+                  <p>この3つの関係は、<strong>数学的に常に成り立つ</strong>美しい式です。<br/>PBRが低い会社は、PERが低いか、ROEが低いかのどちらか。<br/>経営的にPBRを上げるには、ROEを上げるしかありません。</p>
+                </div>
+
                 {/* 参考書籍 */}
                 <div className="mt-12">
                   <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
