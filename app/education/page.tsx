@@ -256,11 +256,79 @@ export default function EducationPage() {
             </section>
 
             <section id="screening">
-              <Accordion title="企業分析詳細編②スクリーニング編 読了時間 6分">
-                <p className="mb-6">財務指標を使って、投資対象となる企業を効率的に絞り込みます。</p>
+              <Accordion title="企業分析詳細編②スクリーニング編 読了時間 15分">
+                <p className="mb-6">4000社の中から良い企業を見つけたいのですが、<br/>逆に<strong>悪い企業をスクリーニングすることで省く</strong>ことができます。</p>
 
                 <h3 className="text-2xl font-semibold mb-4">財務指標によるスクリーニング</h3>
-                <p className="mb-6">4000社以上ある上場企業の中から、<strong>悪い企業を機械的に除外</strong>することで、分析対象を絞り込みます。</p>
+                <p className="mb-6">スクリーニングとは、様々な株価指標を使って機械的に銘柄を絞り込むことです。<br/>ここでは、最も重要な3つの指標「PER」「PBR」「ROE」について、YouTube文字起こしの内容を詳細に反映しながら解説します。</p>
+
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                  <span className="section-label label-essence">本質</span>
+                  <h4 className="text-xl font-semibold mb-2">大前提：100%信じられる指標は存在しない</h4>
+                  <p className="mb-2">これから解説するPER、PBR、ROEは、どれも非常に有用な指標です。しかし、<strong>100%信じられる指標は存在しません</strong>。</p>
+                  <p className="mb-2">重要なのは、<strong>指標の構造を理解すること</strong>です。なぜその指標が高いのか？なぜ低いのか？その背景にある企業の実態を見抜く力が必要です。</p>
+                  <p><strong>ケースバイケース</strong>であることを常に意識しましょう。指標は「道具」であり、使い方次第で見える景色が変わります。</p>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4 mt-8">PER（株価収益率）：利益の何倍で買われているか？</h3>
+
+                <h4 className="text-xl font-semibold mb-3">① PERとは何か？ ー トヨタと日産の比較で理解する</h4>
+                <p className="mb-4"><strong>PER（Price Earnings Ratio：株価収益率）</strong>は、株価が1株あたり利益（EPS）の何倍になっているかを示す指標です。</p>
+
+                <p className="mb-4">まず、こんな質問から始めましょう。<br/><strong>「トヨタの株が今日5,000円、日産の株が今日3,000円だとしたら、どっちの株価が割安か？」</strong></p>
+
+                <p className="mb-6">多くの人は「日産の方が安いから割安では？」と考えます。しかし、これは<strong>大きな間違い</strong>です。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">株価だけでは割安・割高は決まらない</h4>
+                  <p className="mb-2">株価が5,000円だろうが3,000円だろうが、それだけでは割安とも割高とも言えません。</p>
+                  <p className="mb-2"><strong>例えば：</strong>牛肉がグラム3,000円、鶏肉がグラム100円だとして、どっちが割安か比べられますか？<br/>→ 比べられません。そもそも違うものだからです。</p>
+                  <p>株価も同じ。トヨタの発行済み株数と日産の発行済み株数が違うため、株価だけでは比較できないのです。</p>
+                </div>
+
+                <p className="mb-2"><strong>時価総額で考える</strong></p>
+                <p className="mb-2">会社の「大きさ」を測るには、<strong>時価総額</strong>を見る必要があります。<br/>時価総額 = 株価 × 発行済み株数</p>
+
+                <p className="mb-4"><strong>例：</strong>トヨタの時価総額が50兆円、日産の時価総額が5兆円だとしたら、<br/>→ トヨタの方が10倍大きい会社です。</p>
+
+                <p className="mb-6">そして、この時価総額と利益の関係を見るのが<strong>PER</strong>です。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h4 className="text-xl font-semibold mb-2">PERの計算式</h4>
+                  <p className="formula-inline mb-2">
+                    <strong>PER = </strong>
+                    <span className="fraction">
+                      <span className="numerator">株価</span>
+                      <span className="denominator">1株あたり利益（EPS）</span>
+                    </span>
+                  </p>
+                  <p className="mb-2">または</p>
+                  <p className="formula-inline mb-4">
+                    <strong>PER = </strong>
+                    <span className="fraction">
+                      <span className="numerator">時価総額</span>
+                      <span className="denominator">純利益</span>
+                    </span>
+                  </p>
+                  <p><strong>例：</strong>トヨタの時価総額が50兆円、利益が5兆円だとすると、<br/>→ PER = 50兆 ÷ 5兆 = 10倍<br/>→ 「利益の10年分で買われている」という意味です。</p>
+                </div>
+
+                <p className="mb-2"><strong>PERの本質：投資回収年数</strong></p>
+                <p className="mb-6">PER10倍とは、「今の利益水準が続けば、10年で投資を回収できる」という意味です。<br/>不動産投資に例えると、1,000万円のアパートを買って、年間家賃100万円（利回り10%）であれば、10年で回収できる。これがPER10倍です。</p>
+
+                <p className="mb-2"><strong>トヨタと日産の比較（続き）</strong></p>
+                <p className="mb-6">仮に、トヨタの時価総額50兆円、利益5兆円でPER10倍。<br/>日産の時価総額3兆円、利益1,000億円でPER30倍。<br/>→ この場合、<strong>トヨタの方が割安</strong>です。なぜなら、利益の10年分で買えるトヨタに対し、日産は利益の30年分を払う必要があるからです。</p>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>PERの目安</strong></p>
+                  <ul className="list-disc ml-6 space-y-1">
+                    <li><strong>10〜15倍：</strong>標準的な水準（日本企業の平均は15倍前後）</li>
+                    <li><strong>10倍以下：</strong>割安または利益が持続不可能と見られている</li>
+                    <li><strong>20倍以上：</strong>成長期待が高い、または割高</li>
+                    <li><strong>100倍以上：</strong>超高成長期待、またはバブル</li>
+                  </ul>
+                  <p className="mt-3"><strong>重要：</strong>業界によって適正PERは大きく異なります。単純にPERが低いから買う、という判断は危険です。</p>
+                </div>
 
                 <div className="space-y-6">
                   <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-300 rounded-xl p-6">
