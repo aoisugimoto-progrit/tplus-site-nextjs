@@ -1219,9 +1219,95 @@ export default function EducationPage() {
                   </div>
                 </div>
 
+                <h3 className="text-2xl font-semibold mb-4">逆日歩（ぎゃくひぶ）とは？</h3>
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-8">
+                  <p className="mb-3"><strong>逆日歩＝株を借りるための追加コスト</strong></p>
+                  <p className="mb-3">ショート（空売り）をする際、証券会社から株を借りますが、市場全体でショートが集中すると「貸せる株」が不足します。この需給バランスが崩れた時に発生するのが<strong>逆日歩</strong>です。</p>
+                  <p className="mb-3"><strong>仕組み：</strong><br/>
+                  ① 多くの投資家が同じ銘柄をショートする<br/>
+                  ② 証券会社が貸し出せる株が不足する<br/>
+                  ③ 証券会社が機関投資家などから高いコストで株を調達<br/>
+                  ④ そのコストが「逆日歩」として空売りした投資家に請求される</p>
+                  <p><strong>リスク：</strong>逆日歩は1日あたり数円〜数十円になることもあり、保有期間が長引くと想定外のコストが発生します。特に株主優待が近い銘柄は逆日歩が高騰しやすいため注意が必要です。</p>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">ショート時の配当と優待の扱い</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-3">配当の支払い義務</h4>
+                    <p className="text-sm text-gray-600 mb-3">ショートポジションを保有したまま配当権利日を迎えると、<strong>配当相当額を支払う義務</strong>が発生します。</p>
+                    <p className="text-sm text-gray-600 mb-2"><strong>理由：</strong><br/>
+                    株を借りて売却しているため、本来の株主（貸し手）が配当を受け取れなくなります。そのため、空売りした側が配当相当額を補填する必要があります。</p>
+                    <p className="text-sm text-gray-600"><strong>例：</strong>配当50円の銘柄を1000株ショートしている場合、50円×1000株＝50,000円を支払う</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-3">株主優待の扱い</h4>
+                    <p className="text-sm text-gray-600 mb-3">ショートポジションでは<strong>株主優待を受け取る権利はありません</strong>。逆に、優待相当額を支払う義務が発生することもあります。</p>
+                    <p className="text-sm text-gray-600 mb-3"><strong>優待クロス取引の注意点：</strong><br/>
+                    一部の投資家は「ロングとショートを同時に持つ（クロス取引）」ことで株価変動リスクを相殺しながら優待だけを取得しようとしますが、逆日歩コストが優待価値を上回ることもあるため要注意です。</p>
+                    <p className="text-sm text-gray-600"><strong>例：</strong>優待券3000円分を狙ってクロス取引したが、逆日歩が1日500円×7日＝3500円かかり、結果的に損失</p>
+                  </div>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">ロングショート戦略とは？</h3>
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-8">
+                  <p className="mb-3"><strong>ロングショート＝買いと売りを同時に組み合わせる投資戦略</strong></p>
+                  <p className="mb-4">ロングショート戦略は、ヘッジファンドなどのプロ投資家が多用する手法で、<strong>上昇が期待できる銘柄を買い（ロング）、下落が予想される銘柄を売る（ショート）</strong>ことで、市場全体の動きに左右されにくいポートフォリオを構築します。</p>
+
+                  <h4 className="text-lg font-semibold mb-3">基本的な考え方</h4>
+                  <p className="mb-3">通常の株式投資（ロングのみ）では、市場全体が下落すると保有株も連れ安して損失を被ります。しかし、ロングショート戦略では：</p>
+                  <ul className="list-disc pl-6 space-y-2 mb-4">
+                    <li><strong>割安な優良株をロング</strong>（成長が期待できる銘柄）</li>
+                    <li><strong>割高な問題株をショート</strong>（業績悪化や構造的問題がある銘柄）</li>
+                  </ul>
+                  <p className="mb-4">この組み合わせにより、市場全体が下落しても、ショートで利益を出すことで損失を相殺できます。</p>
+
+                  <h4 className="text-lg font-semibold mb-3">具体例：同業他社でのロングショート</h4>
+                  <div className="bg-white rounded-lg p-4 mb-4">
+                    <p className="mb-2"><strong>シナリオ：</strong>小売業界で2社を比較</p>
+                    <ul className="list-disc pl-6 space-y-2 text-sm">
+                      <li><strong>A社（ロング）：</strong>EC強化で売上拡大中、新規出店も好調</li>
+                      <li><strong>B社（ショート）：</strong>既存店舗の売上減少、経営陣の刷新なし</li>
+                    </ul>
+                    <p className="mt-3 text-sm"><strong>市場全体が下落した場合：</strong></p>
+                    <ul className="list-disc pl-6 space-y-1 text-sm">
+                      <li>A社：-5%（業界平均より下落幅が小さい）→ 損失</li>
+                      <li>B社：-15%（業界平均より大きく下落）→ 利益</li>
+                      <li><strong>結果：</strong>市場下落局面でも、B社のショートで利益を出してA社の損失を相殺</li>
+                    </ul>
+                  </div>
+
+                  <h4 className="text-lg font-semibold mb-3">ロングショート戦略のメリット</h4>
+                  <ul className="list-disc pl-6 space-y-2 mb-4">
+                    <li><strong>市場リスクの低減：</strong>市場全体の上げ下げに左右されにくい</li>
+                    <li><strong>相対的な優位性を利益化：</strong>「A社がB社より良い」という相対評価で利益を狙える</li>
+                    <li><strong>下落相場でも利益機会：</strong>ショート側で利益を出すことができる</li>
+                  </ul>
+
+                  <h4 className="text-lg font-semibold mb-3">ロングショート戦略のデメリット</h4>
+                  <ul className="list-disc pl-6 space-y-2 mb-4">
+                    <li><strong>複雑性：</strong>ロングとショートの比率調整、銘柄選定が難しい</li>
+                    <li><strong>コスト：</strong>ショートには貸株料、逆日歩などのコストがかかる</li>
+                    <li><strong>リスク：</strong>想定と逆に動いた場合、ロングとショートの両方で損失が発生する可能性</li>
+                    <li><strong>取引制約：</strong>空売り規制（株価が前日より下がっている時は空売り禁止）などのルールがある</li>
+                  </ul>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">マーケットニュートラル戦略</h3>
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-l-4 border-purple-500 p-6 rounded-lg mb-8">
+                  <p className="mb-3"><strong>マーケットニュートラル＝ロングとショートを同額にして市場リスクをゼロにする</strong></p>
+                  <p className="mb-3">ロングショート戦略の一種で、<strong>ロングポジションとショートポジションの金額を同じにする</strong>ことで、市場全体の動き（ベータリスク）を完全に排除し、<strong>銘柄選択のスキル（アルファ）のみ</strong>で利益を狙う戦略です。</p>
+                  <p className="mb-3"><strong>例：</strong><br/>
+                  ① 100万円分のA社株を買い（ロング）<br/>
+                  ② 100万円分のB社株を売り（ショート）<br/>
+                  → 市場全体が±10%動いても、ロングとショートが相殺されて影響を受けない</p>
+                  <p><strong>この戦略が成功するのは：</strong>A社の株価上昇率がB社の株価上昇率を上回った場合のみ。つまり、<strong>銘柄選択の精度が全て</strong>です。</p>
+                </div>
+
                 <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
                   <p className="font-semibold mb-2">T＋では主にロング（買い）を扱います</p>
-                  <p>ショートは高度な手法であり、初心者にはリスクが高いため、まずは企業の成長を見極めて「買い」で利益を得るファンダメンタルズ分析に集中することをおすすめします。</p>
+                  <p>ショートやロングショート戦略は高度な手法であり、初心者にはリスクが高いため、まずは企業の成長を見極めて「買い」で利益を得るファンダメンタルズ分析に集中することをおすすめします。</p>
                 </div>
               </Accordion>
             </section>
