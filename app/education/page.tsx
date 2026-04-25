@@ -1255,20 +1255,79 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-4">具体例：小売業界でのロングショート</h4>
                 <div className="bg-white border-2 border-gray-200 rounded-xl p-6 mb-8">
                   <p className="mb-4 text-lg"><strong>同じ小売業界で2社を比較：</strong></p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6 relative">
+                    <div
+                      className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300 transition-all duration-700"
+                      style={{
+                        animation: 'slideInLeft 0.8s ease-out, float 3s ease-in-out 0.8s infinite'
+                      }}
+                    >
                       <h5 className="font-bold text-lg mb-2 text-blue-800">A社（ロング）</h5>
                       <p className="mb-2">✓ EC事業で売上拡大中</p>
                       <p className="mb-2">✓ 新規出店も好調</p>
                       <p className="text-sm text-gray-600">→ 業界内で<strong>相対的に強い</strong></p>
                     </div>
-                    <div className="bg-red-50 p-4 rounded-lg border-2 border-red-300">
+                    <div
+                      className="bg-red-50 p-4 rounded-lg border-2 border-red-300 transition-all duration-700"
+                      style={{
+                        animation: 'slideInRight 0.8s ease-out, float 3s ease-in-out 1.3s infinite'
+                      }}
+                    >
                       <h5 className="font-bold text-lg mb-2 text-red-800">B社（ショート）</h5>
                       <p className="mb-2">✗ 既存店舗の売上減少</p>
                       <p className="mb-2">✗ 経営陣の刷新なし</p>
                       <p className="text-sm text-gray-600">→ 業界内で<strong>相対的に弱い</strong></p>
                     </div>
+                    {/* 対比を示す矢印 */}
+                    <div
+                      className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl text-gray-400 font-bold"
+                      style={{
+                        animation: 'pulse 2s ease-in-out infinite'
+                      }}
+                    >
+                      ⇄
+                    </div>
                   </div>
+                  <style jsx>{`
+                    @keyframes slideInLeft {
+                      from {
+                        opacity: 0;
+                        transform: translateX(-50px);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: translateX(0);
+                      }
+                    }
+                    @keyframes slideInRight {
+                      from {
+                        opacity: 0;
+                        transform: translateX(50px);
+                      }
+                      to {
+                        opacity: 1;
+                        transform: translateX(0);
+                      }
+                    }
+                    @keyframes float {
+                      0%, 100% {
+                        transform: translateY(0);
+                      }
+                      50% {
+                        transform: translateY(-10px);
+                      }
+                    }
+                    @keyframes pulse {
+                      0%, 100% {
+                        opacity: 0.4;
+                        transform: translate(-50%, -50%) scale(1);
+                      }
+                      50% {
+                        opacity: 1;
+                        transform: translate(-50%, -50%) scale(1.2);
+                      }
+                    }
+                  `}</style>
 
                   <div className="bg-gray-50 p-6 rounded-lg mb-4">
                     <p className="font-bold mb-3 text-lg">パターン①：市場全体が下落した場合</p>
