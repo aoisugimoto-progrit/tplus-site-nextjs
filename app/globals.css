@@ -420,23 +420,23 @@
 
   /* Card type specific icons */
   .card-icon-chart::before {
-    content: "📊";
+    content: "";
   }
 
   .card-icon-trend::before {
-    content: "📈";
+    content: "";
   }
 
   .card-icon-government::before {
-    content: "🏛️";
+    content: "";
   }
 
   .card-icon-law::before {
-    content: "⚖️";
+    content: "";
   }
 
   .card-icon-target::before {
-    content: "🎯";
+    content: "";
   }
 
   /* Important card badge */
