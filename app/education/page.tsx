@@ -724,75 +724,218 @@ export default function EducationPage() {
 
             <section id="internal">
               <Accordion title="企業分析詳細編③内部環境分析編 読了時間 10分" defaultOpen={false}>
-                <p className="mb-6">企業のビジネスモデルと収益構造を深く理解し、競争優位性を見極めます。</p>
+                <p className="mb-6">企業のビジネスモデル、競争優位性、収益構造を深く分析します。</p>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h3 className="text-xl font-semibold mb-3">財務3表の基本：PL・BS・CSとは？</h3>
+                  <p className="mb-2"><strong>そもそも財務諸表って何？</strong></p>
+                  <p className="mb-3">財務諸表とは、企業の経営状態を数字で表した報告書です。<strong>上場企業はすべて財務諸表を公開する義務</strong>があります。</p>
+                  <p className="mb-3"><strong>なぜ公開するのか？</strong><br/>株主や投資家を守るためです。企業がどれだけ儲けているのか、財務状況は健全か、お金の流れはどうかを透明にすることで、投資家が正しい判断をできるようにしています。<br/>上場していない企業は公開義務がありませんが、上場企業は四半期ごとに必ず公開します。</p>
+                  <p className="mb-2">企業の実態を理解するには、3つの財務諸表を読む必要があります。</p>
+                  <ul className="list-disc ml-6 space-y-1 mb-4">
+                    <li><strong>PL（損益計算書）</strong>：1年間でいくら儲けたか？稼ぐ力を見る</li>
+                    <li><strong>BS（貸借対照表）</strong>：今どれだけの資産・負債があるか？財務の健全性を見る</li>
+                    <li><strong>CS（キャッシュフロー計算書）</strong>：実際にお金が増えたか減ったか？お金の流れを見る</li>
+                  </ul>
+                  <p><strong>重要：</strong>この3つは独立しているのではなく、<strong>繋がっています</strong>。<br/>PLで利益が出れば、BSの純資産が増える。<br/>PLで利益が出ても、CSで営業CFがマイナスなら「儲かっているのにお金がない」状態。<br/>財務3表を一体で見ることで、企業の本当の姿が見えてきます。</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                  <span className="section-label label-essence">本質</span>
+                  <h3 className="text-xl font-semibold mb-2">ビジネスモデルの理解：誰からお金をもらっているのか？</h3>
+                  <p className="mb-2">ビジネスモデルとは、<strong>「誰に・何を・どうやって売るか」</strong>の全体像です。</p>
+                  <p>上流（仕入先）→ 自社 → 下流（顧客）という流れで理解します。</p>
+                </div>
 
                 <h3 className="text-2xl font-semibold mb-4">ビジネスモデルの具体例</h3>
-                <p className="mb-4">企業がどのように価値を生み出し、収益を得ているかを理解することが重要です。</p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3">サブスクリプション型</h4>
-                    <p className="mb-2"><strong>例：</strong>Netflix、Spotify</p>
-                    <p>月額課金で安定した収益。解約率（チャーンレート）が重要指標。</p>
+                    <h4 className="text-lg font-semibold mb-3">トヨタ自動車</h4>
+                    <p className="mb-2"><strong>上流：</strong>部品メーカー（デンソー、アイシンなど）<br/><strong>自社：</strong>自動車の組み立て<br/><strong>下流：</strong>ディーラー経由で一般消費者</p>
+                    <p><strong>儲けのポイント：</strong>大量生産によるコスト削減、ブランド力</p>
                   </div>
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3">プラットフォーム型</h4>
-                    <p className="mb-2"><strong>例：</strong>メルカリ、Airbnb</p>
-                    <p>売り手と買い手をマッチング。ネットワーク効果で価値が増大。</p>
+                    <h4 className="text-lg font-semibold mb-3">Amazon</h4>
+                    <p className="mb-2"><strong>上流：</strong>出品者（個人・企業）<br/><strong>自社：</strong>ECプラットフォーム<br/><strong>下流：</strong>一般消費者</p>
+                    <p><strong>儲けのポイント：</strong>手数料収入、物流インフラ、データ活用</p>
                   </div>
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3">フリーミアム型</h4>
-                    <p className="mb-2"><strong>例：</strong>Dropbox、Zoom</p>
-                    <p>基本無料で有料プランに誘導。コンバージョン率が収益の鍵。</p>
+                    <h4 className="text-lg font-semibold mb-3">Google</h4>
+                    <p className="mb-2"><strong>上流：</strong>広告主（企業）<br/><strong>自社：</strong>検索エンジン・広告プラットフォーム<br/><strong>下流：</strong>一般ユーザー（無料）</p>
+                    <p><strong>儲けのポイント：</strong>広告収入、ユーザーデータ</p>
                   </div>
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3">広告収入型</h4>
-                    <p className="mb-2"><strong>例：</strong>Google、Meta</p>
-                    <p>無料サービスでユーザーを集め、広告で収益化。ユーザー数と滞在時間が重要。</p>
-                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                  <span className="section-label label-essence">本質</span>
+                  <h3 className="text-xl font-semibold mb-2">収益構造の深掘り：どこで儲けているのか？（PL分析）</h3>
+                  <p>売上が伸びているだけでは不十分です。<strong>どの収益構造が変わって純利益が伸びるのか</strong>を見極める必要があります。</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>成長の質を見分ける：一口に「成長」と言っても質が違う</strong></p>
+                  <p className="mb-3">企業が成長する方法は大きく分けて3つあります。そして、<strong>成長の質には大きな差があります</strong>。</p>
+                  <ul className="list-disc ml-6 space-y-2 mb-4">
+                    <li><strong>①売上が伸びる型</strong>：市場拡大、新製品ヒット、シェア拡大。<br/>→ 成長は早いが、競合に追随されやすい。</li>
+                    <li><strong>②原価が下がる型</strong>：量産効果、内製化、仕入れ交渉力の向上。<br/>→ 売上が変わらなくても利益率が大幅改善。持続性が高い。</li>
+                    <li><strong>③販管費が下がる型</strong>：広告費削減、効率化、固定費削減。<br/>→ 売上が変わらなくても営業利益が大幅改善。</li>
+                  </ul>
+                  <p><strong>質の良い成長</strong>：売上増加と原価削減が同時に起こり、限界利益率が高い状態。<br/>こういう企業は、売上が2倍になると利益が3倍、4倍になることもある。</p>
                 </div>
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8">収益構造の改善パターン</h3>
-                <div className="space-y-4">
-                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 border-l-4 border-blue-500 p-4 rounded">
-                    <h4 className="font-semibold mb-2">①売上の増加</h4>
-                    <p>新規顧客獲得、既存顧客の単価アップ、新製品投入など</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-3">①売上が伸びる</h4>
+                    <p className="mb-2"><strong>パターンA：数量増加</strong><br/>新製品のヒット、市場拡大、シェア拡大などで販売数量が伸びる。</p>
+                    <p className="mb-2"><strong>パターンB：値上げ（価格転嫁）</strong><br/>製品価格を引き上げることで、販売数量が変わらなくても売上が伸びる。ブランド力や独占的地位がある企業ほど値上げしやすい。</p>
+                    <p><strong>注意：</strong>売上が伸びても原価率が上がれば利益は増えない。値上げは数量増加より利益率改善効果が高い。</p>
                   </div>
-                  <div className="bg-gradient-to-r from-green-50 to-green-100 border-l-4 border-green-500 p-4 rounded">
-                    <h4 className="font-semibold mb-2">②原価率の改善</h4>
-                    <p>仕入コスト削減、生産効率向上、規模の経済によるコストダウン</p>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-3">②売上原価が下がる</h4>
+                    <p className="mb-2"><strong>パターンA：内部要因</strong><br/>量産効果、内製化、仕入れ交渉力の向上、生産効率化などで自社努力によりコストが下がる。</p>
+                    <p className="mb-2"><strong>パターンB：原材料価格下落</strong><br/>石油、鉄鉱石、小麦などの原材料市況が下落することで、仕入れコストが下がる。外部環境の恩恵を受ける形で利益率が改善する。</p>
+                    <p><strong>効果：</strong>売上が変わらなくても利益率が大幅に改善する。原材料価格下落は一時的だが、内製化などの構造改善は持続性が高い。</p>
                   </div>
-                  <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 border-l-4 border-yellow-500 p-4 rounded">
-                    <h4 className="font-semibold mb-2">③販管費の削減</h4>
-                    <p>広告効率化、オペレーション自動化、間接部門のスリム化</p>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-3">③販管費が下がる</h4>
+                    <p className="mb-4">広告費削減、効率化、固定費の削減などで販管費が下がる。</p>
+                    <p><strong>効果：</strong>売上が変わらなくても営業利益が大幅に改善する。</p>
                   </div>
                 </div>
 
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>限界利益率とは？</strong></p>
+                  <p className="mb-3"><strong>限界利益率 = (売上 - 変動費) ÷ 売上</strong></p>
+                  <p>限界利益率が高いほど、売上が伸びたときに利益が急激に増えます。ソフトウェア業界は限界利益率が非常に高く（80%以上）、売上が2倍になれば利益は3倍、4倍になることもあります。</p>
+                </div>
+
                 <h3 className="text-2xl font-semibold mb-4 mt-8">競争優位性の源泉</h3>
-                <p className="mb-4">長期的に高い収益を維持できる企業は、何らかの「モート（堀）」を持っています。</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white border-2 border-indigo-300 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3 text-indigo-700">ブランド力</h4>
-                    <p>AppleApple、コカ・コーラなど、消費者の心に強く刻まれた企業は価格決定力を持つ。</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">コスト優位性</h4>
+                    <p>他社よりも安く作れる。量産効果、内製化、技術力など。</p>
                   </div>
-                  <div className="bg-white border-2 border-purple-300 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3 text-purple-700">ネットワーク効果</h4>
-                    <p>ユーザーが増えるほど価値が高まる。LINE、Facebookなどのプラットフォーム企業。</p>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">差別化</h4>
+                    <p>他社にはない独自の価値。ブランド力、技術力、ネットワーク効果など。</p>
                   </div>
-                  <div className="bg-white border-2 border-pink-300 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3 text-pink-700">コスト優位性</h4>
-                    <p>規模の経済や効率的なオペレーションで競合より低コストを実現。Amazonなど。</p>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">ニッチ戦略</h4>
+                    <p>特定の市場に集中する。大手が参入しにくい領域で独占する。</p>
                   </div>
-                  <div className="bg-white border-2 border-red-300 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold mb-3 text-red-700">スイッチングコスト</h4>
-                    <p>乗り換えコストが高く、顧客が離れにくい。SalesforceなどのBtoB SaaS。</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <h3 className="text-xl font-semibold mb-2">健全性を見る：BS・CS分析</h3>
+                  <p className="mb-3">PLで稼ぐ力を見たら、次は<strong>BS（貸借対照表）</strong>と<strong>CS（キャッシュフロー計算書）</strong>で健全性を見ます。</p>
+                  <p><strong>どれだけ儲かっていても、倒産する企業はあります。</strong><br/>借金が多すぎたり、お金が回らなくなったり、投資しすぎたり。<br/>BS・CSを見ることで、企業の「安全性」と「持続性」を判断できます。</p>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">BS・CSで見るべき指標</h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">自己資本比率（BS）</h4>
+                    <p className="mb-2"><strong>自己資本 ÷ 総資産</strong></p>
+                    <p className="mb-2">企業の財務安全性を示す指標。<br/>40%以上：安全<br/>20%以下：倒産リスク高</p>
+                    <p><strong>意味：</strong>借金に頼らず、自分の資本でどれだけ事業を回しているか。</p>
                   </div>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">流動比率（BS）</h4>
+                    <p className="mb-2"><strong>流動資産 ÷ 流動負債</strong></p>
+                    <p className="mb-2">短期的な支払能力を示す指標。<br/>150%以上：安全<br/>100%以下：資金繰りリスク</p>
+                    <p><strong>意味：</strong>1年以内に現金化できる資産が、1年以内に支払う負債を上回っているか。</p>
+                  </div>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">営業CF（CS）</h4>
+                    <p className="mb-2">本業でどれだけ現金を稼いだか。</p>
+                    <p className="mb-2">プラス：本業で現金を稼いでいる<br/>マイナス：本業で現金が流出している</p>
+                    <p><strong>重要：</strong>PLで黒字でも営業CFがマイナスなら危険。売掛金の回収遅延や在庫増加が原因。</p>
+                  </div>
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold mb-2">フリーCF（CS）</h4>
+                    <p className="mb-2"><strong>営業CF - 投資CF</strong></p>
+                    <p className="mb-2">企業が自由に使える現金。</p>
+                    <p><strong>意味：</strong>フリーCFがプラスなら、配当や自社株買い、借金返済に使える。マイナスなら借入や増資が必要。</p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6 mt-8">
+                  <p className="mb-2"><strong>財務3表が繋がっている例</strong></p>
+                  <p className="mb-3">例：ある企業が1億円の利益を出した（PL）。</p>
+                  <ul className="list-disc pl-6 mb-3 space-y-1">
+                    <li>PLの純利益1億円が、BSの純資産に加算される。</li>
+                    <li>しかし、売掛金が増えて現金化されていないと、CSの営業CFはマイナスになることもある。</li>
+                    <li>つまり、「利益は出ているが、手元に現金がない」状態。</li>
+                  </ul>
+                  <p>このように、3つの財務諸表を一体で見ることで、企業の本当の姿が見えてきます。</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <span className="section-label label-column">補足</span>
+                  <h3 className="text-xl font-semibold mb-3 mt-2">減価償却：3表の繋がりを最もよく示す概念</h3>
+                  <p className="mb-3"><strong>減価償却とは？</strong><br/>建物や機械などの固定資産は、時間とともに価値が減っていきます。<br/>その価値の減少分を、毎年費用として計上する会計処理が「減価償却」です。</p>
+                  <p className="mb-3"><strong>例：</strong>1億円の機械を買って、10年で償却する場合、<br/>毎年1000万円ずつ減価償却費として費用計上します。</p>
+                  <p className="mb-2 mt-4"><strong>なぜ一気に費用計上しないのか？</strong></p>
+                  <p className="mb-3">もし1億円の機械を買った年に全額費用計上すると、その年だけPLが大赤字になり、翌年以降は費用ゼロになります。<br/>しかし実際には、その機械は10年間使い続けて利益を生み出します。</p>
+                  <p className="mb-2"><strong>会計の基本原則：費用と収益の対応</strong></p>
+                  <p className="mb-3">機械が10年間で生み出す収益に対応させて、費用も10年間で分散させる。<br/>これにより、<strong>毎年のPLが企業の実態を正しく反映</strong>します。<br/>もし一気に費用計上してしまうと、投資家が企業の本当の収益力を判断できなくなるため、減価償却という仕組みが存在します。</p>
+                </div>
+
+                <h3 className="text-2xl font-semibold mb-4">減価償却が財務3表に与える影響</h3>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">PL（損益計算書）</h4>
+                    <p className="mb-2"><strong>費用として計上される</strong></p>
+                    <p className="mb-2">減価償却費1000万円が費用として引かれ、営業利益が減る。<br/>しかし、<strong>実際にお金が出ていくわけではない</strong>。<br/>（お金が出たのは機械を買った時）</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">BS（貸借対照表）</h4>
+                    <p className="mb-2"><strong>固定資産の簿価が減少する</strong></p>
+                    <p className="mb-2">機械の帳簿上の価値が毎年1000万円ずつ減っていく。<br/>1年目：9000万円<br/>2年目：8000万円<br/>10年目：0円</p>
+                  </div>
+
+                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                    <h4 className="text-lg font-semibold mb-2">CS（キャッシュフロー計算書）</h4>
+                    <p className="mb-2"><strong>営業CFに戻される</strong></p>
+                    <p className="mb-2">減価償却費は「費用だが現金が出ていない」ので、営業CFの計算では利益に加算し直す。<br/><strong>純利益 + 減価償却費 = 営業CF（簡易版）</strong></p>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                  <p className="mb-2"><strong>なぜ減価償却を理解すべきなのか？</strong></p>
+                  <p className="mb-3">減価償却費が大きい企業（製造業、インフラ企業など）は、<strong>PLの利益が少なく見えても、実際のキャッシュ創出力は高い</strong>ことがあります。</p>
+                  <p className="mb-2"><strong>具体例：</strong></p>
+                  <ul className="list-disc pl-6 mb-3 space-y-1">
+                    <li>PL：営業利益1億円、減価償却費5000万円</li>
+                    <li>CS：営業CF = 1億円 + 5000万円 = 1億5000万円</li>
+                  </ul>
+                  <p className="mb-3">→ 利益は1億円だが、<strong>実際に手元に残るお金は1億5000万円</strong>。<br/>この差を理解していないと、「利益が少ないから割安」と勘違いすることがある。</p>
+                  <p><strong>逆に：</strong>減価償却費が少ないソフトウェア企業などは、PLの利益とCSの営業CFがほぼ一致します。</p>
+                </div>
+
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+                  <h3 className="text-xl font-semibold mb-3">IR取材：企業の生の声を聞く</h3>
+                  <p className="mb-3">財務諸表だけでは見えない企業の戦略や経営者の考えを、IR取材を通じて直接聞くことができます。</p>
+                  <p className="mb-3">IR担当者や経営者と対話することで、<strong>決算書には載っていない「なぜ？」</strong>を深掘りできます。</p>
+                  <p className="mb-2"><strong>参考資料：</strong></p>
+                  <p><a href="https://docs.google.com/presentation/d/1-ZZLOIIIFzPXjef9XRPO4dRPoHXyKlQWWEjRriNk2B0/edit?slide=id.g1f04479e724_0_0#slide=id.g1f04479e724_0_0" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">IR取材の手法と質問例（Googleスライド）</a></p>
                 </div>
 
                 {/* 参考書籍 */}
                 <div className="mt-12">
                   <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
+                    { image: '/images/books/zaimu3.png', description: '財務諸表の基礎', priority: 1 },
+                    { image: '/images/books/IMG_1269.JPG', description: '決算書の読み方', priority: 1 },
+                    { image: '/images/books/IMG_1271.JPG', description: '実践的な分析手法', priority: 2 },
+                    { image: '/images/books/IMG_1272.JPG', description: '業界別の分析', priority: 2 },
                     { image: '/images/books/IMG_1274.JPG', description: 'ビジネスモデル理解', priority: 3 },
                     { image: '/images/books/IMG_1289.JPG', description: '収益構造の分析', priority: 3 },
                     { image: '/images/books/book_new1.png', description: '応用編①', priority: 3 },
@@ -806,6 +949,9 @@ export default function EducationPage() {
                     { id: 'YiSy4Bjpo0Q', title: 'リアルゲイト岩本社長を直撃！増資は？配当は？リアルゲイト株は今後どうなるのか！？', duration: '01:02:41' },
                     { id: 'A8F6q0CJNQI', title: '【そもそも解説】増資とは何なのか？なぜ株価が下がりがちなのか？　語ります', duration: '00:31:58' },
                     { id: 'bLIrCEzvwnU', title: 'イケてる企業は決算説明を見れば分かります。〜INFORICHとクックパッドを事例に解説', duration: '00:26:01' },
+                    { id: 'eaqMFmtDsbU', title: '【株散歩】イケてる銘柄を街中から探せ！！', duration: '00:17:51' },
+                    { id: 'XHKGXsLi8u0', title: 'ラーメン銘柄「山岡家」を株ど素人カメラマンが推してるので、現地調査してみた。', duration: '00:22:07' },
+                    { id: 'xlR4tWmN3iU', title: '65万を200億にした伝説の投資家 片山晃（五月）さんに投資哲学と田端の活動への意見を聞いてみました。', duration: '00:14:35' },
                   ]} />
                 </div>
               </Accordion>
