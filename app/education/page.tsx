@@ -82,7 +82,7 @@ export default function EducationPage() {
                 </div>
 
                 <p className="mb-4"><strong>配当：今後生み出される利益</strong></p>
-                <p className="mb-6">株を保有していれば、その会社が今後生み出す純利益を配当という形で受け取ることができます。株を保有し続ける限り、その会社が存在する限り、配当が出続けると考えることができます。</p>
+                <p className="mb-6">株を保有していれば、その会社が今後生み出す純利益を<span className="glossary-term" data-definition="企業が利益の一部を株主に分配するお金。年1〜2回支払われることが多いです。">配当</span>という形で受け取ることができます。株を保有し続ける限り、その会社が存在する限り、配当が出続けると考えることができます。</p>
 
                 <p className="mb-2"><strong>株価とは何か？</strong></p>
                 <p className="mb-6"><span className="glossary-term" data-definition="株式市場で取引される株式1株あたりの価格。需要と供給で決まります。">株価</span>とは、<strong>今後その会社が生み出す利益の現在価値</strong>です。今後生み出す利益が増えそうだと判断されれば株価は上がり、そうでない場合は株価は下がります。</p>
@@ -168,15 +168,15 @@ export default function EducationPage() {
 
                 <h3 className="text-2xl font-semibold mb-4">STEP1: 外部環境の分析 ー 良い土壌を選ぶ</h3>
                 <p className="mb-6"><strong>目的：</strong>順張りで良い環境を選ぶ<br/>
-                市場全体が伸びていく中で、その市場で伸びていく企業は基本的にその流れに乗ることができます。そのため、基本的には<strong>良い環境の上場企業を選びたい</strong>です。市場規模、成長率、5フォース（競争環境）などを調査し、企業が成長できる土壌があるかを見極めます。</p>
+                市場全体が伸びていく中で、その市場で伸びていく企業は基本的にその流れに乗ることができます。そのため、基本的には<strong>良い環境の上場企業を選びたい</strong>です。市場規模、成長率、<span className="glossary-term" data-definition="業界の競争環境を5つの要素で分析するフレームワーク。新規参入の脅威、代替品の脅威、買い手の交渉力、売り手の交渉力、既存競合の強さを評価します。">5フォース</span>（競争環境）などを調査し、企業が成長できる土壌があるかを見極めます。</p>
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8">STEP2: スクリーニング ー 悪い企業を省く</h3>
                 <p className="mb-6"><strong>目的：</strong>財務指標で機械的に絞り込む<br/>
-                4000社の中から良い企業を見つけたいのですが、逆に<strong>悪い企業をスクリーニングすることで省く</strong>ことができます。スクリーニングとは、様々な株価指標（PER、PBR、ROEなど）を見ていくことです。</p>
+                4000社の中から良い企業を見つけたいのですが、逆に<strong>悪い企業をスクリーニングすることで省く</strong>ことができます。<span className="glossary-term" data-definition="大量のデータから特定の条件に合う対象を抽出すること。投資では財務指標や成長率などの条件で銘柄を絞り込みます。">スクリーニング</span>とは、様々な株価指標（PER、PBR、ROEなど）を見ていくことです。</p>
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8">STEP3: 内部環境の分析 ー 企業の本質を見抜く</h3>
                 <p className="mb-6"><strong>目的：</strong>ビジネスモデルと収益構造を深掘りする<br/>
-                企業のビジネスモデルを見ていきます。上流、競合、下流といった形で、<strong>一体誰からお金をもらって誰に売っているのか</strong>というビジネスモデルをしっかり理解することが重要です。</p>
+                企業の<span className="glossary-term" data-definition="企業がどのように価値を生み出し、顧客に提供し、収益を得るかの仕組み。誰に・何を・どうやって売るかの全体像です。">ビジネスモデル</span>を見ていきます。上流、競合、下流といった形で、<strong>一体誰からお金をもらって誰に売っているのか</strong>というビジネスモデルをしっかり理解することが重要です。</p>
 
                 <p className="mb-6"><strong>収益構造を深く分析する</strong><br/>
                 次に、収益構造を深く分析します。例えば、この会社が成長していくとなったとしても、売上が成長していくのか、それとも売上原価が下がったり、販管費が下がっていくのか、という点です。純利益は株価に非常にダイレクトに影響しますが、その純利益が<strong>何がきっかけで、どの収益構造が変わって伸びるのか</strong>を見ていきたいです。</p>
@@ -186,7 +186,7 @@ export default function EducationPage() {
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8">STEP4: イベントドリブン ー タイミングを見極める</h3>
                 <p className="mb-6"><strong>目的：</strong>短期的な株価変動の機会を捉える<br/>
-                企業の特定のイベントを契機とした投資機会を捉えます。M&A、TOB、MBO、粉飾決算の見極め、政治イベント、金利動向など、様々なイベントドリブンな要素を見ていくことが重要です。</p>
+                企業の特定のイベントを契機とした投資機会を捉えます。<span className="glossary-term" data-definition="企業の合併（Merger）と買収（Acquisition）。企業が成長戦略として他社を統合・買収すること。">M&A</span>、TOB、MBO、粉飾決算の見極め、政治イベント、金利動向など、様々なイベントドリブンな要素を見ていくことが重要です。</p>
               </Accordion>
             </section>
 
