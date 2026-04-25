@@ -1182,8 +1182,8 @@ export default function EducationPage() {
             <section id="movies" className="mt-16 mb-16">
               <Accordion title="おすすめの映画" defaultOpen={false}>
                 <p className="mb-6">企業分析やビジネスの理解を深めるために、実際の事例を描いた映画を観ることもおすすめです。<br/>エンターテイメントとして楽しみながら、投資家の視点やビジネスの裏側を学べます。</p>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {[1, 2, 3, 4, 5].map((num) => (
+                <div className="grid grid-cols-2 md:grid-cols-7 gap-4">
+                  {[1, 2, 3, 4, 5, 6, 7].map((num) => (
                     <div key={num} className="relative aspect-[2/3] bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                       <img
                         src={`${basePath}/images/movie${num}.png`}
@@ -1197,20 +1197,6 @@ export default function EducationPage() {
                       />
                     </div>
                   ))}
-                </div>
-                <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="bg-white rounded-lg p-6 shadow-md">
-                    <h3 className="font-bold text-lg mb-2">マネー・ショート</h3>
-                    <p className="text-sm text-gray-600">2008年金融危機の裏側を描く実話ベースの傑作</p>
-                  </div>
-                  <div className="bg-white rounded-lg p-6 shadow-md">
-                    <h3 className="font-bold text-lg mb-2">ウルフ・オブ・ウォールストリート</h3>
-                    <p className="text-sm text-gray-600">株式ブローカーの栄華と転落を描いた衝撃作</p>
-                  </div>
-                  <div className="bg-white rounded-lg p-6 shadow-md">
-                    <h3 className="font-bold text-lg mb-2">マージン・コール</h3>
-                    <p className="text-sm text-gray-600">金融危機直前の投資銀行の24時間を描くリアルな作品</p>
-                  </div>
                 </div>
               </Accordion>
             </section>
