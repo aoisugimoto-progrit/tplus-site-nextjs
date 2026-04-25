@@ -56,7 +56,28 @@ export default function HomePage() {
               { title: 'Grow', desc: '組織と共に進化し、\n持続的な価値を生み出せ' }
             ].map((item, i) => (
               <ScrollFade key={i} delay={100 * (i + 1)}>
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
+                <div
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20"
+                  style={{
+                    transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+                    transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
+                  }}
+                  onMouseMove={(e) => {
+                    const card = e.currentTarget;
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+                  }}
+                  onMouseLeave={(e) => {
+                    const card = e.currentTarget;
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+                  }}
+                >
                   <h3 className="text-3xl font-bold text-white mb-4">{item.title}</h3>
                   <p className="text-white/70 whitespace-pre-line leading-relaxed text-lg">{item.desc}</p>
                 </div>
