@@ -22,8 +22,7 @@ export default function AboutSeminarPage() {
 
       <Sidebar
         items={sidebarItems}
-        isOpen={sidebarOpen}
-        onToggle={() => setSidebarOpen(!sidebarOpen)}
+        onToggle={setSidebarOpen}
       />
 
       <div className="transition-all duration-300" style={{ marginLeft: sidebarOpen ? '260px' : '0' }}>
