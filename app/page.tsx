@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import ScrollFade from '@/components/ui/ScrollFade';
