@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import ScrollFade from '@/components/ui/ScrollFade';
@@ -7,6 +8,10 @@ import ScrollFade from '@/components/ui/ScrollFade';
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function HomePage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Header />

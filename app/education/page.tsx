@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Sidebar from '@/components/layout/Sidebar';
 import Accordion from '@/components/ui/Accordion';
@@ -15,6 +15,10 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function EducationPage() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const sidebarItems = [
     { title: 'トップ', id: 'hero' },
