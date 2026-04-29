@@ -1,9 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export default function proxy(request: NextRequest) {
   const basicAuth = request.headers.get('authorization');
-  const url = request.nextUrl;
 
   // 環境変数からパスワードを取得（Vercelで設定）
   const validPassword = process.env.PASSWORD || 'defaultpassword';
@@ -18,13 +17,11 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  url.pathname = '/api/auth';
-
-  return NextResponse.rewrite(url, {
+  return new NextResponse('Authentication required', {
+    status: 401,
     headers: {
       'WWW-Authenticate': 'Basic realm="Secure Area"',
     },
-    status: 401,
   });
 }
 
