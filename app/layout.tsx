@@ -1,9 +1,17 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "瀧本ゼミ企業分析パート T＋",
   description: "瀧本ゼミにおける新入生教育の総称。投資の原理原則、業界研究、学習ロードマップを学べます。",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#2D5F4C",
+  colorScheme: "light",
 };
 
 export default function RootLayout({

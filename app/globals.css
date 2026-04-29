@@ -68,8 +68,41 @@
     color: #1F2937;
     background: linear-gradient(135deg, rgba(230, 240, 245, 1) 0%, rgba(215, 230, 240, 1) 100%);
     line-height: 1.8;
-    overflow-x: hidden;
+    overflow-x: clip;
     font-weight: 400;
+    font-size: 16px;
+  }
+
+  html[lang="ja"] {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+  }
+
+  @supports (word-break: auto-phrase) {
+    html[lang="ja"] p,
+    html[lang="ja"] li,
+    html[lang="ja"] dd,
+    html[lang="ja"] h1,
+    html[lang="ja"] h2,
+    html[lang="ja"] h3,
+    html[lang="ja"] h4,
+    html[lang="ja"] h5 {
+      word-break: auto-phrase;
+    }
+  }
+
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* iOS auto-zoom 回避: form 要素は最低 16px */
+  input, textarea, select {
+    font-size: max(16px, 1rem);
   }
 
   h1 {
@@ -340,10 +373,11 @@
     font-size: 13px;
   }
 
-  @media (max-width: 900px) {
+  /* Tablet: 17列のままだとつぶれるので横スクロール許容、文字サイズだけ縮小 */
+  @media (max-width: 1024px) and (min-width: 769px) {
     .insight-matrix-v4 {
       padding: 20px;
-      grid-template-columns: 60px repeat(17, 1fr);
+      grid-template-columns: 60px repeat(17, minmax(48px, 1fr));
       gap: 8px;
     }
 
@@ -368,6 +402,7 @@
     }
   }
 
+  /* Mobile: 17列グリッドを諦めて縦書きを解除 → カードリストに切替 */
   @media (max-width: 768px) {
     .quiz-container {
       grid-template-columns: 1fr;
@@ -386,33 +421,53 @@
       padding: 12px 30px;
       font-size: 14px;
     }
-  }
 
-  @media (max-width: 600px) {
     .insight-matrix-v4 {
-      grid-template-columns: 50px repeat(17, 1fr);
-      gap: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
       padding: 16px;
+      overflow-x: visible;
     }
 
-    .mx-cell {
-      padding: 10px 4px;
-      font-size: 10px;
+    .insight-matrix-v4 .mx-empty {
+      display: none;
     }
 
-    .mx-col-header,
+    .mx-row-header,
+    .mx-col-header {
+      writing-mode: horizontal-tb;
+      text-orientation: mixed;
+      font-size: 14px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-align: left;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
     .mx-row-header {
-      font-size: 10px;
+      margin-top: 8px;
     }
 
-    .mx-number {
-      min-width: 20px;
-      height: 20px;
-      font-size: 9px;
+    .mx-item {
+      writing-mode: horizontal-tb;
+      text-orientation: mixed;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      padding: 14px 16px;
+      text-align: left;
     }
 
     .mx-title {
-      font-size: 9px;
+      font-size: 14px;
+      flex: 1;
+    }
+
+    .mx-number {
+      flex-shrink: 0;
     }
   }
 

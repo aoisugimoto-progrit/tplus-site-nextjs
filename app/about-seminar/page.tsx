@@ -25,44 +25,44 @@ export default function AboutSeminarPage() {
         onToggle={setSidebarOpen}
       />
 
-      <div className="transition-all duration-300" style={{ marginLeft: sidebarOpen ? '260px' : '0' }}>
+      <div className={`transition-all duration-300 ${sidebarOpen ? 'md:ml-[260px]' : 'ml-0'}`}>
         <div className="pt-[70px]">
           {/* ページヒーロー */}
           <section
             id="hero"
-            className="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+            className="relative h-[260px] sm:h-[320px] md:h-[400px] bg-cover bg-center flex items-center justify-center"
             style={{ backgroundImage: `url('${basePath}/hero-bg.jpg')` }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)]"></div>
-            <h1 className="relative z-10 text-6xl font-bold text-white">Founder</h1>
+            <h1 className="relative z-10 text-4xl sm:text-5xl md:text-6xl font-bold text-white">Founder</h1>
           </section>
 
-          <div className="max-w-5xl mx-auto px-8 py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-16">
             {/* 瀧本先生について */}
-            <section id="takimoto" className="mb-16">
-              <div className="flex flex-col md:flex-row gap-8">
+            <section id="takimoto" className="mb-12 md:mb-16">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8">
                 {/* 左側：画像 */}
                 <div className="md:w-1/3">
                   <div className="mb-6">
                     <img
                       src={`${basePath}/takimoto.png`}
                       alt="瀧本哲史先生"
-                      className="w-full rounded-lg shadow-lg"
+                      className="w-full h-auto rounded-lg shadow-lg"
                     />
                   </div>
                   <div className="grid grid-cols-3 gap-2">
-                    <img src={`${basePath}/images/books/takimoto_weapon.png`} alt="僕は君たちに武器を配りたい" className="w-full rounded shadow" />
-                    <img src={`${basePath}/images/books/takimoto_friends.png`} alt="君に友達はいらない" className="w-full rounded shadow" />
-                    <img src={`${basePath}/images/books/takimoto_2020.png`} alt="2020年6月30日にまたここで会おう" className="w-full rounded shadow" />
+                    <img src={`${basePath}/images/books/takimoto_weapon.png`} alt="僕は君たちに武器を配りたい" className="w-full h-auto rounded shadow" />
+                    <img src={`${basePath}/images/books/takimoto_friends.png`} alt="君に友達はいらない" className="w-full h-auto rounded shadow" />
+                    <img src={`${basePath}/images/books/takimoto_2020.png`} alt="2020年6月30日にまたここで会おう" className="w-full h-auto rounded shadow" />
                   </div>
                 </div>
 
                 {/* 右側：プロフィール */}
                 <div className="md:w-2/3">
-                  <h2 className="text-4xl font-bold text-[#1E4535] mb-2">瀧本 哲史</h2>
-                  <p className="text-xl text-gray-600 mb-1">Tetsufumi Takimoto</p>
-                  <p className="text-lg text-gray-500 mb-6">創設者</p>
-                  <div className="space-y-4 text-lg leading-relaxed">
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#1E4535] mb-2">瀧本 哲史</h2>
+                  <p className="text-lg md:text-xl text-gray-600 mb-1">Tetsufumi Takimoto</p>
+                  <p className="text-base md:text-lg text-gray-500 mb-6">創設者</p>
+                  <div className="space-y-4 text-base md:text-lg leading-relaxed">
                     <p>東京大学法学部卒業後、マッキンゼー・アンド・カンパニーでコンサルタントとして活躍。</p>
                     <p>その後、独立してエンジェル投資家として数々のベンチャー企業を支援。2007年より京都大学客員准教授として教鞭をとり、瀧本ゼミを主宰。</p>
                     <p>「自分の頭で考え、決断し、行動する」ことの重要性を説き続け、次世代のリーダー育成に情熱を注いだ。</p>
@@ -73,17 +73,17 @@ export default function AboutSeminarPage() {
             </section>
 
             {/* Only Outliers Can Outperform */}
-            <section id="outliers" className="mb-16">
-              <h2 className="text-4xl font-bold mb-8 text-[#1E4535]">Only Outliers Can Outperform</h2>
+            <section id="outliers" className="mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-[#1E4535]">Only Outliers Can Outperform</h2>
 
-              <h3 className="text-2xl font-semibold mb-4">Tゼミは何のための組織なのか？</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">Tゼミは何のための組織なのか？</h3>
 
-              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-4 md:p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-3">ゼミの存在目的</h3>
                 <p className="text-lg">Tゼミ生とTゼミ関係者の有機的つながり「Tゼミマフィア」をつくり、社会変革を成し遂げる</p>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4 mt-8">Step1：企業分析を通じて「武器」を獲得する</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">Step1：企業分析を通じて「武器」を獲得する</h3>
               <p className="mb-6 text-lg">T＋では、企業分析を通じて<br/>社会で戦うための「武器」を身につけます。</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -105,7 +105,7 @@ export default function AboutSeminarPage() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4 mt-8">Step2：現役生、卒業生問わずゼミ生同士がつながる</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">Step2：現役生、卒業生問わずゼミ生同士がつながる</h3>
               <p className="mb-6 text-lg">T＋では、普段から<br/>横、縦、斜めのつながりが生まれるようにしています。</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -127,7 +127,7 @@ export default function AboutSeminarPage() {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4 mt-8">Tゼミは今からが一番面白い</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">Tゼミは今からが一番面白い</h3>
               <p className="mb-4">OB・OGの活躍例：</p>
               <ul className="list-disc pl-6 space-y-2 mb-8">
                 <li>AR企業経営 → Forbes under 30選出（政策1.0期尾）</li>
@@ -151,16 +151,16 @@ export default function AboutSeminarPage() {
             </section>
 
             {/* ゼミの沿革 */}
-            <section id="history" className="mb-16">
-              <h2 className="text-4xl font-bold mb-8 text-[#1E4535]">ゼミの沿革</h2>
+            <section id="history" className="mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-[#1E4535]">ゼミの沿革</h2>
               <p className="text-lg mb-8">瀧本ゼミ企業分析パート（T＋）は、<br/>2012年から始まった約13年の歴史を持つ組織です。</p>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-3">創立期：混沌からのスタート（2012年）</h3>
                 <p>すべては、駒場図書館の狭い一室から始まった。<br/>見よう見まねで始めたゼミは、初日から大炎上。<br/>しかし、その混沌こそが、のちの瀧本ゼミの原型となる。</p>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">2012年</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">2012年</h3>
 
               <h4 className="text-xl font-semibold mb-3">2012年夏：京都大学への訪問</h4>
               <p className="mb-4">ある先輩に誘われて京都大学の瀧本ゼミを見学。<br/>瀧本先生の話すスピードは人の10倍で、<br/>最初は何を言っているのか全く聞き取れなかった。</p>
@@ -178,17 +178,17 @@ export default function AboutSeminarPage() {
               <p className="mb-4">最初は友達を連れてくる形で参加者を集めていたが、<br/>どんどん辞めていき5人程度に。</p>
               <p className="mb-8">「ちゃんと組織として人を入れて、<br/>育成してゼミを運営しませんか？」という提案から、<br/>正式に組織としての運営が始まった。</p>
 
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-3">瀧本先生の言葉</h3>
                 <p>「僕はあと10年で日本が変わることに賭けたい。変えられるのはそう、あなたたちのような若い人です。優秀な若い人材が集まる場所はありませんか。秘密結社を作って日本を変えましょう。」</p>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-3">成長期：理想に現実を追いつかせる（2013年～2014年）</h3>
                 <p>「優れた教育システムがあります！」と言い切った。<br/>実態は何もないハリボテだった。<br/>しかし、その大風呂敷こそが、組織を急成長させる原動力となった。</p>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">2013年～2014年</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">2013年～2014年</h3>
 
               <h4 className="text-xl font-semibold mb-3">2013年1～2月：1.5期生募集</h4>
               <p className="mb-4">4月の新歓に向けて、急遽メンバーを募集。<br/>Twitterで募集をかけ、<br/>瀧本さんについてつぶやいている人にDMを送るなどして集めた。</p>
@@ -199,12 +199,12 @@ export default function AboutSeminarPage() {
               <p className="mb-4">「優れた教育システムと優れた組織と<br/>優れた議論の仕組みがあります！」と言っていたが、<br/>実態は何もないハリボテ状態。</p>
               <p className="mb-8">理想や構想に現実を追いつかせるのに必死だった。</p>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-3">確立期：唯一無二の文化が生まれる（2013年～2015年）</h3>
                 <p>炎上、多様性、そして『君に友達はいらない』。<br/>混沌の中から生まれた独自の文化が、<br/>瀧本ゼミを他のどの組織とも違う存在にした。</p>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">瀧本ゼミの特徴的な文化</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">瀧本ゼミの特徴的な文化</h3>
 
               <h4 className="text-xl font-semibold mb-3">「炎上文化」</h4>
               <p className="mb-4">瀧本ゼミでは、企業を一社選んで<br/>その会社が買いか売りかをプレゼンする。</p>
@@ -219,17 +219,17 @@ export default function AboutSeminarPage() {
               <p className="mb-4">瀧本先生の著書『君に友達はいらない』は、<br/>実は初代代表をモデルに書かれた。</p>
               <p className="mb-8">大学1年生が自分より年上の人たちと一緒に<br/>最高のゼミを作るという難しい命題に挑戦する姿を見て、<br/>同じような境遇にある人が同じ苦労をしないよう、<br/>最高の組織を作るための方法論を伝えようと書かれた。</p>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-3">転換期：自灯明（2015年～2019年）</h3>
                 <p>2015年、瀧本先生から一通のメッセージが届いた。<br/>「覚悟のある人だけ残ってください」<br/>その言葉は、ゼミ生に自立を迫るものだった。</p>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">2015年～2019年</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">2015年～2019年</h3>
 
               <h4 className="text-xl font-semibold mb-3">2015年：「自灯明」のメッセージ</h4>
               <p className="mb-8">瀧本先生から病気についてのメッセージが一部のゼミ生に送られた。</p>
 
-              <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-8">
                 <p className="mb-3"><strong>瀧本先生からのメッセージ：</strong></p>
                 <p>「瀧本ゼミという組織は、私がいずれいなくなることを織り込まれた組織であり、皆さんが主体的に自分の頭で考えて動かなければ、そもそも動かない組織です。本当に覚悟のある人だけ残ってください。自分の頭で考えられない人は、今すぐやめてもらって構わないです」</p>
               </div>
@@ -237,7 +237,7 @@ export default function AboutSeminarPage() {
               <p className="mb-4">「自灯明（じとうみょう）」とは、<br/>お釈迦様が入滅の際に弟子に伝えた言葉。</p>
               <p className="mb-8">「誰かの言葉や教えに左右されることなく、<br/>これまで積み重ねてきた行いを信じ、<br/>自らの心に従い正しい教えを拠りどころとして、<br/>この先も精進していきなさい」という教え。</p>
 
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-8">
                 <h3 className="text-xl font-semibold mb-3">現在：次の10年へ（2019年～）</h3>
                 <p>瀧本先生が蒔いた種は、いま芽を出し始めている。<br/>それぞれの分野で活躍するOB・OGたち。<br/>そして、新しい仲間とともに歩み続ける現役生たち。<br/>瀧本ゼミの物語は、まだ続いている。</p>
               </div>
