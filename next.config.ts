@@ -1,8 +1,13 @@
 import type { NextConfig } from "next";
 
+// Vercelかどうかを判定
+const isVercel = process.env.VERCEL === '1';
+
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: '/tplus-site-nextjs',
+  // Vercelでは動的ビルド、GitHub Pagesでは静的エクスポート
+  output: isVercel ? undefined : 'export',
+  // VercelではbasePathなし、GitHub Pagesでは/tplus-site-nextjs
+  basePath: isVercel ? '' : '/tplus-site-nextjs',
   images: {
     unoptimized: true,
   },
