@@ -169,6 +169,7 @@ export default function EducationPage() {
                     { id: 'nA3NVxG28vQ', title: '好決算でも株価が下がるワケ', duration: '00:31:27' },
                     { id: 'ydPKNjSldR4', title: 'グロース株とバリュー株どっちを買うべき？それぞれのメリット・デメリットを解説します。', duration: '00:15:08' },
                     { id: 'sb3v8Ytdmng', title: 'スマホで2億円を稼いだ天才ママに「チャート分析」を徹底解説してもらいました。', duration: '00:33:06' },
+                    { id: 'pr8cPsYQLL4', title: '株式投資１年目に知っておきたかったこと', duration: '00:00:00' },
                   ]} />
                 </div>
               </Accordion>
@@ -272,6 +273,7 @@ export default function EducationPage() {
 
                   <VideoGrid videos={[
                     { id: 'jmlpCcqkh5A', title: '日銀: ハト派vsタカ派の意味を理解できない人はダメ投資家です！', duration: '00:16:23' },
+                    { id: 'YrWrSXIqXW8', title: '【お金の勉強】イマサラ聞けない！日銀ってどういう機関？政策金利と物価の関係性を徹底解説', duration: '00:00:00' },
                   ]} />
                 </div>
               </Accordion>
@@ -730,6 +732,7 @@ export default function EducationPage() {
                     { id: '9CoLaONOEyE', title: '【東証が注意】PBR低い株は、なぜダメか？理由を解説します。', duration: '00:29:14' },
                     { id: 'TkQPQzEhP1g', title: '超絶わかる！ROEの解説です', duration: '00:44:11' },
                     { id: 'aV9cGgu6W2g', title: '【株仙人の道】資産250億円の片山晃が教えるPER活用の極意', duration: '00:45:51' },
+                    { id: 'duYE2o6ZJMo', title: '株価が上がらない！信用買い残が原因かも【信用買い残・信用売り残とは？影響を解説】', duration: '00:00:00' },
                   ]} />
                 </div>
               </Accordion>
@@ -965,6 +968,7 @@ export default function EducationPage() {
                     { id: 'eaqMFmtDsbU', title: '【株散歩】イケてる銘柄を街中から探せ！！', duration: '00:17:51' },
                     { id: 'XHKGXsLi8u0', title: 'ラーメン銘柄「山岡家」を株ど素人カメラマンが推してるので、現地調査してみた。', duration: '00:22:07' },
                     { id: 'xlR4tWmN3iU', title: '65万を200億にした伝説の投資家 片山晃（五月）さんに投資哲学と田端の活動への意見を聞いてみました。', duration: '00:14:35' },
+                    { id: 'r8rx8aB-4dg', title: '【失敗談】3営業日で「全資産」失った《250億円投資家・五月》', duration: '00:00:00' },
                   ]} />
                 </div>
               </Accordion>
@@ -1064,6 +1068,8 @@ export default function EducationPage() {
                     { id: '_j04D4zhYYk', title: 'オリオンビールIPOの闇を暴く！初値が爆上がりするのは良いことか？', duration: '00:23:36' },
                     { id: 'inp-bEFX4Ks', title: '100%外す最強の「逆神」投資家！岐阜さん登場で株クラについて激論しました。', duration: '00:37:52' },
                     { id: 'yL2qE8bpqUY', title: 'Kaihou井村氏の「和製バークシャー宣言」で分かってない奴が多すぎる。', duration: '00:40:13' },
+                    { id: 'DB2m2DxYeys', title: '【株で大損】危険すぎる「仕手株」とは？【株初心者講座】', duration: '00:00:00' },
+                    { id: '084JsBANg9k', title: '【不正会計】オルツの売上水増し計上がいくらなんでもヤバすぎる。不正会計の全容と教訓を徹底解説！', duration: '00:00:00' },
                   ]} />
                 </div>
               </Accordion>
