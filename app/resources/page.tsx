@@ -13,24 +13,10 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 /* ---------- データ定義 ---------- */
 
-interface Book {
-  title: string;
-  author: string;
-  description: string;
-  point: string;
-}
-
 interface Website {
   title: string;
   url: string;
   description: string;
-}
-
-interface YouTubeChannel {
-  name: string;
-  url: string;
-  description: string;
-  feature: string;
 }
 
 interface XAccount {
@@ -39,22 +25,6 @@ interface XAccount {
   url: string;
   description: string;
 }
-
-/* ---------- 参考書籍 ---------- */
-const books: Book[] = [
-  { title: '株式投資の未来', author: 'ジェレミー・シーゲル', description: '過去200年の株式データを基に、配当再投資戦略の有効性を実証した長期投資のバイブル。', point: '長期投資の原理原則を学びたい人に最適' },
-  { title: 'ウォール街のランダム・ウォーカー', author: 'バートン・マルキール', description: '効率的市場仮説を軸に、インデックス投資の有効性を説く古典的名著。', point: '個人投資家が取るべき戦略の全体像が掴める' },
-  { title: '敗者のゲーム', author: 'チャールズ・エリス', description: '「市場に勝とうとするな」というメッセージを、データと論理で伝える良書。', point: '投資で大切なマインドセットが身につく' },
-  { title: '賢明なる投資家', author: 'ベンジャミン・グレアム', description: 'バリュー投資の父による不朽の名著。「安全域」の概念を提唱し、投資の原理原則を説く。', point: 'バフェットの師匠による投資哲学の原点' },
-  { title: 'バフェットの銘柄選択術', author: 'メアリー・バフェット', description: 'ウォーレン・バフェットの投資手法を具体的な銘柄選定プロセスとして解説。', point: '実践的なバリュー投資の方法論が学べる' },
-  { title: 'ピーター・リンチの株で勝つ', author: 'ピーター・リンチ', description: '伝説的ファンドマネージャーが、個人投資家の強みを活かした投資法を伝授。', point: '身近な生活から銘柄を見つける視点が得られる' },
-  { title: '企業価値評価（上・下）', author: 'マッキンゼー・アンド・カンパニー', description: 'DCF法を中心としたバリュエーションの教科書。プロの投資家が参照する定番テキスト。', point: '本格的な企業価値算定を学びたい人向け' },
-  { title: '財務諸表分析', author: 'K. G. パレプ 他', description: '財務諸表を使って企業の実態を読み解く手法を体系的に学べるMBAの定番テキスト。', point: 'アカデミックかつ実践的な分析フレームワーク' },
-  { title: '会計クイズを解くだけで財務3表がわかる 世界一楽しい決算書の読み方', author: '大手町のランダムウォーカー', description: 'クイズ形式で財務3表の読み方を学べる入門書。初心者でも楽しみながら理解できる。', point: '財務諸表の入門に最適。ゼミ生の最初の1冊' },
-  { title: '金利を見れば投資はうまくいく', author: '堀井正孝', description: '金利と株式市場の関係を分かりやすく解説。マクロ経済の視点から投資判断を行う方法。', point: '金利と株価の関係を直感的に理解できる' },
-  { title: 'マーケットの魔術師', author: 'ジャック・D・シュワッガー', description: 'トップトレーダーたちへのインタビュー集。多様な投資スタイルと共通する成功法則。', point: '成功する投資家に共通するマインドセットが学べる' },
-  { title: '世界一やさしい米国経済の教科書', author: '田内学', description: '米国経済の仕組みを初心者向けに解説。FRBの金融政策や経済指標の読み方が学べる。', point: '米国経済を理解するための最初の一歩' },
-];
 
 /* ---------- おすすめWEBサイト ---------- */
 const websites: Website[] = [
@@ -70,22 +40,6 @@ const websites: Website[] = [
   { title: 'マネックス銘柄スカウター', url: 'https://info.monex.co.jp/news/2019/20190212_01.html', description: '10年以上の財務データをグラフで確認できる。セグメント分析にも強い。マネックス証券の口座開設で無料。' },
   { title: 'Investopedia', url: 'https://www.investopedia.com/', description: '英語の投資用語辞典・学習サイト。金融知識の国際標準を学べる。英語に抵抗がなければ最高の学習リソース。' },
   { title: '投資の森', url: 'https://nikkeiyosoku.com/', description: '日経平均予想や経済指標カレンダーなど、マーケット情報を分かりやすくまとめたサイト。' },
-];
-
-/* ---------- YouTube動画 ---------- */
-const youtubeChannels: YouTubeChannel[] = [
-  { name: '両学長 リベラルアーツ大学', url: 'https://www.youtube.com/@ryogakucho', description: '「お金の大学」著者。投資の基礎から節約術、副業まで幅広くカバー。初心者に最も分かりやすいチャンネルの一つ。', feature: '初心者向け・網羅的' },
-  { name: '中田敦彦のYouTube大学', url: 'https://www.youtube.com/@NKTofficial', description: '書籍の解説が中心。経済・投資関連の本を分かりやすくプレゼン形式で紹介。エンタメ性が高く入門に最適。', feature: '書籍解説・エンタメ性' },
-  { name: '高橋ダン', url: 'https://www.youtube.com/@DanTakahashi', description: 'ウォール街出身の投資家。グローバルなマクロ経済分析と具体的な投資戦略を解説。英語圏の情報も取り入れている。', feature: 'グローバル視点・マクロ分析' },
-  { name: 'バフェット太郎', url: 'https://www.youtube.com/@buffett_taro', description: '米国株投資の情報発信。高配当株やETFを中心とした長期投資戦略を解説。初心者にも分かりやすい語り口。', feature: '米国株・高配当投資' },
-  { name: 'BANK ACADEMY / 小林亮平', url: 'https://www.youtube.com/@bankacademy', description: 'つみたてNISAやiDeCoなど、制度活用を中心に解説。投資初心者が最初に見るべきチャンネルとして人気。', feature: 'NISA・iDeCo・制度解説' },
-  { name: '株の買い時を考えるチャンネル', url: 'https://www.youtube.com/@kabunokaidoki', description: '個別銘柄の分析やスクリーニング手法を丁寧に解説。ファンダメンタルズ分析の実践的な学びが得られる。', feature: '個別銘柄分析・スクリーニング' },
-  { name: 'つばめ投資顧問', url: 'https://www.youtube.com/@tsubame1045', description: '元証券アナリストが企業分析の手法を本格的に解説。プロの視点からバリュー投資を学べる。', feature: 'プロの企業分析・バリュー投資' },
-  { name: 'Zeppy投資ちゃんねる', url: 'https://www.youtube.com/@zeppy_investment', description: '井村俊哉氏が主宰。IR取材や企業分析のリアルを発信。実際の投資プロセスを追体験できる。', feature: 'IR取材・実践的企業分析' },
-  { name: 'PIVOT', url: 'https://www.youtube.com/@pivot', description: 'ビジネスパーソン向けの経済メディア。著名な経営者や投資家のインタビューが豊富。マクロ経済やビジネストレンドの理解に。', feature: '経営者インタビュー・ビジネストレンド' },
-  { name: 'Money Sense College', url: 'https://www.youtube.com/@MoneySenseCollege', description: '投資信託やインデックス投資を中心に、資産形成の王道を解説。データに基づいた冷静な分析が特徴。', feature: 'インデックス投資・資産形成' },
-  { name: 'グローバルファイナンシャルスクール（GFS）', url: 'https://www.youtube.com/@glofinschool', description: '投資スクールが運営するチャンネル。体系的に投資知識を学べる講義形式の動画が多い。', feature: '体系的な投資教育' },
-  { name: 'Ray Dalio（レイ・ダリオ）', url: 'https://www.youtube.com/@principlesbyraydalio', description: '世界最大級のヘッジファンド、ブリッジウォーター創業者。「経済のしくみ」は必見の名作動画。', feature: 'マクロ経済の本質・世界的投資家' },
 ];
 
 /* ---------- Xユーザー ---------- */
@@ -267,45 +221,18 @@ export default function ResourcesPage() {
               <ScrollFade>
                 <Accordion title="参考書籍" defaultOpen={true}>
                   <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
-                    投資の理論と実践を体系的に学べる書籍を厳選しました。まずは気になる1冊から手に取ってみてください。
+                    教育コンテンツ（Education）ページの各セクションで紹介されている参考書籍です。<br />
+                    星の数（★★★ &gt; ★★☆ &gt; ★☆☆）は優先度を表しています。
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    {books.map((book, i) => (
-                      <div
-                        key={i}
-                        className="bg-white border-2 border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                      >
-                        <h4 className="text-lg font-semibold mb-1 text-gray-900">{book.title}</h4>
-                        <p className="text-sm text-gray-500 mb-2">{book.author}</p>
-                        <p className="text-gray-700 leading-relaxed text-sm md:text-base mb-3">{book.description}</p>
-                        <div className="flex items-start gap-2">
-                          <span className="inline-block text-xs font-semibold bg-gradient-to-r from-[#0A5046] to-[#1E4535] text-white px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">
-                            おすすめ
-                          </span>
-                          <p className="text-sm text-[#0A5046] font-medium">{book.point}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* 教育コンテンツ掲載書籍 */}
-                  <div className="mt-10 pt-8 border-t-2 border-gray-200">
-                    <h3 className="text-xl font-bold mb-4 text-[#0A5046]">教育コンテンツ掲載書籍</h3>
-                    <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
-                      教育コンテンツ（Education）ページの各セクションで紹介されている参考書籍です。<br />
-                      星の数（★★★ &gt; ★★☆ &gt; ★☆☆）は優先度を表しています。
-                    </p>
-
-                    {Object.entries(educationBooks).map(([key, { section, books: sectionBooks }]) => (
-                      <div key={key} className="mb-10">
-                        <h4 className="text-lg font-semibold mb-3 text-[#0A5046] border-b-2 border-[#0A5046]/20 pb-2">
-                          {section}
-                        </h4>
-                        <BookGrid books={sectionBooks} />
-                      </div>
-                    ))}
-                  </div>
+                  {Object.entries(educationBooks).map(([key, { section, books: sectionBooks }]) => (
+                    <div key={key} className="mb-10">
+                      <h4 className="text-lg font-semibold mb-3 text-[#0A5046] border-b-2 border-[#0A5046]/20 pb-2">
+                        {section}
+                      </h4>
+                      <BookGrid books={sectionBooks} />
+                    </div>
+                  ))}
                 </Accordion>
               </ScrollFade>
             </section>
@@ -344,52 +271,18 @@ export default function ResourcesPage() {
               <ScrollFade delay={200}>
                 <Accordion title="YouTube動画" defaultOpen={false}>
                   <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
-                    投資学習に役立つYouTubeチャンネルを厳選しました。通学中や空き時間にぜひ。
+                    教育コンテンツ（Education）ページの各セクションで紹介されている個別のYouTube動画です。<br />
+                    各セクションの内容をより深く理解するために活用してください。
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                    {youtubeChannels.map((channel, i) => (
-                      <a
-                        key={i}
-                        href={channel.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block bg-white border-2 border-gray-200 rounded-xl p-5 md:p-6 hover:shadow-lg hover:-translate-y-1 hover:border-red-400/30 transition-all duration-300 group"
-                      >
-                        <div className="flex items-start justify-between gap-2">
-                          <div className="flex items-center gap-2">
-                            <span className="text-red-500 text-xl flex-shrink-0">&#9654;</span>
-                            <h4 className="text-lg font-semibold text-gray-900 group-hover:text-red-600 transition-colors">{channel.name}</h4>
-                          </div>
-                          <span className="text-gray-400 flex-shrink-0 text-sm mt-1">&#8599;</span>
-                        </div>
-                        <p className="text-gray-700 leading-relaxed mt-3 text-sm md:text-base">{channel.description}</p>
-                        <div className="mt-3">
-                          <span className="inline-block text-xs font-semibold bg-red-50 text-red-600 border border-red-200 px-3 py-1 rounded-full">
-                            {channel.feature}
-                          </span>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
-
-                  {/* 教育コンテンツ掲載動画 */}
-                  <div className="mt-10 pt-8 border-t-2 border-gray-200">
-                    <h3 className="text-xl font-bold mb-4 text-red-600">教育コンテンツ掲載動画</h3>
-                    <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
-                      教育コンテンツ（Education）ページの各セクションで紹介されている個別のYouTube動画です。<br />
-                      各セクションの内容をより深く理解するために活用してください。
-                    </p>
-
-                    {Object.entries(educationVideos).map(([key, { section, videos }]) => (
-                      <div key={key} className="mb-10">
-                        <h4 className="text-lg font-semibold mb-3 text-red-600 border-b-2 border-red-200 pb-2">
-                          {section}
-                        </h4>
-                        <VideoGrid videos={videos} />
-                      </div>
-                    ))}
-                  </div>
+                  {Object.entries(educationVideos).map(([key, { section, videos }]) => (
+                    <div key={key} className="mb-10">
+                      <h4 className="text-lg font-semibold mb-3 text-red-600 border-b-2 border-red-200 pb-2">
+                        {section}
+                      </h4>
+                      <VideoGrid videos={videos} />
+                    </div>
+                  ))}
                 </Accordion>
               </ScrollFade>
             </section>
