@@ -230,10 +230,8 @@ export default function ResourcesPage() {
   const sidebarItems = [
     { title: 'トップ', id: 'hero' },
     { title: '参考書籍', id: 'books' },
-    { title: '教育コンテンツ掲載書籍', id: 'education-books' },
     { title: 'おすすめWEBサイト', id: 'websites' },
     { title: 'YouTube動画', id: 'youtube' },
-    { title: '教育コンテンツ掲載動画', id: 'education-videos' },
     { title: 'Xユーザー', id: 'x-accounts' },
   ];
 
@@ -264,7 +262,7 @@ export default function ResourcesPage() {
               </p>
             </ScrollFade>
 
-            {/* ===== 参考書籍 ===== */}
+            {/* ===== 参考書籍（統合版） ===== */}
             <section id="books">
               <ScrollFade>
                 <Accordion title="参考書籍" defaultOpen={true}>
@@ -290,27 +288,24 @@ export default function ResourcesPage() {
                       </div>
                     ))}
                   </div>
-                </Accordion>
-              </ScrollFade>
-            </section>
 
-            {/* ===== 教育コンテンツ掲載書籍 ===== */}
-            <section id="education-books">
-              <ScrollFade delay={50}>
-                <Accordion title="教育コンテンツ掲載書籍" defaultOpen={false}>
-                  <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
-                    教育コンテンツ（Education）ページの各セクションで紹介されている参考書籍です。<br />
-                    星の数（★★★ &gt; ★★☆ &gt; ★☆☆）は優先度を表しています。
-                  </p>
+                  {/* 教育コンテンツ掲載書籍 */}
+                  <div className="mt-10 pt-8 border-t-2 border-gray-200">
+                    <h3 className="text-xl font-bold mb-4 text-[#0A5046]">教育コンテンツ掲載書籍</h3>
+                    <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
+                      教育コンテンツ（Education）ページの各セクションで紹介されている参考書籍です。<br />
+                      星の数（★★★ &gt; ★★☆ &gt; ★☆☆）は優先度を表しています。
+                    </p>
 
-                  {Object.entries(educationBooks).map(([key, { section, books: sectionBooks }]) => (
-                    <div key={key} className="mb-10">
-                      <h4 className="text-lg font-semibold mb-3 text-[#0A5046] border-b-2 border-[#0A5046]/20 pb-2">
-                        {section}
-                      </h4>
-                      <BookGrid books={sectionBooks} />
-                    </div>
-                  ))}
+                    {Object.entries(educationBooks).map(([key, { section, books: sectionBooks }]) => (
+                      <div key={key} className="mb-10">
+                        <h4 className="text-lg font-semibold mb-3 text-[#0A5046] border-b-2 border-[#0A5046]/20 pb-2">
+                          {section}
+                        </h4>
+                        <BookGrid books={sectionBooks} />
+                      </div>
+                    ))}
+                  </div>
                 </Accordion>
               </ScrollFade>
             </section>
@@ -344,7 +339,7 @@ export default function ResourcesPage() {
               </ScrollFade>
             </section>
 
-            {/* ===== YouTube動画 ===== */}
+            {/* ===== YouTube動画（統合版） ===== */}
             <section id="youtube">
               <ScrollFade delay={200}>
                 <Accordion title="YouTube動画" defaultOpen={false}>
@@ -377,27 +372,24 @@ export default function ResourcesPage() {
                       </a>
                     ))}
                   </div>
-                </Accordion>
-              </ScrollFade>
-            </section>
 
-            {/* ===== 教育コンテンツ掲載動画 ===== */}
-            <section id="education-videos">
-              <ScrollFade delay={250}>
-                <Accordion title="教育コンテンツ掲載動画" defaultOpen={false}>
-                  <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
-                    教育コンテンツ（Education）ページの各セクションで紹介されている個別のYouTube動画です。<br />
-                    各セクションの内容をより深く理解するために活用してください。
-                  </p>
+                  {/* 教育コンテンツ掲載動画 */}
+                  <div className="mt-10 pt-8 border-t-2 border-gray-200">
+                    <h3 className="text-xl font-bold mb-4 text-red-600">教育コンテンツ掲載動画</h3>
+                    <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
+                      教育コンテンツ（Education）ページの各セクションで紹介されている個別のYouTube動画です。<br />
+                      各セクションの内容をより深く理解するために活用してください。
+                    </p>
 
-                  {Object.entries(educationVideos).map(([key, { section, videos }]) => (
-                    <div key={key} className="mb-10">
-                      <h4 className="text-lg font-semibold mb-3 text-red-600 border-b-2 border-red-200 pb-2">
-                        {section}
-                      </h4>
-                      <VideoGrid videos={videos} />
-                    </div>
-                  ))}
+                    {Object.entries(educationVideos).map(([key, { section, videos }]) => (
+                      <div key={key} className="mb-10">
+                        <h4 className="text-lg font-semibold mb-3 text-red-600 border-b-2 border-red-200 pb-2">
+                          {section}
+                        </h4>
+                        <VideoGrid videos={videos} />
+                      </div>
+                    ))}
+                  </div>
                 </Accordion>
               </ScrollFade>
             </section>
