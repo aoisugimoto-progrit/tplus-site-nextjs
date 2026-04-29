@@ -8,7 +8,7 @@ interface AccordionProps {
   defaultOpen?: boolean;
 }
 
-export default function Accordion({ title, children, defaultOpen = true }: AccordionProps) {
+export default function Accordion({ title, children, defaultOpen = false }: AccordionProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
   const [height, setHeight] = useState<number | undefined>(defaultOpen ? undefined : 0);
   const contentRef = useRef<HTMLDivElement>(null);
