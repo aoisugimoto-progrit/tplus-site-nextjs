@@ -210,10 +210,10 @@
 
   @keyframes pulse {
     0%, 100% {
-      box-shadow: 0 4px 16px rgba(45, 95, 76, 0.08);
+      box-shadow: 0 4px 12px rgba(45, 95, 76, 0.06);
     }
     50% {
-      box-shadow: 0 6px 20px rgba(45, 95, 76, 0.15);
+      box-shadow: 0 5px 14px rgba(45, 95, 76, 0.1);
     }
   }
 
@@ -267,8 +267,8 @@
   }
 
   .quiz-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(10, 60, 55, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(10, 60, 55, 0.12);
     border-color: rgba(10, 80, 70, 0.4);
   }
 
@@ -300,8 +300,8 @@
   }
 
   .quiz-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(45, 95, 76, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 12px rgba(45, 95, 76, 0.25);
     background: linear-gradient(135deg, rgba(58, 122, 95, 1) 0%, rgba(74, 155, 119, 1) 100%);
   }
 
@@ -379,8 +379,8 @@
   }
 
   .mx-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(234, 179, 8, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(234, 179, 8, 0.15);
     border-color: #f59e0b;
   }
 
@@ -574,8 +574,8 @@
   }
 
   .hover-lift:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
   /* ボーダーのスムーズな変化 */
@@ -666,7 +666,7 @@
   }
 
   .tab.active {
-    transform: translateY(-2px);
+    transform: translateY(-1px);
   }
 
   /* モーダルの表示 */
@@ -928,7 +928,7 @@
   }
 
   .card-3d:hover {
-    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(20px);
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg) translateZ(5px);
   }
 
   /* ネオンエフェクト */

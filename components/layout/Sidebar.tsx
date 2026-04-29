@@ -97,7 +97,7 @@ export default function Sidebar({ items, onToggle }: SidebarProps) {
         aria-expanded={isOpen}
         aria-controls="site-sidebar"
         aria-label={isOpen ? '目次を閉じる' : '目次を開く'}
-        className={`fixed top-[max(env(safe-area-inset-top),12px)] z-[1101] inline-flex items-center justify-center w-11 h-11 rounded-md border text-white transition-all duration-300 hover:scale-105 ${
+        className={`fixed top-[max(env(safe-area-inset-top),12px)] z-[1101] inline-flex items-center justify-center w-11 h-11 rounded-md border text-white transition-all duration-300 hover:scale-[1.02] ${
           isOpen
             ? 'left-3 md:left-[220px] bg-white/10 border-white/30 hover:bg-white/20'
             : 'left-3 bg-[#0A5046]/95 border-[#0A5046] shadow-lg hover:bg-[#0A5046]'

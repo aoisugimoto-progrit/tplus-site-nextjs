@@ -21,13 +21,13 @@ export default function VideoGrid({ videos }: VideoGridProps) {
           href={`https://www.youtube.com/watch?v=${video.id}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative block bg-white rounded-lg shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300 overflow-hidden no-underline hover-lift scale-hover"
+          className="relative block bg-white rounded-lg shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 overflow-hidden no-underline"
         >
           <div className="relative">
             <img
               src={`${BASE_PATH}/images/tabata-videos/${video.id}.jpg`}
               alt={video.title}
-              className="w-full h-auto block transition-transform duration-300 hover:scale-105"
+              className="w-full h-auto block transition-transform duration-300 hover:scale-[1.02]"
             />
             {/* YouTube icon - red background */}
             <div className="absolute top-2 left-2 w-7 h-5 bg-red-600 rounded z-10"></div>

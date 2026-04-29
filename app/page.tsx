@@ -64,7 +64,7 @@ export default function HomePage() {
             ].map((item, i) => (
               <ScrollFade key={i} delay={100 * (i + 1)}>
                 <div
-                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 text-center transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 text-center transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10"
                   style={{
                     transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
                     transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
@@ -76,9 +76,9 @@ export default function HomePage() {
                     const y = e.clientY - rect.top;
                     const centerX = rect.width / 2;
                     const centerY = rect.height / 2;
-                    const rotateX = (y - centerY) / 10;
-                    const rotateY = (centerX - x) / 10;
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+                    const rotateX = (y - centerY) / 25;
+                    const rotateY = (centerX - x) / 25;
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
                   }}
                   onMouseLeave={(e) => {
                     const card = e.currentTarget;
@@ -119,7 +119,7 @@ export default function HomePage() {
               { title: '活動予定', desc: '年間スケジュール、イベント、新歓情報', href: '/schedule' }
             ].map((card, i) => (
               <ScrollFade key={i} delay={100 * (i + 1) + 400}>
-                <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 hover:from-white/10 hover:to-white/15 hover:-translate-y-2 transition-all duration-300">
+                <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 hover:from-white/10 hover:to-white/15 hover:-translate-y-1 transition-all duration-300">
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{card.title}</h3>
                   <p className="text-white/70 mb-6 leading-relaxed text-base md:text-lg">{card.desc}</p>
                   <Link href={card.href} className="inline-flex items-center gap-2 min-h-11 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300 text-base md:text-lg">

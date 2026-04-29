@@ -37,13 +37,13 @@ export default function BookGrid({ books }: BookGridProps) {
           <img
             src={`${BASE_PATH}${book.image}`}
             alt={book.description}
-            className="w-full h-auto rounded shadow-md transition-all duration-500 group-hover:shadow-2xl"
+            className="w-full h-auto rounded shadow-md transition-all duration-500 group-hover:shadow-lg"
             style={{
               transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)',
               transformStyle: 'preserve-3d'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-20px) translateZ(50px) rotateX(5deg) scale(1.1)';
+              e.currentTarget.style.transform = 'translateY(-4px) translateZ(5px) rotateX(1deg) scale(1.02)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'translateY(0) translateZ(0) rotateX(0deg) scale(1)';

@@ -37,7 +37,7 @@ export default function Accordion({ title, children, defaultOpen = false }: Acco
   }, [isOpen]);
 
   return (
-    <section className="mb-8 md:mb-10 border-[3px] border-[rgba(10,80,70,0.25)] rounded-2xl md:rounded-[20px] overflow-hidden bg-gradient-to-br from-white/98 to-[#FAFCFF] shadow-lg hover:shadow-xl hover:border-[rgba(10,80,70,0.4)] transition-all duration-300">
+    <section className="mb-8 md:mb-10 border-[3px] border-[rgba(10,80,70,0.25)] rounded-2xl md:rounded-[20px] overflow-hidden bg-gradient-to-br from-white/98 to-[#FAFCFF] shadow-lg hover:shadow-lg hover:border-[rgba(10,80,70,0.35)] transition-all duration-300">
       <button
         className="w-full border-none border-b-2 border-[rgba(10,80,70,0.15)] text-left cursor-pointer px-4 sm:px-6 md:px-9 py-5 md:py-8 bg-gradient-to-br from-white/98 to-[#FAFCFF] hover:from-[#FAFCFF] hover:to-[#F5F8FC] transition-all duration-300 flex items-center justify-between gap-3 sm:gap-5 min-h-14"
         onClick={() => setIsOpen(!isOpen)}

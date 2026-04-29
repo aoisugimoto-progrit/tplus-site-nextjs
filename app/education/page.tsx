@@ -133,14 +133,14 @@ export default function EducationPage() {
                 <p className="mb-6">株価を予想する手法は大きく2つに分かれます。<strong>どちらも重要であり、ヘッジファンドは両方を見ています</strong>。</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="card-with-icon card-icon-chart card-pulse relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-lg transition-all duration-300">
+                  <div className="card-with-icon card-icon-chart card-pulse relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-md transition-all duration-300">
                     <h4 className="text-lg font-semibold mb-3">①ファンダメンタルズ分析</h4>
                     <p className="mb-2"><strong>会社の未来を予想していくもの</strong></p>
                     <p className="mb-2">どのような未来を描くかがファンダメンタルズです。企業の財務状況、ビジネスモデル、市場環境などを分析して本質的な価値を見極める手法。</p>
                     <p className="mb-2"><strong>例：</strong>「この会社の新製品は市場を席巻するだろう」「この業界は今後10年伸びる」といった未来予測。</p>
                     <p><strong>T＋ではこちらを主に扱います。</strong></p>
                   </div>
-                  <div className="card-with-icon card-icon-trend card-pulse relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-lg transition-all duration-300">
+                  <div className="card-with-icon card-icon-trend card-pulse relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-md transition-all duration-300">
                     <h4 className="text-lg font-semibold mb-3">②テクニカル分析</h4>
                     <p className="mb-2"><strong>数値的な確率論に基づくもの</strong></p>
                     <p className="mb-2">過去の株価や出来高の動きから将来の株価を予測する手法。チャートのパターンや指標を使って売買タイミングを判断する。</p>
@@ -216,19 +216,19 @@ export default function EducationPage() {
 
                 <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">マクロトレンドの例</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover-lift scale-hover smooth-border">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300 smooth-border">
                     <h4 className="text-lg font-semibold mb-3">国策による成長</h4>
                     <p><strong>例：</strong>政府が「再生可能エネルギー推進」を掲げた場合、太陽光発電関連企業が一気に成長する可能性があります。</p>
                   </div>
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover-lift scale-hover smooth-border">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300 smooth-border">
                     <h4 className="text-lg font-semibold mb-3">技術革新</h4>
                     <p><strong>例：</strong>AI技術の発展により、関連する半導体企業やクラウドサービス企業が成長しています。</p>
                   </div>
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover-lift scale-hover smooth-border">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300 smooth-border">
                     <h4 className="text-lg font-semibold mb-3">人口動態の変化</h4>
                     <p><strong>例：</strong>高齢化社会が進むことで、介護関連企業や医療機器メーカーの需要が増加します。</p>
                   </div>
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover-lift scale-hover smooth-border">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-all duration-300 smooth-border">
                     <h4 className="text-lg font-semibold mb-3">グローバル化</h4>
                     <p><strong>例：</strong>新興国の経済成長により、そこに進出する企業や物流企業が恩恵を受けます。</p>
                   </div>
@@ -902,19 +902,19 @@ export default function EducationPage() {
                 <h3 className="text-xl md:text-2xl font-semibold mb-4">減価償却が財務3表に与える影響</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">PL（損益計算書）</h4>
                     <p className="mb-2"><strong>費用として計上される</strong></p>
                     <p className="mb-2">減価償却費1000万円が費用として引かれ、営業利益が減る。<br/>しかし、<strong>実際にお金が出ていくわけではない</strong>。<br/>（お金が出たのは機械を買った時）</p>
                   </div>
 
-                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">BS（貸借対照表）</h4>
                     <p className="mb-2"><strong>固定資産の簿価が減少する</strong></p>
                     <p className="mb-2">機械の帳簿上の価値が毎年1000万円ずつ減っていく。<br/>1年目：9000万円<br/>2年目：8000万円<br/>10年目：0円</p>
                   </div>
 
-                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">CS（キャッシュフロー計算書）</h4>
                     <p className="mb-2"><strong>営業CFに戻される</strong></p>
                     <p className="mb-2">減価償却費は「費用だが現金が出ていない」ので、営業CFの計算では利益に加算し直す。<br/><strong>純利益 + 減価償却費 = 営業CF（簡易版）</strong></p>
@@ -983,49 +983,49 @@ export default function EducationPage() {
                 <h3 className="text-xl md:text-2xl font-semibold mb-4">主なイベントの種類</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">M&A（合併・買収）</h4>
                     <p className="mb-2">企業が他社を買収すると、買収される側の株価は急騰することが多い。買収する側の株価は下がることも。</p>
                     <p><strong>例：</strong>A社がB社を買収すると発表。B社の株価は買収価格に向かって上昇する。</p>
                   </div>
 
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">TOB（株式公開買付）</h4>
                     <p className="mb-2">特定の価格で株を買い取るオファー。TOB価格は通常、市場価格より高く設定される。</p>
                     <p><strong>例：</strong>1株1000円の株に対し、1株1200円でTOBが発表されると、株価は1200円に向かって上昇。</p>
                   </div>
 
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">MBO（経営陣による買収）</h4>
                     <p className="mb-2">経営陣が自社の株を買い取って非上場化する。株主にプレミアムが支払われる。</p>
                     <p><strong>例：</strong>創業者が「会社を非上場にしたい」と考え、株主から株を買い取る。</p>
                   </div>
 
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">株式分割</h4>
                     <p className="mb-2">1株を複数株に分割することで、株価が下がり流動性が向上。個人投資家が買いやすくなる。</p>
                     <p><strong>例：</strong>1株10,000円の株を1:10に分割すると、1株1,000円になり買いやすくなる。分割発表後に株価が上昇することも。</p>
                   </div>
 
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">増配・減配</h4>
                     <p className="mb-2">配当金の増額は好材料、減額は悪材料として株価に影響する。</p>
                     <p><strong>例：</strong>配当を年間100円から150円に増やすと発表すると、配当目当ての投資家が買いを入れ株価が上昇。逆に減配発表は売りを誘う。</p>
                   </div>
 
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">指数組入</h4>
                     <p className="mb-2">日経平均やTOPIXなどの指数に新たに組み入れられると、インデックスファンドの買いが入り株価が上昇。</p>
                     <p><strong>例：</strong>東証プライム市場に昇格した企業がTOPIXに組み入れられると、機械的な買いが発生する。</p>
                   </div>
 
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">親子上場解消</h4>
                     <p className="mb-2">親会社が子会社株を完全取得して非上場化。子会社株主にプレミアムが支払われる。</p>
                     <p><strong>例：</strong>トヨタが子会社のダイハツを完全子会社化すると発表。ダイハツ株主には市場価格より高い価格で株を買い取る提案がなされる。</p>
                   </div>
 
-                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
+                  <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-md transition-all">
                     <h4 className="text-lg font-semibold mb-2">株主提案</h4>
                     <p className="mb-2">株主が経営陣に対して提案を行う。配当増額や自社株買い、経営陣の交代などが含まれる。</p>
                     <p><strong>例：</strong>アクティビスト（物言う株主）が「配当性向を50%に引き上げよ」と提案し、実現すれば株価が上昇する。</p>
@@ -1195,7 +1195,7 @@ export default function EducationPage() {
                     { num: '⑱', title: '特殊技術', desc: '独自の技術で競合優位を確立' },
                     { num: '⑲', title: '徹底的な仕組み化', desc: '業務プロセスの標準化で利益率向上' },
                   ].map((item, i) => (
-                    <div key={i} className="bg-white border-2 border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-300 hover-lift scale-hover smooth-border slide-up">
+                    <div key={i} className="bg-white border-2 border-gray-200 rounded-xl p-4 hover:shadow-md transition-all duration-300 smooth-border slide-up">
                       <div className="flex items-start gap-3">
                         <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-full flex items-center justify-center font-bold text-sm">
                           {item.num}
@@ -1226,7 +1226,7 @@ export default function EducationPage() {
 
                 <h4 className="text-xl font-semibold mb-4">取引の流れ</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                     <div className="text-center mb-4">
                       <div className="inline-block bg-blue-100 text-blue-800 px-6 py-3 rounded-full font-bold text-lg">STEP 1</div>
                     </div>
@@ -1234,7 +1234,7 @@ export default function EducationPage() {
                     <p className="text-gray-600">証券会社から株を借りて、現在の価格（例：1000円）で売却する</p>
                   </div>
 
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                     <div className="text-center mb-4">
                       <div className="inline-block bg-green-100 text-green-800 px-6 py-3 rounded-full font-bold text-lg">STEP 2</div>
                     </div>
@@ -1242,7 +1242,7 @@ export default function EducationPage() {
                     <p className="text-gray-600">予想通り株価が下がる（例：1000円 → 800円）</p>
                   </div>
 
-                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                  <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                     <div className="text-center mb-4">
                       <div className="inline-block bg-purple-100 text-purple-800 px-6 py-3 rounded-full font-bold text-lg">STEP 3</div>
                     </div>
@@ -1369,7 +1369,7 @@ export default function EducationPage() {
                         transform: translateY(0);
                       }
                       50% {
-                        transform: translateY(-10px);
+                        transform: translateY(-4px);
                       }
                     }
                     @keyframes pulse {
@@ -1379,7 +1379,7 @@ export default function EducationPage() {
                       }
                       50% {
                         opacity: 1;
-                        transform: translate(-50%, -50%) scale(1.2);
+                        transform: translate(-50%, -50%) scale(1.1);
                       }
                     }
                   `}</style>
@@ -1533,7 +1533,7 @@ export default function EducationPage() {
                 <p className="mb-6">企業分析やビジネスの理解を深めるために、実際の事例を描いた映画を観ることもおすすめです。<br/>エンターテイメントとして楽しみながら、投資家の視点やビジネスの裏側を学べます。</p>
                 <div className="grid grid-cols-2 md:grid-cols-7 gap-4">
                   {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-                    <div key={num} className="relative aspect-[2/3] bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                    <div key={num} className="relative aspect-[2/3] bg-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-md transition-shadow">
                       <img
                         src={`${basePath}/images/movie${num}.png`}
                         alt={`映画${num}`}

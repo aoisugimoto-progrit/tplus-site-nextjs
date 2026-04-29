@@ -87,19 +87,19 @@ export default function AboutSeminarPage() {
               <p className="mb-6 text-lg">T＋では、企業分析を通じて<br/>社会で戦うための「武器」を身につけます。</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">分解脳</h4>
                   <p>複雑な問題を構造的に理解し、本質を見抜く力</p>
                 </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">現実の理不尽さ・他者視点</h4>
                   <p>世の中の仕組みを理解し、多様な立場から物事を考える力</p>
                 </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">良い市場・美味しいポジション・良い事業を見分ける洞察力</h4>
                   <p>ビジネスチャンスを見極める目を養う</p>
                 </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">独特な思考・行動</h4>
                   <p>他者と差別化された自分だけの視点と行動力</p>
                 </div>
@@ -109,19 +109,19 @@ export default function AboutSeminarPage() {
               <p className="mb-6 text-lg">T＋では、普段から<br/>横、縦、斜めのつながりが生まれるようにしています。</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">①各々は、専門業界をもつ</h4>
                   <p>Tゼミと専門業界のハブとなる</p>
                 </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">②取り組むべき目的を発見</h4>
                   <p>社会課題やビジネスチャンスを見つける</p>
                 </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">③専門性を跨いだチームをつくる</h4>
                   <p>目的のもとに異なる専門性を持つメンバーが集まる</p>
                 </div>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-2">④目的達成後は解散、新チームへ</h4>
                   <p>柔軟にチームを組み替え、次の挑戦へ</p>
                 </div>

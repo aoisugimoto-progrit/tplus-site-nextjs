@@ -139,7 +139,7 @@ export default function SchedulePage() {
               <p className="mb-6 md:mb-8 text-base md:text-lg">卒業要件を「卓越卒業」と「スタンダード卒業」の2段階にわけ、現役生が自由に卒業ハードルを設定できます。</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-xl font-semibold mb-3">卓越卒業要件</h4>
                   <p className="mb-3">以下のいずれかを満たす：</p>
                   <ul className="list-disc pl-6 space-y-2">
@@ -148,7 +148,7 @@ export default function SchedulePage() {
                   </ul>
                 </div>
 
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-xl font-semibold mb-3">スタンダード卒業要件</h4>
                   <p className="mb-3">2回のファイヤー回避発表の後に、1回の卓越発表を行い、2年間在籍する</p>
                   <p className="italic text-gray-600">ゼミ以外の活動も両立し、ネットワークのハブ人材を目指す人向け</p>
@@ -175,17 +175,17 @@ export default function SchedulePage() {
               <h3 className="text-xl md:text-2xl font-semibold mb-4">その他柔軟な対応</h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-3">ファイヤー回避繰越し制度</h4>
                   <p>同じセメスターに2回以上のファイヤー回避発表をした場合は、次回セメスターのファイヤー回避をしなくても良い。</p>
                 </div>
 
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-3">ファイヤー期限延長制度</h4>
                   <p>ゼミ以外の活動の繁忙期とファイヤー期限がかぶっており、ファイヤー期限までの発表が難しい場合は、城田と代表に延長理由を申請すれば最大3か月のファイヤー期限延長を認める。</p>
                 </div>
 
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                   <h4 className="text-lg font-semibold mb-3">復活発表</h4>
                   <p className="mb-3">1回以上回避してファイヤーされたゼミ生は、卓越発表をもってきた場合にゼミに復帰できます。</p>
                   <ul className="list-disc pl-6 space-y-2">
