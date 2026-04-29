@@ -59,26 +59,26 @@ export default function EducationPage() {
       <GlossaryTooltip />
       <CompletionPopup />
 
-      <div className="transition-all duration-300" style={{ marginLeft: sidebarOpen ? '260px' : '0' }}>
+      <div className={`transition-all duration-300 ${sidebarOpen ? 'md:ml-[260px]' : 'ml-0'}`}>
         <div className="pt-[70px]">
           {/* ページヒーロー */}
           <section
             id="hero"
-            className="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+            className="relative h-[260px] sm:h-[320px] md:h-[400px] bg-cover bg-center flex items-center justify-center"
             style={{ backgroundImage: `url('${basePath}/hero-bg.jpg')` }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)]"></div>
-            <h1 className="relative z-10 text-6xl font-bold text-white">Education</h1>
+            <h1 className="relative z-10 text-4xl sm:text-5xl md:text-6xl font-bold text-white">Education</h1>
           </section>
 
           {/* コンテンツ */}
-          <div className="max-w-5xl mx-auto px-8 py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-16">
             <section id="basics">
               <Accordion title="株ってなに？ 読了時間 5分">
-                <h3 className="text-2xl font-semibold mb-4">① 株とは何か？ ー 所有権という本質</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">① 株とは何か？ ー 所有権という本質</h3>
                 <p className="mb-4">まず、「株」が一体何なのかを理解しましょう。<br/>株を買うということは、会社の一部を所有するということです。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
                   <h4 className="text-xl font-semibold mb-2">株式＝会社の所有権</h4>
                   <p className="mb-2"><span className="glossary-term" data-definition="会社の所有権を小口化したもの。1株を持つことは、その会社の一部を所有することを意味します。">株式</span>とは、会社の所有権を細かく分割したもの。</p>
                   <p><strong>例：</strong>トヨタの株を1株買う＝トヨタ自動車の一部を所有する</p>
@@ -87,7 +87,7 @@ export default function EducationPage() {
                 <p className="mb-4"><strong>株式の誕生：東インド会社の物語</strong></p>
                 <p className="mb-6">株式の起源は17世紀初頭のオランダ東インド会社に遡ります。当時、アジアとの貿易は莫大な利益を生む一方で、航海には難破や海賊といった巨大なリスクが伴いました。そこで生まれたのが「株式」という仕組み。複数の投資家から資金を集め、リスクを分散。航海が成功すれば利益を分配し、失敗しても損失を分散する。これが、現代の株式会社の原型です。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
                   <p className="font-semibold mb-2">補足</p>
                   <p className="mb-2"><strong>会社の利益は誰のものか？</strong></p>
                   <p>「会社の純利益は社長が受け取る」と考えている方も多いかもしれません。しかし、実際には<strong>会社の利益は株主のもの</strong>です。非上場会社であれば社長が株を100%保有していることも多いため、結果的に社長が利益を受け取ります。しかし、上場会社の場合、株主が分散しているため、利益は株主全員に分配されます。</p>
@@ -99,7 +99,7 @@ export default function EducationPage() {
                 <p className="mb-2"><strong>株価とは何か？</strong></p>
                 <p className="mb-6"><span className="glossary-term" data-definition="株式市場で取引される株式1株あたりの価格。需要と供給で決まります。">株価</span>とは、<strong>今後その会社が生み出す利益の現在価値</strong>です。今後生み出す利益が増えそうだと判断されれば株価は上がり、そうでない場合は株価は下がります。</p>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">② どうやって儲けるのか？ ー 2つの方法</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">② どうやって儲けるのか？ ー 2つの方法</h3>
                 <p className="mb-4">株の本質を理解したところで、次は「どうやって儲けるのか？」を学びましょう。</p>
                 <p className="mb-6">
                   <strong>株式投資で利益を得る2つの方法：</strong><br/>
@@ -107,17 +107,17 @@ export default function EducationPage() {
                   <strong>②インカムゲイン（配当金）</strong> - 企業が利益の一部を株主に分配する配当金による利益。
                 </p>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">③ なぜ株価は動くのか？ ー 市場との差</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">③ なぜ株価は動くのか？ ー 市場との差</h3>
                 <p className="mb-4">株価がどのように動くのかを理解することが、投資で成功する鍵です。<br/>ここが最も重要なポイントです。</p>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
                   <span className="section-label label-essence">本質</span>
                   <h4 className="text-xl font-semibold mb-2 mt-2">成長が予想されていれば、すでに織り込み済み</h4>
                   <p className="mb-2">株価がどのように上がるのか？例えば、会社が成長したとしても、その成長が以前から予想されていたものであれば、<strong>それはすでに株価に織り込まれています</strong>。</p>
                   <p><strong>具体例：</strong>新型iPhoneの発表が決まっている場合、発表日にAppleの株価は上がるでしょうか？答えはNOです。なぜなら、新型iPhoneが出ることは誰もが知っているため、すでに株価に反映されているからです。</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-l-4 border-purple-500 p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-l-4 border-purple-500 p-4 md:p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
                   <h4 className="text-xl font-semibold mb-2">市場とのギャップこそが利益</h4>
                   <p className="mb-2">要するに、<strong>市場との差が重要</strong>です。</p>
                   <p className="mb-2">「この会社は伸びるから株価が上がります」というだけでは不十分です。</p>
@@ -129,7 +129,7 @@ export default function EducationPage() {
                 <p className="mb-6"><strong>市場との差分をどう見つけるか？</strong><br/>
                 市場との差分を見つけるためには、<strong>事業を他のどの投資家よりも完全に理解し、真相にたどり着くこと</strong>が必要です。表面的な部分を見るのではなく、本当に何が重要なのかを見極めることが非常に大切になります。</p>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">株価予想の二つの手段</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">株価予想の二つの手段</h3>
                 <p className="mb-6">株価を予想する手法は大きく2つに分かれます。<strong>どちらも重要であり、ヘッジファンドは両方を見ています</strong>。</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -151,7 +151,7 @@ export default function EducationPage() {
 
                 {/* 参考書籍 */}
                 <div className="mt-12">
-                  <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
                     { image: '/images/books/IMG_1278.JPG', description: 'テクニカル分析の決定版', priority: 1 },
                     { image: '/images/books/book_new1.png', description: '株式投資の基礎', priority: 1 },
@@ -176,18 +176,18 @@ export default function EducationPage() {
 
             <section id="flow">
               <Accordion title="企業分析の流れ 読了時間 4分">
-                <h3 className="text-2xl font-semibold mb-4">なぜこの順番なのか？</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">なぜこの順番なのか？</h3>
                 <p className="mb-6">企業分析には正しい順番があります。効率的に、かつ見逃しなく投資対象を見つけるためには、<strong>外から内へ、広く浅くから狭く深く</strong>という流れが重要です。</p>
 
-                <h3 className="text-2xl font-semibold mb-4">STEP1: 外部環境の分析 ー 良い土壌を選ぶ</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">STEP1: 外部環境の分析 ー 良い土壌を選ぶ</h3>
                 <p className="mb-6"><strong>目的：</strong>順張りで良い環境を選ぶ<br/>
                 市場全体が伸びていく中で、その市場で伸びていく企業は基本的にその流れに乗ることができます。そのため、基本的には<strong>良い環境の上場企業を選びたい</strong>です。市場規模、成長率、<span className="glossary-term" data-definition="業界の競争環境を5つの要素で分析するフレームワーク。新規参入の脅威、代替品の脅威、買い手の交渉力、売り手の交渉力、既存競合の強さを評価します。">5フォース</span>（競争環境）などを調査し、企業が成長できる土壌があるかを見極めます。</p>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">STEP2: スクリーニング ー 悪い企業を省く</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">STEP2: スクリーニング ー 悪い企業を省く</h3>
                 <p className="mb-6"><strong>目的：</strong>財務指標で機械的に絞り込む<br/>
                 4000社の中から良い企業を見つけたいのですが、逆に<strong>悪い企業をスクリーニングすることで省く</strong>ことができます。<span className="glossary-term" data-definition="大量のデータから特定の条件に合う対象を抽出すること。投資では財務指標や成長率などの条件で銘柄を絞り込みます。">スクリーニング</span>とは、様々な株価指標（PER、PBR、ROEなど）を見ていくことです。</p>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">STEP3: 内部環境の分析 ー 企業の本質を見抜く</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">STEP3: 内部環境の分析 ー 企業の本質を見抜く</h3>
                 <p className="mb-6"><strong>目的：</strong>ビジネスモデルと収益構造を深掘りする<br/>
                 企業の<span className="glossary-term" data-definition="企業がどのように価値を生み出し、顧客に提供し、収益を得るかの仕組み。誰に・何を・どうやって売るかの全体像です。">ビジネスモデル</span>を見ていきます。上流、競合、下流といった形で、<strong>一体誰からお金をもらって誰に売っているのか</strong>というビジネスモデルをしっかり理解することが重要です。</p>
 
@@ -197,7 +197,7 @@ export default function EducationPage() {
                 <p className="mb-6"><strong>良いマクロトレンドの中で一番良い企業を見つける</strong><br/>
                 外部環境の分析をした後、その外部環境の中でもさらにどの企業が強いか、<strong>良いマクロトレンドの中でどの企業が一番良いのか</strong>を見ていきたいです。</p>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">STEP4: イベントドリブン ー タイミングを見極める</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">STEP4: イベントドリブン ー タイミングを見極める</h3>
                 <p className="mb-6"><strong>目的：</strong>短期的な株価変動の機会を捉える<br/>
                 企業の特定のイベントを契機とした投資機会を捉えます。<span className="glossary-term" data-definition="企業の合併（Merger）と買収（Acquisition）。企業が成長戦略として他社を統合・買収すること。">M&A</span>、TOB、MBO、粉飾決算の見極め、政治イベント、金利動向など、様々なイベントドリブンな要素を見ていくことが重要です。</p>
               </Accordion>
@@ -207,14 +207,14 @@ export default function EducationPage() {
               <Accordion title="企業分析詳細編①外部環境分析編 読了時間 8分">
                 <p className="mb-6">市場全体の動きや業界構造を理解することで、企業を取り巻く外部環境を分析します。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
                   <h3 className="text-xl font-semibold mb-3">順張りの考え方</h3>
                   <p className="mb-2">投資には「順張り」と「逆張り」があります。</p>
                   <p className="mb-2"><strong>順張り：</strong>市場全体が伸びている中で、その流れに乗る企業に投資する<br/><strong>逆張り：</strong>市場が低迷している中で、割安な企業を見つけて投資する</p>
                   <p>T＋では基本的に<strong>順張り</strong>を推奨します。なぜなら、順張りで成功する確率が逆張りで成功する確率よりも圧倒的に高いからです。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">マクロトレンドの例</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">マクロトレンドの例</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover-lift scale-hover smooth-border">
                     <h4 className="text-lg font-semibold mb-3">国策による成長</h4>
@@ -234,7 +234,7 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">5フォース分析</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">5フォース分析</h3>
                 <p className="mb-4">業界の競争環境を5つの要素で分析するフレームワーク。</p>
                 <div className="space-y-4">
                   <div className="bg-white border-l-4 border-blue-500 p-4 rounded hover-lift smooth-border transition-all duration-300">
@@ -261,7 +261,7 @@ export default function EducationPage() {
 
                 {/* 参考書籍 */}
                 <div className="mt-12">
-                  <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
                     { image: '/images/books/IMG_1276.JPG', description: '経済学の基礎を学ぶ', priority: 1 },
                     { image: '/images/books/IMG_1273.JPG', description: '金利と経済の関係', priority: 2 },
@@ -281,10 +281,10 @@ export default function EducationPage() {
               <Accordion title="企業分析詳細編②スクリーニング編 読了時間 15分">
                 <p className="mb-6">4000社の中から良い企業を見つけたいのですが、<br/>逆に<strong>悪い企業をスクリーニングすることで省く</strong>ことができます。</p>
 
-                <h3 className="text-2xl font-semibold mb-4">財務指標によるスクリーニング</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">財務指標によるスクリーニング</h3>
                 <p className="mb-6">スクリーニングとは、様々な株価指標を使って機械的に銘柄を絞り込むことです。<br/>ここでは、最も重要な3つの指標「PER」「PBR」「ROE」について、YouTube文字起こしの内容を詳細に反映しながら解説します。</p>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-6">
                   <span className="section-label label-essence">本質</span>
                   <h4 className="text-xl font-semibold mb-2">大前提：100%信じられる指標は存在しない</h4>
                   <p className="mb-2">これから解説するPER、PBR、ROEは、どれも非常に有用な指標です。しかし、<strong>100%信じられる指標は存在しません</strong>。</p>
@@ -292,7 +292,7 @@ export default function EducationPage() {
                   <p><strong>ケースバイケース</strong>であることを常に意識しましょう。指標は「道具」であり、使い方次第で見える景色が変わります。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">PER（株価収益率）：利益の何倍で買われているか？</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">PER（株価収益率）：利益の何倍で買われているか？</h3>
 
                 <h4 className="text-xl font-semibold mb-3">① PERとは何か？ ー トヨタと日産の比較で理解する</h4>
                 <p className="mb-4"><strong>PER（Price Earnings Ratio：株価収益率）</strong>は、株価が1株あたり利益（EPS）の何倍になっているかを示す指標です。</p>
@@ -301,7 +301,7 @@ export default function EducationPage() {
 
                 <p className="mb-6">多くの人は「日産の方が安いから割安では？」と考えます。しかし、これは<strong>大きな間違い</strong>です。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">株価だけでは割安・割高は決まらない</h4>
                   <p className="mb-2">株価が5,000円だろうが3,000円だろうが、それだけでは割安とも割高とも言えません。</p>
                   <p className="mb-2"><strong>例えば：</strong>牛肉がグラム3,000円、鶏肉がグラム100円だとして、どっちが割安か比べられますか？<br/>→ 比べられません。そもそも違うものだからです。</p>
@@ -315,7 +315,7 @@ export default function EducationPage() {
 
                 <p className="mb-6">そして、この時価総額と利益の関係を見るのが<strong>PER</strong>です。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">PERの計算式</h4>
                   <p className="formula-inline mb-2">
                     <strong>PER = </strong>
@@ -341,7 +341,7 @@ export default function EducationPage() {
                 <p className="mb-2"><strong>トヨタと日産の比較（続き）</strong></p>
                 <p className="mb-6">仮に、トヨタの時価総額50兆円、利益5兆円でPER10倍。<br/>日産の時価総額3兆円、利益1,000億円でPER30倍。<br/>→ この場合、<strong>トヨタの方が割安</strong>です。なぜなら、利益の10年分で買えるトヨタに対し、日産は利益の30年分を払う必要があるからです。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>PERの目安</strong></p>
                   <ul className="list-disc ml-6 space-y-1">
                     <li><strong>10〜15倍：</strong>標準的な水準（日本企業の平均は15倍前後）</li>
@@ -355,7 +355,7 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-3 mt-8">② 株価 = EPS × PER：プロが使う公式</h4>
                 <p className="mb-4">株価を決める要素を分解すると、次の式になります。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">株価 = EPS × PER</h4>
                   <p className="mb-2"><strong>EPS（1株あたり利益）</strong>と<strong>PER（倍率）</strong>の掛け算で株価が決まる。</p>
                   <p><strong>例：</strong>EPS250円、PER20倍なら、株価 = 250円 × 20 = 5,000円</p>
@@ -379,7 +379,7 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-3 mt-8">③ PEGレシオ：成長率とのバランスを見る</h4>
                 <p className="mb-6">PERだけでは、成長企業を正しく評価できません。<br/>そこで登場するのが<strong>PEGレシオ</strong>です。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">PEGレシオ = PER ÷ 利益成長率（%）</h4>
                   <p className="mb-2"><strong>目安：</strong></p>
                   <ul className="list-disc ml-6 space-y-1 mb-4">
@@ -401,7 +401,7 @@ export default function EducationPage() {
                 <p className="mb-2"><strong>高PER株の「がっかり売り」リスク</strong></p>
                 <p className="mb-6">PER100倍の株は、「毎年100%成長する」という期待が織り込まれています。<br/>しかし、実際には50%しか成長しなかった場合、<strong>期待外れで売られる</strong>のです。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-4">PER50倍以上の株は、常に<strong>100点満点を取り続けないといけない優等生</strong>のようなものです。<br/>85点を取っただけで、期待を下回ったとして売られることがあります。</p>
                   <p>好決算なのに株価が下がる理由は、<strong>市場の期待値を下回ったから</strong>です。<br/>決算前に株価が上昇していた場合、それは期待が織り込まれた結果である可能性があります。</p>
                 </div>
@@ -443,7 +443,7 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>業界ごとのPER水準の違い</strong></p>
                   <p className="mb-3">業界によって「適正PER」は大きく異なります。</p>
                   <ul className="list-disc ml-6 space-y-2 mb-4">
@@ -459,7 +459,7 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-3">① PBRとは何か？ ー 「8,000円の財布に1万円入っていた」</h4>
                 <p className="mb-6"><strong>PBR（Price Book-value Ratio：株価純資産倍率）</strong>は、株価が1株あたり純資産（BPS）の何倍になっているかを示す指標です。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">PBRの計算式</h4>
                   <p className="formula-inline mb-2">
                     <strong>PBR = </strong>
@@ -476,7 +476,7 @@ export default function EducationPage() {
                 <p className="mb-2"><strong>PBRの本質：「財布の値段」理論</strong></p>
                 <p className="mb-6">PBRは「財布理論」で理解できます。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">8,000円の財布に1万円入っていた</h4>
                   <p className="mb-2">PBR0.8倍とは、「8,000円で売られている財布を買ったら、中に現金1万円入っていた」状態です。<br/>財布（会社）はどうでもいいから捨てて、中の1万円（純資産）をビッと取ってポイ。<br/>これで2,000円の利益が出ます。</p>
                   <p>これがPBR1倍割れの意味です。</p>
@@ -487,7 +487,7 @@ export default function EducationPage() {
 
                 <p className="mb-6">アクティビストファンドが目をつけて、「不動産を売って株主に配当しろ」とプレッシャーをかけています。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>PBRの目安</strong></p>
                   <ul className="list-disc ml-6 space-y-1">
                     <li><strong>PBR1倍：</strong>株価 = 解散価値（会社を解散して資産を売却した場合の価値）</li>
@@ -500,7 +500,7 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-3 mt-8">② 東証改革：PBR1倍割れ企業への圧力</h4>
                 <p className="mb-6">2023年、東京証券取引所は<strong>「PBR1倍割れ企業に対し、改善計画を開示するよう要請」</strong>しました。<br/>これは、日本の株式市場にとって画期的な出来事です。</p>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">PBR1倍割れが問題な理由</h4>
                   <p className="mb-2">PBR1倍割れとは、<strong>「経営陣がいない方が価値がある」</strong>と市場が判断している状態です。</p>
                   <p className="mb-3"><strong>例：</strong>純資産100億円の会社の時価総額が80億円の場合、<br/>→ 会社を解散して資産を売却すれば100億円になるのに、今の株価は80億円。<br/>→ つまり、経営陣の存在がマイナス20億円の価値しかない。</p>
@@ -547,7 +547,7 @@ export default function EducationPage() {
 
                 <h4 className="text-xl font-semibold mb-3 mt-8">④ PBR = PER × ROE：3兄弟の美しい関係</h4>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">PBR = PER × ROE</h4>
                   <p className="mb-2">この式は、PBR、PER、ROEの3つが密接に関係していることを示しています。</p>
                   <p className="mb-3"><strong>例：</strong>PER20倍、ROE10%の企業 → PBR = 20 × 0.1 = 2倍</p>
@@ -560,7 +560,7 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-3">① ROEとは何か？</h4>
                 <p className="mb-6"><strong>ROE（Return On Equity：自己資本利益率）</strong>は、純利益が純資産（自己資本）の何%になっているかを示す指標です。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">レンタカー会社の例</h4>
                   <p className="mb-2"><strong>資本金500万円</strong>でレンタカー会社を立ち上げました。<br/>政策金融公庫から<strong>500万円を借金</strong>して、合計1,000万円で<strong>レンタカー5台</strong>（1台200万円）を購入。</p>
                   <p className="mb-3">1年後、<strong>純利益50万円</strong>を出しました。</p>
@@ -568,7 +568,7 @@ export default function EducationPage() {
                   <p>つまり、<strong>株主が出した500万円を使って、年間10%のリターンを生み出した</strong>ということです。</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">ROEの計算式</h4>
                   <p className="mb-4"><strong>ROE = 純利益 ÷ 純資産（自己資本）</strong></p>
                   <p><strong>例：</strong>純利益50万円、純資産500万円の場合、ROE = 50 ÷ 500 = 10%</p>
@@ -577,13 +577,13 @@ export default function EducationPage() {
                 <p className="mb-2"><strong>ROEの本質：投資効率</strong></p>
                 <p className="mb-6">ROE10%とは、「株主が出資した資本を使って、年間10%のリターンを生み出している」という意味です。<br/>より少ない資本でより多くの利益を生む企業ほど、ROEが高くなります。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>なぜROE8%が基準なのか？</strong></p>
                   <p className="mb-3">S&P500のインデックスファンドに投資すれば、平均年率約8%のリターンが得られます。<br/>→ つまり、<strong>ROE8%未満の企業は、インデックスファンド以下のリターン</strong>です。<br/>→ わざわざ個別株のリスクを取る意味がありません。</p>
                   <p><strong>ROE8%の企業が、ずっとROE8%のままなら、それは債券や不動産と変わりません。<br/>株式投資のリスクを取っているのに、ROEがインデックス以下なら投資妙味がないと言えます。</strong></p>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>ROEの目安</strong></p>
                   <ul className="list-disc ml-6 space-y-1">
                     <li><strong>8%以上：</strong>優良企業（S&P500の平均リターンが約8%のため、これを上回る必要がある）</li>
@@ -596,7 +596,7 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-3 mt-8">② ROEの分解：デュポン分析で構造を理解する</h4>
                 <p className="mb-6">ROEは以下の3つの要素に分解できます。これを「デュポン分析」と呼びます。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="formula-inline mb-4">
                     <strong>ROE = </strong>
                     <span className="fraction">
@@ -626,7 +626,7 @@ export default function EducationPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-6">
                   <span className="section-label label-essence">本質</span>
                   <h4 className="text-xl font-semibold mb-2">この式は何を意味するのか？</h4>
                   <p className="mb-3">分子と分母で「売上高」と「総資産」が約分されるため、最終的に「純利益 ÷ 自己資本」に戻ります。</p>
@@ -659,7 +659,7 @@ export default function EducationPage() {
                 <h4 className="text-xl font-semibold mb-3 mt-8">③ ROEの落とし穴：借金で膨らませたROE</h4>
 
                 <p className="mb-4"><strong>財務レバレッジの罠</strong></p>
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">借金を増やせばROEは上がる</h4>
                   <p className="mb-2">レンタカー会社が、資本金100万円、借金900万円でスタートしたとします。<br/>同じく純利益50万円を出した場合、<br/><strong>ROE = 50万円 ÷ 100万円 = 50%</strong></p>
                   <p className="mb-2">一見すごいですが、実際は借金に依存しているだけ。<br/>景気悪化時に返済できなくなるリスクが高い。</p>
@@ -669,7 +669,7 @@ export default function EducationPage() {
                 <p className="mb-4"><strong>自社株買いの罠</strong></p>
                 <p className="mb-6">自社株買いで自己資本を減らせば、ROEは機械的に上がります。しかし、これは本質的な成長ではありません。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>例：</strong>純利益50万円、純資産500万円（ROE10%）<br/>→ 自社株買いで純資産を250万円に削減<br/>→ ROE = 50 ÷ 250 = 20%</p>
                   <p><strong>対策：</strong>ROEが上がった理由を確認する。利益が増えたのか、資本が減っただけなのか。</p>
                 </div>
@@ -681,7 +681,7 @@ export default function EducationPage() {
                 <p className="mb-4"><strong>ケース1：ZOZO（ROE60%）</strong></p>
                 <p className="mb-6">ZOZOは、ROE60%という異常値を達成しています。なぜか？</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">ZOZOのビジネスモデル：在庫を持たない</h4>
                   <p className="mb-2">ZOZOは、ブランドから商品を<strong>預かって販売</strong>する「コンシグメント型」ビジネスモデル。<br/>→ 在庫リスクがなく、少ない資本で大きな利益を生む。<br/>→ 結果、ROE60%という異常値を達成。</p>
                   <p>外部から資金を調達しないで済むビジネスモデルを構築することで、<strong>自己資本が膨らまず、ROEが異常に高くなる</strong>という好循環を生み出しています。</p>
@@ -690,7 +690,7 @@ export default function EducationPage() {
                 <p className="mb-4"><strong>ケース2：セブンイレブンのFCモデル</strong></p>
                 <p className="mb-6">セブンイレブンは、フランチャイズチェーン（FC）モデルでROEを高めています。</p>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>FCモデルの仕組み</strong></p>
                   <p className="mb-3">店舗を自分で持たず、FC加盟店に運営を任せる。<br/>→ 店舗の資産はBS（貸借対照表）に乗らない。<br/>→ 少ない資本で、大きな利益を得られる。</p>
                   <p>一方、店長は「自分の店」だと思って一生懸命掃除をする。<br/>→ 直営店より、FCの方が効率が良い。</p>
@@ -703,7 +703,7 @@ export default function EducationPage() {
 
                 <h3 className="text-2xl font-semibold mb-4 mt-12">まとめ：指標は「道具」であり、100%信じてはいけない</h3>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h4 className="text-xl font-semibold mb-2">PBR = PER × ROE</h4>
                   <p className="mb-2">この式は、3つの指標が密接に関係していることを示しています。</p>
                   <p className="mb-2"><strong>良い企業の条件：</strong></p>
@@ -719,7 +719,7 @@ export default function EducationPage() {
 
                 {/* 参考書籍 */}
                 <div className="mt-12">
-                  <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
                     { image: '/images/books/IMG_1275.JPG', description: '四季報の読み方入門', priority: 1 },
                     { image: '/images/books/IMG_1281.JPG', description: '最新の企業情報', priority: 2 },
@@ -739,7 +739,7 @@ export default function EducationPage() {
               <Accordion title="企業分析詳細編③内部環境分析編 読了時間 10分" defaultOpen={false}>
                 <p className="mb-6">企業のビジネスモデル、競争優位性、収益構造を深く分析します。</p>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h3 className="text-xl font-semibold mb-3">財務3表の基本：PL・BS・CSとは？</h3>
                   <p className="mb-2"><strong>そもそも財務諸表って何？</strong></p>
                   <p className="mb-3">財務諸表とは、企業の経営状態を数字で表した報告書です。<strong>上場企業はすべて財務諸表を公開する義務</strong>があります。</p>
@@ -753,14 +753,14 @@ export default function EducationPage() {
                   <p><strong>重要：</strong>この3つは独立しているのではなく、<strong>繋がっています</strong>。<br/>PLで利益が出れば、BSの純資産が増える。<br/>PLで利益が出ても、CSで営業CFがマイナスなら「儲かっているのにお金がない」状態。<br/>財務3表を一体で見ることで、企業の本当の姿が見えてきます。</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-6">
                   <span className="section-label label-essence">本質</span>
                   <h3 className="text-xl font-semibold mb-2">ビジネスモデルの理解：誰からお金をもらっているのか？</h3>
                   <p className="mb-2">ビジネスモデルとは、<strong>「誰に・何を・どうやって売るか」</strong>の全体像です。</p>
                   <p>上流（仕入先）→ 自社 → 下流（顧客）という流れで理解します。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4">ビジネスモデルの具体例</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">ビジネスモデルの具体例</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
@@ -780,13 +780,13 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-l-4 border-orange-500 p-4 md:p-6 rounded-lg mb-6">
                   <span className="section-label label-essence">本質</span>
                   <h3 className="text-xl font-semibold mb-2">収益構造の深掘り：どこで儲けているのか？（PL分析）</h3>
                   <p>売上が伸びているだけでは不十分です。<strong>どの収益構造が変わって純利益が伸びるのか</strong>を見極める必要があります。</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>成長の質を見分ける：一口に「成長」と言っても質が違う</strong></p>
                   <p className="mb-3">企業が成長する方法は大きく分けて3つあります。そして、<strong>成長の質には大きな差があります</strong>。</p>
                   <ul className="list-disc ml-6 space-y-2 mb-4">
@@ -797,7 +797,7 @@ export default function EducationPage() {
                   <p><strong>質の良い成長</strong>：売上増加と原価削減が同時に起こり、限界利益率が高い状態。<br/>こういう企業は、売上が2倍になると利益が3倍、4倍になることもある。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">収益構造の改善パターン</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">収益構造の改善パターン</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
@@ -819,13 +819,13 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-green-50 to-teal-50 border-l-4 border-green-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>限界利益率とは？</strong></p>
                   <p className="mb-3"><strong>限界利益率 = (売上 - 変動費) ÷ 売上</strong></p>
                   <p>限界利益率が高いほど、売上が伸びたときに利益が急激に増えます。ソフトウェア業界は限界利益率が非常に高く（80%以上）、売上が2倍になれば利益は3倍、4倍になることもあります。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">競争優位性の源泉</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">競争優位性の源泉</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
@@ -842,13 +842,13 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <h3 className="text-xl font-semibold mb-2">健全性を見る：BS・CS分析</h3>
                   <p className="mb-3">PLで稼ぐ力を見たら、次は<strong>BS（貸借対照表）</strong>と<strong>CS（キャッシュフロー計算書）</strong>で健全性を見ます。</p>
                   <p><strong>どれだけ儲かっていても、倒産する企業はあります。</strong><br/>借金が多すぎたり、お金が回らなくなったり、投資しすぎたり。<br/>BS・CSを見ることで、企業の「安全性」と「持続性」を判断できます。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4">BS・CSで見るべき指標</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">BS・CSで見るべき指標</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="bg-white border-2 border-gray-200 rounded-xl p-6">
@@ -877,7 +877,7 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6 mt-8">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6 mt-8">
                   <p className="mb-2"><strong>財務3表が繋がっている例</strong></p>
                   <p className="mb-3">例：ある企業が1億円の利益を出した（PL）。</p>
                   <ul className="list-disc pl-6 mb-3 space-y-1">
@@ -888,7 +888,7 @@ export default function EducationPage() {
                   <p>このように、3つの財務諸表を一体で見ることで、企業の本当の姿が見えてきます。</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <span className="section-label label-column">補足</span>
                   <h3 className="text-xl font-semibold mb-3 mt-2">減価償却：3表の繋がりを最もよく示す概念</h3>
                   <p className="mb-3"><strong>減価償却とは？</strong><br/>建物や機械などの固定資産は、時間とともに価値が減っていきます。<br/>その価値の減少分を、毎年費用として計上する会計処理が「減価償却」です。</p>
@@ -899,7 +899,7 @@ export default function EducationPage() {
                   <p className="mb-3">機械が10年間で生み出す収益に対応させて、費用も10年間で分散させる。<br/>これにより、<strong>毎年のPLが企業の実態を正しく反映</strong>します。<br/>もし一気に費用計上してしまうと、投資家が企業の本当の収益力を判断できなくなるため、減価償却という仕組みが存在します。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4">減価償却が財務3表に与える影響</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">減価償却が財務3表に与える影響</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   <div className="bg-white border-2 border-blue-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
@@ -921,7 +921,7 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>なぜ減価償却を理解すべきなのか？</strong></p>
                   <p className="mb-3">減価償却費が大きい企業（製造業、インフラ企業など）は、<strong>PLの利益が少なく見えても、実際のキャッシュ創出力は高い</strong>ことがあります。</p>
                   <p className="mb-2"><strong>具体例：</strong></p>
@@ -933,7 +933,7 @@ export default function EducationPage() {
                   <p><strong>逆に：</strong>減価償却費が少ないソフトウェア企業などは、PLの利益とCSの営業CFがほぼ一致します。</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-4 md:p-6 rounded-lg mb-8">
                   <h3 className="text-xl font-semibold mb-3">IR取材：企業の生の声を聞く</h3>
                   <p className="mb-3">財務諸表だけでは見えない企業の戦略や経営者の考えを、IR取材を通じて直接聞くことができます。</p>
                   <p className="mb-3">IR担当者や経営者と対話することで、<strong>決算書には載っていない「なぜ？」</strong>を深掘りできます。</p>
@@ -943,7 +943,7 @@ export default function EducationPage() {
 
                 {/* 参考書籍 */}
                 <div className="mt-12">
-                  <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
                     { image: '/images/books/zaimu3.png', description: '財務諸表の基礎', priority: 1 },
                     { image: '/images/books/IMG_1269.JPG', description: '決算書の読み方', priority: 1 },
@@ -974,13 +974,13 @@ export default function EducationPage() {
               <Accordion title="企業分析詳細編④イベントドリブン編 読了時間 6分" defaultOpen={false}>
                 <p className="mb-6">企業の特定のイベントを契機とした投資機会を捉える手法です。</p>
 
-                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-4 md:p-6 rounded-lg mb-6">
                   <h3 className="text-xl font-semibold mb-3">イベントドリブンとは？</h3>
                   <p className="mb-2">企業に起こる特定のイベントをきっかけに、短期的な株価変動を狙う投資手法です。</p>
                   <p><strong>ファンダメンタルズ分析</strong>が「長期的な企業価値」を見るのに対し、<br/><strong>イベントドリブン</strong>は「短期的な株価変動」を狙います。</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4">主なイベントの種類</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">主なイベントの種類</h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <div className="bg-white border-2 border-cyan-200 rounded-lg p-6 shadow hover:shadow-lg transition-all">
@@ -1032,7 +1032,7 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="mb-2"><strong>粉飾決算の見極め方</strong></p>
                   <p className="mb-3">粉飾決算（会計不正）を見抜くことも重要なスキルです。以下のサインに注意：</p>
                   <ul className="list-disc pl-6 space-y-1">
@@ -1043,7 +1043,7 @@ export default function EducationPage() {
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-4 md:p-6 rounded-lg mb-8">
                   <h3 className="text-xl font-semibold mb-3">イベントドリブンの活用法</h3>
                   <p className="mb-2">イベントドリブンは短期トレード向きですが、<strong>ファンダメンタルズ分析と組み合わせる</strong>ことで威力を発揮します。</p>
                   <p><strong>例：</strong>良い企業を見つけた後、決算発表のタイミングで買うことで、より高いリターンを狙えます。</p>
@@ -1051,7 +1051,7 @@ export default function EducationPage() {
 
                 {/* 参考書籍 */}
                 <div className="mt-12">
-                  <h3 className="text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
                     { image: '/images/books/IMG_1279.JPG', description: '粉飾決算の実例', priority: 1 },
                     { image: '/images/books/IMG_1286.JPG', description: '企業金融の基礎', priority: 1 },
@@ -1071,17 +1071,17 @@ export default function EducationPage() {
 
             <section id="insights">
               <Accordion title="まとめ：19の隠れたインサイト 読了時間 5分" defaultOpen={false}>
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6 hover-lift smooth-shadow smooth-border transition-all duration-300">
                   <h3 className="text-xl font-semibold mb-3">外部環境×内部環境の統合フレームワーク</h3>
                   <p className="mb-2">これまで学んだ「外部環境分析（STEP1）」と「内部環境分析（STEP3）」を統合し、企業の成長パターンを19種類に分類したフレームワークです。</p>
                   <p className="mb-2">このフレームワークを使うことで、<strong>「隠れたインサイト」＝まだ市場が気づいていない企業の本当の強み</strong>を体系的に見つけることができます。</p>
                   <p><strong>横軸：</strong>外部環境・ビジネスモデル・経営資源<br/><strong>縦軸：</strong>市場拡大・シェア拡大・利益率向上</p>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4">「隠れたインサイト」を知り、いい銘柄の見逃しを防ぐ</h3>
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">「隠れたインサイト」を知り、いい銘柄の見逃しを防ぐ</h3>
                 <p className="mb-6">「隠れたインサイト」とは、まだ多くの人が知らないその会社の本当の強みのこと。<br/>「実は○○」と説明できるストーリーです。</p>
 
-                <h3 className="text-2xl font-semibold mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold mb-4">
                   <span
                     className="inline-block text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mr-2"
                     style={{
@@ -1146,7 +1146,7 @@ export default function EducationPage() {
                   <div className="mx-cell mx-item" style={{gridColumn: '16', gridRow: '4'}}><span className="mx-title">徹底的な仕組み化</span></div>
                 </div>
 
-                <h3 className="text-2xl font-semibold mb-4 mt-8">
+                <h3 className="text-xl md:text-2xl font-semibold mb-4 mt-8">
                   <span
                     className="inline-block text-5xl font-bold bg-gradient-to-r from-green-600 to-teal-600 bg-clip-text text-transparent mr-2"
                     style={{
@@ -1384,7 +1384,7 @@ export default function EducationPage() {
                     }
                   `}</style>
 
-                  <div className="bg-gray-50 p-6 rounded-lg mb-4">
+                  <div className="bg-gray-50 p-4 md:p-6 rounded-lg mb-4">
                     <p className="font-bold mb-3 text-lg">パターン①：市場全体が下落した場合</p>
                     <div className="space-y-2">
                       <p>小売業界全体が不調 → 両社とも株価下落</p>
@@ -1395,7 +1395,7 @@ export default function EducationPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 p-6 rounded-lg">
+                  <div className="bg-gray-50 p-4 md:p-6 rounded-lg">
                     <p className="font-bold mb-3 text-lg">パターン②：市場全体が上昇した場合</p>
                     <div className="space-y-2">
                       <p>小売業界全体が好調 → 両社とも株価上昇</p>
@@ -1407,7 +1407,7 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 border-l-4 border-yellow-500 p-4 md:p-6 rounded-lg mb-8">
                   <p className="font-bold mb-3 text-xl">ロングショート戦略の本質</p>
                   <div className="space-y-3">
                     <p className="text-lg"><strong>ベータ（市場全体の動き）を打ち消す</strong></p>
@@ -1422,7 +1422,7 @@ export default function EducationPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg">
+                  <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg">
                     <h4 className="text-lg font-bold mb-3">メリット</h4>
                     <ul className="list-disc pl-6 space-y-2">
                       <li><strong>市場リスクの低減：</strong>市場全体の上げ下げに左右されにくい</li>
@@ -1430,7 +1430,7 @@ export default function EducationPage() {
                       <li><strong>下落相場でも利益機会：</strong>ショート側で利益を出せる</li>
                     </ul>
                   </div>
-                  <div className="bg-gradient-to-br from-red-50 to-orange-50 border-l-4 border-red-500 p-6 rounded-lg">
+                  <div className="bg-gradient-to-br from-red-50 to-orange-50 border-l-4 border-red-500 p-4 md:p-6 rounded-lg">
                     <h4 className="text-lg font-bold mb-3">デメリット</h4>
                     <ul className="list-disc pl-6 space-y-2">
                       <li><strong>複雑性：</strong>ロングとショートの比率調整、銘柄選定が難しい</li>
@@ -1440,7 +1440,7 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-l-4 border-purple-500 p-6 rounded-lg mb-12">
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 border-l-4 border-purple-500 p-4 md:p-6 rounded-lg mb-12">
                   <h4 className="text-xl font-semibold mb-3">マーケットニュートラル戦略</h4>
                   <p className="mb-3"><strong>マーケットニュートラル＝ベータを完全にゼロにする</strong></p>
                   <p className="mb-4">ロングショート戦略の一種で、<strong>ロングポジションとショートポジションの金額を同じにする</strong>ことで、<strong>ベータ（市場リスク）を完全に排除し、アルファ（銘柄選択のスキル）のみ</strong>で利益を狙う戦略です。</p>
@@ -1497,7 +1497,7 @@ export default function EducationPage() {
                   <p className="text-sm text-gray-600">ショート取引の仕組みとリスクについて、さらに詳しく解説されています。</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-6">
+                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
                   <p className="font-semibold mb-2">T＋では主にロング（買い）を扱います</p>
                   <p>ショートやロングショート戦略は高度な手法であり、初心者にはリスクが高いため、まずは企業の成長を見極めて「買い」で利益を得るファンダメンタルズ分析に集中することをおすすめします。</p>
                 </div>

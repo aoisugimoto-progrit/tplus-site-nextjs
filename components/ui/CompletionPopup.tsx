@@ -48,7 +48,7 @@ export default function CompletionPopup() {
   if (!popup.show) return null;
 
   return (
-    <div className="fixed bottom-8 right-8 z-50 bg-white rounded-2xl shadow-2xl p-6 flex items-center gap-4 animate-slide-in-right">
+    <div className="fixed bottom-[max(env(safe-area-inset-bottom),16px)] right-4 sm:right-6 md:right-8 sm:bottom-8 z-50 bg-white rounded-2xl shadow-2xl p-4 md:p-6 flex items-center gap-3 md:gap-4 animate-slide-in-right max-w-[calc(100vw-2rem)]">
       <div className="text-4xl">(•̀ᴗ•́)و</div>
       <div>
         <div className="text-3xl font-bold text-[#0A5046]">{popup.percentage}%</div>

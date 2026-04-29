@@ -24,27 +24,27 @@ export default function SchedulePage() {
         onToggle={setSidebarOpen}
       />
 
-      <div className="transition-all duration-300" style={{ marginLeft: sidebarOpen ? '260px' : '0' }}>
+      <div className={`transition-all duration-300 ${sidebarOpen ? 'md:ml-[260px]' : 'ml-0'}`}>
         <div className="pt-[70px]">
           {/* ページヒーロー */}
           <section
             id="hero"
-            className="relative h-[400px] bg-cover bg-center flex items-center justify-center"
+            className="relative h-[260px] sm:h-[320px] md:h-[400px] bg-cover bg-center flex items-center justify-center"
             style={{ backgroundImage: `url('${basePath}/hero-bg.jpg')` }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[rgba(20,40,30,0.85)] via-[rgba(10,80,70,0.75)] to-[rgba(15,30,80,0.85)]"></div>
-            <h1 className="relative z-10 text-6xl font-bold text-white">Activity</h1>
+            <h1 className="relative z-10 text-4xl sm:text-5xl md:text-6xl font-bold text-white">Activity</h1>
           </section>
 
-          <div className="max-w-5xl mx-auto px-8 py-16">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 py-10 md:py-16">
             {/* 年間スケジュール */}
-            <section id="schedule" className="mb-16">
-              <h2 className="text-4xl font-bold mb-8 text-[#1E4535]">年間スケジュール</h2>
+            <section id="schedule" className="mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-[#1E4535]">年間スケジュール</h2>
 
-              <p className="mb-8 text-lg">T＋では、1年を通して様々な活動を行っています。</p>
+              <p className="mb-6 md:mb-8 text-base md:text-lg">T＋では、1年を通して様々な活動を行っています。</p>
 
-              <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-                {/* 月ラベル */}
+              {/* デスクトップ: 12カラムタイムライン */}
+              <div className="hidden md:block bg-white rounded-xl shadow-lg p-8 mb-8">
                 <div className="grid grid-cols-12 gap-2 mb-4">
                   {['3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月', '1月', '2月'].map((month, i) => (
                     <div key={i} className="text-center text-sm font-semibold text-gray-700">
@@ -53,27 +53,21 @@ export default function SchedulePage() {
                   ))}
                 </div>
 
-                {/* 活動バー */}
                 <div className="grid grid-cols-12 gap-2 mb-4">
-                  {/* 新歓活動（3-4月） */}
                   <div className="col-span-2 bg-gradient-to-r from-[#FF6B9D] to-[#C239B3] text-white text-center py-3 rounded-lg font-semibold text-sm">
                     新歓活動
                   </div>
-                  {/* 教育（5-6月） */}
                   <div className="col-start-3 col-span-2 bg-gradient-to-r from-[#4ECDC4] to-[#44A08D] text-white text-center py-3 rounded-lg font-semibold text-sm">
                     教育
                   </div>
-                  {/* 新歓活動（9-10月） */}
                   <div className="col-start-7 col-span-2 bg-gradient-to-r from-[#FF6B9D] to-[#C239B3] text-white text-center py-3 rounded-lg font-semibold text-sm">
                     新歓活動
                   </div>
-                  {/* 教育（11-12月） */}
                   <div className="col-start-9 col-span-2 bg-gradient-to-r from-[#4ECDC4] to-[#44A08D] text-white text-center py-3 rounded-lg font-semibold text-sm">
                     教育
                   </div>
                 </div>
 
-                {/* イベント */}
                 <div className="grid grid-cols-12 gap-2">
                   <div className="col-start-1 text-center bg-blue-100 py-2 rounded text-sm font-semibold text-blue-800">
                     YEP
@@ -92,19 +86,47 @@ export default function SchedulePage() {
                   </div>
                 </div>
               </div>
+
+              {/* モバイル: 月別の縦リスト */}
+              <ol className="md:hidden bg-white rounded-xl shadow-lg p-4 mb-6 divide-y divide-gray-100">
+                {[
+                  { months: '3月 - 4月', activity: { label: '新歓活動', color: 'from-[#FF6B9D] to-[#C239B3]' }, events: [{ label: 'YEP', tone: 'bg-blue-100 text-blue-800' }] },
+                  { months: '5月 - 6月', activity: { label: '教育', color: 'from-[#4ECDC4] to-[#44A08D]' }, events: [{ label: 'オンボレク', tone: 'bg-green-100 text-green-800' }] },
+                  { months: '7月 - 8月', activity: null, events: [{ label: '夏合宿', tone: 'bg-yellow-100 text-yellow-800' }] },
+                  { months: '9月 - 10月', activity: { label: '新歓活動', color: 'from-[#FF6B9D] to-[#C239B3]' }, events: [] },
+                  { months: '11月 - 12月', activity: { label: '教育', color: 'from-[#4ECDC4] to-[#44A08D]' }, events: [{ label: '東西戦・忘年会', tone: 'bg-purple-100 text-purple-800' }] },
+                  { months: '1月 - 2月', activity: null, events: [{ label: '冬合宿', tone: 'bg-indigo-100 text-indigo-800' }] },
+                ].map((row, i) => (
+                  <li key={i} className="py-3 first:pt-0 last:pb-0">
+                    <div className="text-xs font-semibold text-gray-500 mb-2">{row.months}</div>
+                    <div className="flex flex-wrap gap-2">
+                      {row.activity && (
+                        <span className={`inline-block bg-gradient-to-r ${row.activity.color} text-white px-3 py-1.5 rounded-full text-sm font-semibold`}>
+                          {row.activity.label}
+                        </span>
+                      )}
+                      {row.events.map((ev, j) => (
+                        <span key={j} className={`inline-block ${ev.tone} px-3 py-1.5 rounded-full text-sm font-semibold`}>
+                          {ev.label}
+                        </span>
+                      ))}
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </section>
 
             {/* FIRE制度・卒業要件 */}
-            <section id="fire" className="mb-16">
-              <h2 className="text-4xl font-bold mb-8 text-[#1E4535]">FIRE制度・卒業要件</h2>
+            <section id="fire" className="mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 text-[#1E4535]">FIRE制度・卒業要件</h2>
 
-              <p className="mb-8 text-lg">T＋では、ゼミ生の成長を促すための独自の評価制度を設けています。</p>
+              <p className="mb-6 md:mb-8 text-base md:text-lg">T＋では、ゼミ生の成長を促すための独自の評価制度を設けています。</p>
 
-              <h3 className="text-2xl font-semibold mb-4">打開</h3>
-              <p className="mb-8 text-lg">回避発表の練習として、入ゼミと1回目回避期限の中間地点で期限が設置されます。ファイヤーするための制度ではないため、きちんと準備していれば株の知識ゼロでも余裕で通過できます。</p>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">打開</h3>
+              <p className="mb-6 md:mb-8 text-base md:text-lg">回避発表の練習として、入ゼミと1回目回避期限の中間地点で期限が設置されます。ファイヤーするための制度ではないため、きちんと準備していれば株の知識ゼロでも余裕で通過できます。</p>
 
-              <h3 className="text-2xl font-semibold mb-4">回避</h3>
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">回避</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-8">
                 <p className="font-semibold mb-3">回避基準：</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>（ゼミ生4人以上の平均）+（あんてこさんの点数）= 3.5/5で回避</li>
@@ -113,8 +135,8 @@ export default function SchedulePage() {
                 </ul>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">卒業</h3>
-              <p className="mb-8 text-lg">卒業要件を「卓越卒業」と「スタンダード卒業」の2段階にわけ、現役生が自由に卒業ハードルを設定できます。</p>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">卒業</h3>
+              <p className="mb-6 md:mb-8 text-base md:text-lg">卒業要件を「卓越卒業」と「スタンダード卒業」の2段階にわけ、現役生が自由に卒業ハードルを設定できます。</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
@@ -133,7 +155,7 @@ export default function SchedulePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg mb-8">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-8">
                 <p className="font-semibold mb-3">卓越発表基準：</p>
                 <ul className="list-disc pl-6 space-y-2 mb-4">
                   <li>（ゼミ生4人以上の平均）+（あんてこさんの点数）= 4.5/5で卓越</li>
@@ -150,7 +172,7 @@ export default function SchedulePage() {
                 </ul>
               </div>
 
-              <h3 className="text-2xl font-semibold mb-4">その他柔軟な対応</h3>
+              <h3 className="text-xl md:text-2xl font-semibold mb-4">その他柔軟な対応</h3>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
@@ -174,7 +196,7 @@ export default function SchedulePage() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-6 rounded-lg">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg">
                 <p className="font-semibold mb-3">参考資料：</p>
                 <ul className="list-disc pl-6">
                   <li>

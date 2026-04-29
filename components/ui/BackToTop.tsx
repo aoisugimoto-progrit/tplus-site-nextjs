@@ -21,7 +21,7 @@ export default function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-8 w-14 h-14 bg-[#0A5046] text-white rounded-full shadow-lg hover:bg-[#1E4535] hover:scale-110 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-2xl z-50 hover-lift ripple-effect ${
+      className={`fixed bottom-[max(env(safe-area-inset-bottom),16px)] right-4 sm:right-6 md:right-8 sm:bottom-8 w-12 h-12 sm:w-14 sm:h-14 bg-[#0A5046] text-white rounded-full shadow-lg hover:bg-[#1E4535] hover:scale-110 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center text-xl sm:text-2xl z-50 hover-lift ripple-effect ${
         isVisible ? 'opacity-100 pointer-events-auto zoom-in' : 'opacity-0 pointer-events-none scale-0'
       }`}
       aria-label="ページトップへ戻る"
