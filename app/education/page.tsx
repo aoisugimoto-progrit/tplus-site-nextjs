@@ -1484,23 +1484,12 @@ export default function EducationPage() {
                   </div>
                 </div>
 
-                {/* もっと学びたい人へ */}
-                <h3 className="text-2xl font-semibold mb-4 mt-12">もっと学びたい人へ</h3>
-                <div className="bg-white border-2 border-gray-200 rounded-xl p-6 mb-8">
-                  <h4 className="text-lg font-semibold mb-3">おすすめ動画</h4>
-                  <div className="aspect-video w-full mb-4">
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      src="https://www.youtube.com/embed/-F-Wt6qz3Bw"
-                      title="ショート取引解説動画"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="rounded-lg"
-                    ></iframe>
-                  </div>
-                  <p className="text-sm text-gray-600">ショート取引の仕組みとリスクについて、さらに詳しく解説されています。</p>
+                {/* 参考書籍 */}
+                <div className="mt-12">
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
+                  <VideoGrid videos={[
+                    { id: '-F-Wt6qz3Bw', title: 'ショート取引の仕組みとリスク', duration: '00:00:00' },
+                  ]} />
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border-l-4 border-blue-500 p-4 md:p-6 rounded-lg mb-6">
