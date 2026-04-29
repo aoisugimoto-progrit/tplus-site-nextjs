@@ -48,10 +48,6 @@ export default function Header() {
     };
   }, [menuOpen]);
 
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
-
   const linkBase = (active: boolean) =>
     `text-sm font-normal transition-all duration-300 relative group ${
       isHome ? 'text-white/90 hover:text-white' : 'text-gray-600 hover:text-[#0A5046]'
@@ -155,6 +151,7 @@ export default function Header() {
               <li key={href}>
                 <Link
                   href={href}
+                  onClick={() => setMenuOpen(false)}
                   className={`flex items-center min-h-12 px-4 py-3 rounded-md text-base transition-colors ${
                     active
                       ? 'bg-[#0A5046] text-white font-semibold'
