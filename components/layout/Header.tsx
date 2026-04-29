@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { href: '/', label: 'ホーム' },
   { href: '/about-seminar', label: '創設者と理念' },
   { href: '/education', label: '教育コンテンツ' },
+  { href: '/resources', label: '有用資料' },
   { href: '/schedule', label: '活動予定' },
 ];
 

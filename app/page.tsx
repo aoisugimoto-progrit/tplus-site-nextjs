@@ -108,13 +108,14 @@ export default function HomePage() {
         <div className="mt-16 md:mt-24 max-w-6xl mx-auto">
           <ScrollFade delay={400}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">Explore</h2>
-            <p className="text-white/60 text-center mb-10 md:mb-12">3 Categories</p>
+            <p className="text-white/60 text-center mb-10 md:mb-12">4 Categories</p>
           </ScrollFade>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {[
               { title: '創設者と理念', desc: '瀧本先生について、ゼミの理念、OB・OG紹介', href: '/about-seminar' },
               { title: '教育コンテンツ', desc: '投資の原理原則、業界研究、学習ロードマップ', href: '/education' },
+              { title: '有用資料', desc: '投資学習に役立つ書籍、サイト、資料集', href: '/resources' },
               { title: '活動予定', desc: '年間スケジュール、イベント、新歓情報', href: '/schedule' }
             ].map((card, i) => (
               <ScrollFade key={i} delay={100 * (i + 1) + 400}>
