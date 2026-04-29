@@ -38,7 +38,7 @@ export default function HomePage() {
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-8 md:px-20 bg-gradient-to-br from-[#0A0F14] to-[#050A0F]">
         <div className="max-w-4xl mx-auto">
           <ScrollFade>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 md:mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent pb-2 border-b-2 border-gray-700 inline-block w-full">Only outliers can outperform</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-10 md:mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent pb-2 border-b-2 border-gray-700 inline-block w-full">Only outliers can outperform</h2>
           </ScrollFade>
 
           <ScrollFade delay={100}>
@@ -54,7 +54,7 @@ export default function HomePage() {
         {/* ゼミ生の責務 */}
         <div className="mt-16 md:mt-24 max-w-6xl mx-auto">
           <ScrollFade delay={200}>
-            <h2 className="text-2xl sm:text-3xl font-bold mb-10 md:mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">ゼミ生の責務</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 md:mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">ゼミ生の責務</h2>
           </ScrollFade>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             {[
