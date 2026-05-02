@@ -105,13 +105,13 @@ export default function HomePage() {
         </ScrollFade>
 
         {/* ナビゲーションカード */}
-        <div className="mt-16 md:mt-24 max-w-6xl mx-auto">
+        <div className="mt-20 md:mt-32 max-w-7xl mx-auto">
           <ScrollFade delay={400}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">Explore</h2>
-            <p className="text-white/60 text-center mb-10 md:mb-12">4 Categories</p>
+            <p className="text-white/60 text-center mb-12 md:mb-16">4 Categories</p>
           </ScrollFade>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { title: '創設者と理念', href: '/about-seminar' },
               { title: '教育コンテンツ', href: '/education' },
