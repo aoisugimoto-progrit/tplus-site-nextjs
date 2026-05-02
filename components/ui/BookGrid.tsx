@@ -15,10 +15,10 @@ const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export default function BookGrid({ books }: BookGridProps) {
   const getStars = (priority: number) => {
     switch(priority) {
-      case 1: return '★★★';
-      case 2: return '★★☆';
-      case 3: return '★☆☆';
-      default: return '★★★';
+      case 1: return '★';
+      case 2: return '★★';
+      case 3: return '★★★';
+      default: return '★';
     }
   };
 
