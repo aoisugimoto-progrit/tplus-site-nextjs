@@ -176,7 +176,7 @@ export default function ResourcesPage() {
             {/* ===== 参考書籍（統合版） ===== */}
             <section id="books">
               <ScrollFade>
-                <Accordion title="参考書籍" defaultOpen={true}>
+                <Accordion title="参考書籍" defaultOpen={false}>
                   <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
                     教育コンテンツ（Education）ページの各セクションで紹介されている参考書籍です。<br />
                     星の数（★★★ &gt; ★★☆ &gt; ★☆☆）は優先度を表しています。
