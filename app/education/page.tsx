@@ -954,8 +954,6 @@ export default function EducationPage() {
                     { image: '/images/books/IMG_1272.JPG', description: '業界別の分析', priority: 2 },
                     { image: '/images/books/IMG_1274.JPG', description: 'ビジネスモデル理解', priority: 3 },
                     { image: '/images/books/IMG_1289.JPG', description: '収益構造の分析', priority: 3 },
-                    { image: '/images/books/book_new1.png', description: '応用編①', priority: 1 },
-                    { image: '/images/books/book_new2.png', description: '応用編②', priority: 1 },
                   ]} />
 
                   <VideoGrid videos={[
