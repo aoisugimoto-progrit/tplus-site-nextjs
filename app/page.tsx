@@ -68,7 +68,7 @@ export default function HomePage() {
               <ScrollFade delay={200}>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">ゼミ生の責務</h2>
               </ScrollFade>
-              <div className="grid grid-cols-1 gap-4 md:gap-6">
+              <div className="grid grid-cols-1 gap-3 md:gap-4">
                 {[
                   { title: 'TAKE', desc: '投資知識を貪欲に吸収し、自己を研鑽せよ', color: 'from-green-400 to-cyan-400' },
                   { title: 'GIVE', desc: '専門領域を極め、知見を惜しみなく共有せよ', color: 'from-blue-400 to-purple-400' },
@@ -76,7 +76,7 @@ export default function HomePage() {
                 ].map((item, i) => (
                   <ScrollFade key={i} delay={100 * (i + 1) + 200}>
                     <div
-                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 md:p-6 text-center transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10"
+                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-3 md:p-4 text-center transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10"
                       style={{
                         transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
                         transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
@@ -97,8 +97,8 @@ export default function HomePage() {
                         card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
                       }}
                     >
-                      <h3 className={`text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>{item.title}</h3>
-                      <p className="text-white/70 leading-relaxed text-sm md:text-base">{item.desc}</p>
+                      <h3 className={`text-lg md:text-xl font-bold mb-1 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>{item.title}</h3>
+                      <p className="text-white/70 leading-relaxed text-xs md:text-sm">{item.desc}</p>
                     </div>
                   </ScrollFade>
                 ))}
