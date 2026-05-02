@@ -42,7 +42,7 @@ export default function HomePage() {
             {/* 1. Only outliers can outperform */}
             <ScrollFade>
               <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">Only outliers can outperform</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent uppercase">ONLY OUTLIERS CAN OUTPERFORM</h2>
                 <div className="text-white/80 space-y-4 text-left leading-relaxed text-base md:text-lg">
                   <p>「T+」とは、瀧本ゼミにおける新入生教育の総称です。</p>
                   <p>2.0期の城田氏をはじめ、代々のゼミ生によって連綿と受け継がれ、常にブラッシュアップされてきました。</p>
@@ -70,9 +70,9 @@ export default function HomePage() {
               </ScrollFade>
               <div className="grid grid-cols-1 gap-4 md:gap-6">
                 {[
-                  { title: 'Take', desc: '投資知識を貪欲に吸収し、自己を研鑽せよ' },
-                  { title: 'Give', desc: '専門領域を極め、知見を惜しみなく共有せよ' },
-                  { title: 'Grow', desc: '組織と共に進化し、持続的な価値を生み出せ' }
+                  { title: 'TAKE', desc: '投資知識を貪欲に吸収し、自己を研鑽せよ', color: 'from-green-400 to-cyan-400' },
+                  { title: 'GIVE', desc: '専門領域を極め、知見を惜しみなく共有せよ', color: 'from-blue-400 to-purple-400' },
+                  { title: 'GROW', desc: '組織と共に進化し、持続的な価値を生み出せ', color: 'from-purple-400 to-pink-400' }
                 ].map((item, i) => (
                   <ScrollFade key={i} delay={100 * (i + 1) + 200}>
                     <div
@@ -97,7 +97,7 @@ export default function HomePage() {
                         card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
                       }}
                     >
-                      <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{item.title}</h3>
+                      <h3 className={`text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>{item.title}</h3>
                       <p className="text-white/70 leading-relaxed text-sm md:text-base">{item.desc}</p>
                     </div>
                   </ScrollFade>
@@ -108,7 +108,7 @@ export default function HomePage() {
             {/* 4. Explore */}
             <div>
               <ScrollFade delay={300}>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">Explore</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent uppercase">EXPLORE</h2>
               </ScrollFade>
               <div className="grid grid-cols-2 gap-4 md:gap-6">
                 {[
