@@ -51,63 +51,110 @@ export default function HomePage() {
           </ScrollFade>
         </div>
 
-        {/* 2列レイアウト: ゼミ生の責務 & 本サイトの目的 */}
+        {/* 2×2グリッドレイアウト */}
         <div className="mt-16 md:mt-24 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <ScrollFade delay={200}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 md:mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">ゼミ生の責務</h2>
+          </ScrollFade>
 
-            {/* 左列: ゼミ生の責務 */}
-            <div>
-              <ScrollFade delay={200}>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 md:mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">ゼミ生の責務</h2>
-              </ScrollFade>
-              <div className="grid grid-cols-1 gap-6 md:gap-8">
-                {[
-                  { title: 'Take', desc: '投資知識を貪欲に吸収し、\n自己を研鑽せよ' },
-                  { title: 'Give', desc: '専門領域を極め、\n知見を惜しみなく共有せよ' },
-                  { title: 'Grow', desc: '組織と共に進化し、\n持続的な価値を生み出せ' }
-                ].map((item, i) => (
-                  <ScrollFade key={i} delay={100 * (i + 1)}>
-                    <div
-                      className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 text-center transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10"
-                      style={{
-                        transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
-                        transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
-                      }}
-                      onMouseMove={(e) => {
-                        const card = e.currentTarget;
-                        const rect = card.getBoundingClientRect();
-                        const x = e.clientX - rect.left;
-                        const y = e.clientY - rect.top;
-                        const centerX = rect.width / 2;
-                        const centerY = rect.height / 2;
-                        const rotateX = (y - centerY) / 25;
-                        const rotateY = (centerX - x) / 25;
-                        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-                      }}
-                      onMouseLeave={(e) => {
-                        const card = e.currentTarget;
-                        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
-                      }}
-                    >
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{item.title}</h3>
-                      <p className="text-white/70 whitespace-pre-line leading-relaxed text-base md:text-lg">{item.desc}</p>
-                    </div>
-                  </ScrollFade>
-                ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+            {/* Take */}
+            <ScrollFade delay={100}>
+              <div
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 text-center transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10"
+                style={{
+                  transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+                  transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
+                }}
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  const centerX = rect.width / 2;
+                  const centerY = rect.height / 2;
+                  const rotateX = (y - centerY) / 25;
+                  const rotateY = (centerX - x) / 25;
+                  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+                }}
+                onMouseLeave={(e) => {
+                  const card = e.currentTarget;
+                  card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+                }}
+              >
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Take</h3>
+                <p className="text-white/70 whitespace-pre-line leading-relaxed text-base md:text-lg">投資知識を貪欲に吸収し、{'\n'}自己を研鑽せよ</p>
               </div>
-            </div>
+            </ScrollFade>
 
-            {/* 右列: 本サイトの目的 */}
+            {/* Give */}
+            <ScrollFade delay={200}>
+              <div
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 text-center transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10"
+                style={{
+                  transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+                  transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
+                }}
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  const centerX = rect.width / 2;
+                  const centerY = rect.height / 2;
+                  const rotateX = (y - centerY) / 25;
+                  const rotateY = (centerX - x) / 25;
+                  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+                }}
+                onMouseLeave={(e) => {
+                  const card = e.currentTarget;
+                  card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+                }}
+              >
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Give</h3>
+                <p className="text-white/70 whitespace-pre-line leading-relaxed text-base md:text-lg">専門領域を極め、{'\n'}知見を惜しみなく共有せよ</p>
+              </div>
+            </ScrollFade>
+
+            {/* Grow */}
             <ScrollFade delay={300}>
-              <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-10 md:mb-12 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">本サイトの目的について</h2>
-                <div className="text-white/80 space-y-5 text-left leading-relaxed text-base md:text-xl">
+              <div
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8 text-center transition-all duration-500 hover:shadow-lg hover:shadow-cyan-500/10"
+                style={{
+                  transform: 'perspective(1000px) rotateX(0deg) rotateY(0deg)',
+                  transition: 'all 0.5s cubic-bezier(0.23, 1, 0.32, 1)'
+                }}
+                onMouseMove={(e) => {
+                  const card = e.currentTarget;
+                  const rect = card.getBoundingClientRect();
+                  const x = e.clientX - rect.left;
+                  const y = e.clientY - rect.top;
+                  const centerX = rect.width / 2;
+                  const centerY = rect.height / 2;
+                  const rotateX = (y - centerY) / 25;
+                  const rotateY = (centerX - x) / 25;
+                  card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+                }}
+                onMouseLeave={(e) => {
+                  const card = e.currentTarget;
+                  card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+                }}
+              >
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Grow</h3>
+                <p className="text-white/70 whitespace-pre-line leading-relaxed text-base md:text-lg">組織と共に進化し、{'\n'}持続的な価値を生み出せ</p>
+              </div>
+            </ScrollFade>
+
+            {/* 本サイトの目的 */}
+            <ScrollFade delay={400}>
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">本サイトの目的について</h3>
+                <div className="text-white/80 space-y-4 text-left leading-relaxed text-sm md:text-base">
                   <p>本サイトは「投資について何から勉強すればいいかわからない」という超初心者向けのガイドです。投資の全体像を把握し、将来の見通しを立てる一助となることを目的に、初歩的な全体像を描きました。</p>
                   <p>あくまで全体像であり、投資の醍醐味は本来、一社一社や各業界を詳細に分析していくプロセスにあります。本資料は投資の「基礎」としてご活用ください。</p>
                 </div>
               </div>
             </ScrollFade>
-
           </div>
         </div>
 
