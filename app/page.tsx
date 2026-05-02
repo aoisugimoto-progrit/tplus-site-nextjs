@@ -42,7 +42,7 @@ export default function HomePage() {
           </ScrollFade>
 
           <ScrollFade delay={100}>
-            <div className="text-white/80 space-y-4 text-center leading-relaxed text-base md:text-lg">
+            <div className="text-white/80 space-y-4 text-left leading-relaxed text-base md:text-lg">
               <p>「T+」とは、瀧本ゼミにおける新入生教育の総称です。</p>
               <p>2.0期の城田氏をはじめ、代々のゼミ生によって連綿と受け継がれ、常にブラッシュアップされてきました。</p>
               <p>この度、瀧本ゼミに蓄積された膨大な資料やこれまでの歴史を一つに集約しました。</p>
@@ -96,10 +96,10 @@ export default function HomePage() {
         {/* 本サイトの目的 */}
         <ScrollFade delay={300}>
           <div className="mt-16 md:mt-24 max-w-4xl mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-6 md:mb-8 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">本サイトの目的について</h2>
-            <div className="text-white/80 space-y-4 text-center leading-relaxed text-base md:text-lg">
-              <p>本サイトは「投資について何から勉強すればいいかわからない」という<br/>超初心者向けのガイドです。<br/>投資の全体像を把握し、将来の見通しを立てる一助となることを目的に、<br/>初歩的な全体像を描きました。</p>
-              <p>あくまで全体像であり、投資の醍醐味は本来、<br/>一社一社や各業界を詳細に分析していくプロセスにあります。<br/>本資料は投資の「基礎」としてご活用ください。</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 md:mb-10 text-center bg-gradient-to-r from-[#4ADE80] to-[#38BDF8] bg-clip-text text-transparent">本サイトの目的について</h2>
+            <div className="text-white/80 space-y-5 text-left leading-relaxed text-base md:text-xl">
+              <p>本サイトは「投資について何から勉強すればいいかわからない」という超初心者向けのガイドです。投資の全体像を把握し、将来の見通しを立てる一助となることを目的に、初歩的な全体像を描きました。</p>
+              <p>あくまで全体像であり、投資の醍醐味は本来、一社一社や各業界を詳細に分析していくプロセスにあります。本資料は投資の「基礎」としてご活用ください。</p>
             </div>
           </div>
         </ScrollFade>
@@ -113,15 +113,14 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {[
-              { title: '創設者と理念', desc: '瀧本先生について、ゼミの理念、OB・OG紹介', href: '/about-seminar' },
-              { title: '教育コンテンツ', desc: '投資の原理原則、業界研究、学習ロードマップ', href: '/education' },
-              { title: '有用資料', desc: '投資学習に役立つ書籍、サイト、資料集', href: '/resources' },
-              { title: '活動予定', desc: '年間スケジュール、イベント、新歓情報', href: '/schedule' }
+              { title: '創設者と理念', href: '/about-seminar' },
+              { title: '教育コンテンツ', href: '/education' },
+              { title: '有用資料', href: '/resources' },
+              { title: '活動予定', href: '/schedule' }
             ].map((card, i) => (
               <ScrollFade key={i} delay={100 * (i + 1) + 400}>
                 <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 md:p-8 hover:from-white/10 hover:to-white/15 hover:-translate-y-1 transition-all duration-300">
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{card.title}</h3>
-                  <p className="text-white/70 mb-6 leading-relaxed text-base md:text-lg">{card.desc}</p>
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-6">{card.title}</h3>
                   <Link href={card.href} className="inline-flex items-center gap-2 min-h-11 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300 text-base md:text-lg">
                     <span>Enter</span>
                     <span>→</span>
