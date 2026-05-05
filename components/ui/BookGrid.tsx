@@ -66,7 +66,7 @@ export default function BookGrid({ books }: BookGridProps) {
       <WrapperTag
         {...wrapperProps}
         key={index}
-        className="book-cover-wrapper relative flex-[0_0_calc(20%-13px)] cursor-pointer group"
+        className="book-cover-wrapper relative flex-[0_0_calc(14.28%-14px)] cursor-pointer group"
         data-priority={book.priority}
         style={{
           order: book.priority,
