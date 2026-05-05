@@ -153,11 +153,11 @@ export default function EducationPage() {
                 <div className="mt-12">
                   <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
-                    { image: '/images/books/IMG_1278.JPG', description: 'テクニカル分析の決定版', priority: 1 },
-                    { image: '/images/books/book_new1.png', description: '株式投資の基礎', priority: 1 },
-                    { image: '/images/books/IMG_1268.JPG', description: 'バフェットの投資哲学', priority: 2 },
-                    { image: '/images/books/IMG_1270.JPG', description: '成長株投資の教科書', priority: 3 },
-                    { image: '/images/books/book_new2.png', description: '応用編', priority: 1 },
+                    { image: '/images/books/IMG_1278.JPG', description: 'テクニカル分析の決定版', priority: 1, url: 'https://www.amazon.co.jp/積極的な投資ができる-デイトレチャート大全-池田書店-戸松-信博-ebook/dp/B0C4NTPJQN/' },
+                    { image: '/images/books/book_new1.png', description: '株式投資の基礎', priority: 1, url: 'https://www.amazon.co.jp/企業価値の神秘-宮川壽夫/dp/450220191X/' },
+                    { image: '/images/books/IMG_1268.JPG', description: 'バフェットの投資哲学', priority: 2, url: 'https://www.amazon.co.jp/わが投資術-市場は誰に微笑むか-清原-達郎/dp/4065350352/' },
+                    { image: '/images/books/IMG_1270.JPG', description: '成長株投資の教科書', priority: 3, url: 'https://www.amazon.co.jp/ミネルヴィニの成長株投資法-━━高い先導株を買い、より高値で売り抜けろ-ウィザードブックシリーズ-マーク・ミネルヴィニ/dp/4775971808/' },
+                    { image: '/images/books/book_new2.png', description: '応用編', priority: 1, url: 'https://www.amazon.co.jp/MBAバリュエーション-日経BP実戦MBA2-森生-明/dp/4822242463/' },
                   ]} />
 
                   <VideoGrid videos={[
@@ -264,10 +264,10 @@ export default function EducationPage() {
                 <div className="mt-12">
                   <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
-                    { image: '/images/books/IMG_1276.JPG', description: '経済学の基礎を学ぶ', priority: 1 },
-                    { image: '/images/books/IMG_1273.JPG', description: '金利と経済の関係', priority: 2 },
-                    { image: '/images/books/IMG_1287.JPG', description: 'マクロ経済学の教科書①', priority: 3 },
-                    { image: '/images/books/IMG_1288.JPG', description: 'マクロ経済学の教科書②', priority: 1 },
+                    { image: '/images/books/IMG_1276.JPG', description: '経済学の基礎を学ぶ', priority: 1, url: 'https://www.amazon.co.jp/ミクロ経済学の力-神取-道宏/dp/453555756X/' },
+                    { image: '/images/books/IMG_1273.JPG', description: '金利と経済の関係', priority: 2, url: 'https://www.amazon.co.jp/決定版-金利が上がるとどうなるか-角川-総一/dp/4756923631/' },
+                    { image: '/images/books/IMG_1287.JPG', description: 'マクロ経済学の教科書①', priority: 3, url: 'https://www.amazon.co.jp/マンキュー-マクロ経済学Ⅰ-入門篇（第５版）-Ｎ・グレゴリー・マンキュー-ebook/dp/B0CNXK17RW/' },
+                    { image: '/images/books/IMG_1288.JPG', description: 'マクロ経済学の教科書②', priority: 1, url: 'https://www.amazon.co.jp/マンキュー-マクロ経済学Ⅱ-応用篇（第５版）-Ｎ・グレゴリー・マンキュー-ebook/dp/B0CNXJCB1C/' },
                     { image: '/images/books/IMG_1291.JPG', description: '業界の全体像を把握', priority: 2 },
                   ]} />
 
@@ -723,7 +723,7 @@ export default function EducationPage() {
                 <div className="mt-12">
                   <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
-                    { image: '/images/books/IMG_1275.JPG', description: '四季報の読み方入門', priority: 2 },
+                    { image: '/images/books/IMG_1275.JPG', description: '四季報の読み方入門', priority: 2, url: 'https://www.amazon.co.jp/伝説の編集長が教える会社四季報はココだけ見て得する株だけ買えばいい-改訂版-山本-隆行/dp/4492733728/' },
                     { image: '/images/books/IMG_1281.JPG', description: '最新の企業情報', priority: 1 },
                     { image: '/images/books/IMG_1290.JPG', description: 'プロが選ぶ注目銘柄', priority: 2 },
                   ]} />
@@ -948,12 +948,12 @@ export default function EducationPage() {
                 <div className="mt-12">
                   <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
-                    { image: '/images/books/zaimu3.png', description: '財務諸表の基礎', priority: 3 },
-                    { image: '/images/books/IMG_1269.JPG', description: '決算書の読み方', priority: 2 },
-                    { image: '/images/books/IMG_1271.JPG', description: '実践的な分析手法', priority: 1 },
-                    { image: '/images/books/IMG_1272.JPG', description: '業界別の分析', priority: 2 },
-                    { image: '/images/books/IMG_1274.JPG', description: 'ビジネスモデル理解', priority: 3 },
-                    { image: '/images/books/IMG_1289.JPG', description: '収益構造の分析', priority: 3 },
+                    { image: '/images/books/zaimu3.png', description: '財務諸表の基礎', priority: 3, url: 'https://www.amazon.co.jp/【新版】財務3表一体理解法-朝日新書-國貞-克則/dp/4022951125/' },
+                    { image: '/images/books/IMG_1269.JPG', description: '決算書の読み方', priority: 2, url: 'https://www.amazon.co.jp/決算分析の地図-財務3表だけではつかめないビジネスモデルを視る技術-村上茂久/dp/4802614691/' },
+                    { image: '/images/books/IMG_1271.JPG', description: '実践的な分析手法', priority: 1, url: 'https://www.amazon.co.jp/2000億円超を運用した伝説のファンドマネジャーの-株トレ-ファンダメンタルズ編-窪田真之/dp/4478116911/' },
+                    { image: '/images/books/IMG_1272.JPG', description: '業界別の分析', priority: 2, url: 'https://www.amazon.co.jp/決算書×ビジネスモデル大全-会社の数字から儲かる仕組みまでいっきにわかる-矢部-謙介/dp/4492602321/' },
+                    { image: '/images/books/IMG_1274.JPG', description: 'ビジネスモデル理解', priority: 3, url: 'https://www.amazon.co.jp/ビジネスモデルの教科書-経営戦略を見る目と考える力を養う-今枝-昌宏/dp/4492533435/' },
+                    { image: '/images/books/IMG_1289.JPG', description: '収益構造の分析', priority: 3, url: 'https://www.amazon.co.jp/もうけの仕組み-ビジネスモデル大図鑑-404社を徹底検証-会社四季報業界地図編集部/dp/4492534849/' },
                   ]} />
 
                   <VideoGrid videos={[
@@ -1055,8 +1055,8 @@ export default function EducationPage() {
                 <div className="mt-12">
                   <h3 className="text-xl md:text-2xl font-semibold mb-4">もっと詳しく学びたい方へ</h3>
                   <BookGrid books={[
-                    { image: '/images/books/IMG_1279.JPG', description: '粉飾決算の実例', priority: 1 },
-                    { image: '/images/books/IMG_1286.JPG', description: '企業金融の基礎', priority: 1 },
+                    { image: '/images/books/IMG_1279.JPG', description: '粉飾決算の実例', priority: 1, url: 'https://www.amazon.co.jp/東芝-粉飾の原点-内部告発が暴いた闇-小笠原-啓/dp/4822236617/' },
+                    { image: '/images/books/IMG_1286.JPG', description: '企業金融の基礎', priority: 1, url: 'https://www.amazon.co.jp/コーポレート・ファイナンス-新井-富雄/dp/4502183512/' },
                   ]} />
 
                   <VideoGrid videos={[
