@@ -50,6 +50,7 @@ export default function EducationPage() {
     { title: '理解度チェックテスト', id: 'quiz' },
     { title: 'おすすめの映画', id: 'movies' },
     { title: '有用資料', id: 'resources' },
+    { title: '有用ブログ', id: 'blogs' },
   ];
 
   return (
@@ -1585,6 +1586,38 @@ export default function EducationPage() {
                           <p className="text-sm text-gray-600 leading-relaxed">{site.desc}</p>
                         </div>
                         <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </Accordion>
+            </section>
+
+            <section id="blogs" className="mt-16 mb-16">
+              <Accordion title="有用ブログ" defaultOpen={false}>
+                <p className="mb-6">投資・経済分析に役立つ専門家のブログです。<br/>質の高い分析や独自の視点から学ぶことができます。</p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {[
+                    { name: 'Shen Macro', url: 'https://www.shenmacro.com/', desc: 'マクロ経済分析・金融市場の深い洞察', author: 'Shen' },
+                    { name: '春山昇華の株ブログ', url: 'https://haruyama-shoka.blogspot.com/', desc: '企業分析・投資哲学の実践的な解説', author: '春山昇華' },
+                  ].map((blog, i) => (
+                    <a
+                      key={i}
+                      href={blog.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-purple-300 transition-all duration-300 group"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <h4 className="text-lg font-semibold mb-1 group-hover:text-purple-600 transition-colors">{blog.name}</h4>
+                          <p className="text-xs text-gray-500 mb-3">by {blog.author}</p>
+                          <p className="text-sm text-gray-600 leading-relaxed">{blog.desc}</p>
+                        </div>
+                        <svg className="w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                       </div>
