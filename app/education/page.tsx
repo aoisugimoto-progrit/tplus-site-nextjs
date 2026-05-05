@@ -1179,24 +1179,24 @@ export default function EducationPage() {
                 `}</style>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    { num: '①', title: '市場の構造的な伸び', desc: '外部環境の変化により、市場全体が成長している' },
-                    { num: '②', title: '成長企業のコバンザメ', desc: '取引先や親会社の成長に乗じて成長する' },
-                    { num: '③', title: '国策との強いリンク', desc: '国の政策に乗ったビジネスで成長機会を得る' },
-                    { num: '④', title: 'デカいダメ競合', desc: '大手企業の弱点を突いてシェアを奪う' },
+                    { num: '①', title: '市場の構造的な伸び', desc: '外部環境の変化により、市場全体が成長している', url: 'https://docs.google.com/presentation/d/1idWd5_937N733I2087m5Glg2_qCGKPf4rH5pqgyLc9w/edit?usp=sharing', company: 'コプロHD' },
+                    { num: '②', title: '成長企業のコバンザメ', desc: '取引先や親会社の成長に乗じて成長する', url: 'https://drive.google.com/open?id=1LPJh5c0-mDi9V2ls-_y6LuOgJh5HZazjiP2GocJqHzU&usp=drive_copy', company: 'クレハ' },
+                    { num: '③', title: '国策との強いリンク', desc: '国の政策に乗ったビジネスで成長機会を得る', url: 'https://docs.google.com/document/d/1PlbJR0qm0624vo9kCYpVhwObJjmr9UwCGmoksxF7-Xo/edit', company: '北海電気工事' },
+                    { num: '④', title: 'デカいダメ競合', desc: '大手企業の弱点を突いてシェアを奪う', url: 'https://drive.google.com/open?id=1FA5l8S5_GtNJSdYL8vQopJqUTFsF_xQH&usp=drive_copy', company: 'エフピコ' },
                     { num: '⑤', title: '原材料価格下落', desc: 'コスト減少により利益率が向上する' },
                     { num: '⑥', title: '成長市場の武器商人', desc: '成長市場に対してツールを提供する' },
-                    { num: '⑦', title: 'ストック化', desc: 'フロー型からストック型ビジネスへ転換' },
-                    { num: '⑧', title: '構造的な参入障壁', desc: '新規参入が困難な構造で優位性を維持' },
-                    { num: '⑨', title: '資産の負債化', desc: '競合の資産を負債に変えて優位に立つ' },
-                    { num: '⑩', title: '業態転換', desc: 'バリューチェーン上の高収益ポジションへ移動' },
+                    { num: '⑦', title: 'ストック化', desc: 'フロー型からストック型ビジネスへ転換', url: 'https://docs.google.com/presentation/d/1jzdeCFGGAVr3iS-xbamcWYw-ctcgPTD3_EhQlVdDXkM/edit?usp=sharing', company: '網屋' },
+                    { num: '⑧', title: '構造的な参入障壁', desc: '新規参入が困難な構造で優位性を維持', url: 'https://drive.google.com/open?id=1RJJfXI1SbSdqWIniBB-80oJkp1mN9pqb&usp=drive_copy', company: 'ミダック' },
+                    { num: '⑨', title: '資産の負債化', desc: '競合の資産を負債に変えて優位に立つ', url: 'https://drive.google.com/open?id=0B17qnYcTZSAabEFibmdDTmNIelU&resourcekey=0-3aKyUWFdR5oD57hj90XbpA&usp=drive_copy', company: 'ドン・キホーテ' },
+                    { num: '⑩', title: '業態転換', desc: 'バリューチェーン上の高収益ポジションへ移動', url: 'https://docs.google.com/presentation/d/1S61i76uwW8EJjzydCS6wmR4eq9WODxWe1a816V9uDSQ/edit?slide=id.p#slide=id.p', company: 'ジモティ' },
                     { num: '⑪', title: '内製化でコスト削減', desc: '外注していた業務を内製化してコスト減' },
-                    { num: '⑫', title: '紅ショウガ理論', desc: '原価率の低い商品で利益率を向上' },
-                    { num: '⑬', title: '構造的な収益率向上', desc: 'ビジネスモデル変革で収益性が改善' },
+                    { num: '⑫', title: '紅ショウガ理論', desc: '原価率の低い商品で利益率を向上', url: 'https://docs.google.com/presentation/d/1ZvyUwUl_a6U6GDES4Pj8rJp1ZdbAQ6M49xfWz-KOYfc/edit?usp=sharing', company: 'rakumo' },
+                    { num: '⑬', title: '構造的な収益率向上', desc: 'ビジネスモデル変革で収益性が改善', url: 'https://docs.google.com/presentation/d/19Yj6zR72OidFrsQLMZAlvZlLLyVaV19JGFVE5R6xl_c/edit?usp=sharing', company: 'やまみ' },
                     { num: '⑭', title: '巨大市場を創出しうる新技術', desc: '革新的技術で新しい市場を創造' },
                     { num: '⑮', title: '有能な経営者', desc: '優れた経営者による企業価値向上' },
-                    { num: '⑯', title: '属人的・地縁的なつながり', desc: '人的ネットワークや地域性が競争優位に' },
-                    { num: '⑰', title: '強烈な営業力', desc: '圧倒的な営業力でシェアを奪い続ける' },
-                    { num: '⑱', title: '特殊技術', desc: '独自の技術で競合優位を確立' },
+                    { num: '⑯', title: '属人的・地縁的なつながり', desc: '人的ネットワークや地域性が競争優位に', url: 'https://docs.google.com/presentation/d/18IzfnODDTEwuDnP9Y3BKrFW-XTFuOOyCnMYjoNcnT-c/edit?usp=sharing', company: 'ツムラ' },
+                    { num: '⑰', title: '強烈な営業力', desc: '圧倒的な営業力でシェアを奪い続ける', url: 'https://drive.google.com/open?id=1kTMtyDWnK3OF7q66XUqRY2t_N_jDWYkP&usp=drive_copy', company: 'シルバーライフ' },
+                    { num: '⑱', title: '特殊技術', desc: '独自の技術で競合優位を確立', url: 'https://drive.google.com/open?id=1_uHNpYpmkLPia9rBeGlb277XCUrOPb6J&usp=drive_copy', company: 'タカトリ' },
                     { num: '⑲', title: '徹底的な仕組み化', desc: '業務プロセスの標準化で利益率向上' },
                   ].map((item, i) => (
                     <div key={i} className="bg-white border-2 border-gray-200 rounded-xl p-4 hover:shadow-sm transition-all duration-300 smooth-border slide-up">
@@ -1204,9 +1204,19 @@ export default function EducationPage() {
                         <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-full flex items-center justify-center font-bold text-sm">
                           {item.num}
                         </span>
-                        <div>
+                        <div className="flex-1">
                           <h4 className="font-semibold mb-1">{item.title}</h4>
-                          <p className="text-sm text-gray-600">{item.desc}</p>
+                          <p className="text-sm text-gray-600 mb-2">{item.desc}</p>
+                          {item.url && (
+                            <a
+                              href={item.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                            >
+                              事例を見る（{item.company}）→
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
