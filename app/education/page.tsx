@@ -133,14 +133,14 @@ export default function EducationPage() {
                 <p className="mb-6">株価を予想する手法は大きく2つに分かれます。<strong>どちらも重要であり、ヘッジファンドは両方を見ています</strong>。</p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="card-with-icon card-icon-chart card-pulse relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-sm transition-all duration-300">
+                  <div className="card-with-icon card-icon-chart relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-sm transition-all duration-300">
                     <h4 className="text-lg font-semibold mb-3">①ファンダメンタルズ分析</h4>
                     <p className="mb-2"><strong>会社の未来を予想していくもの</strong></p>
                     <p className="mb-2">どのような未来を描くかがファンダメンタルズです。企業の財務状況、ビジネスモデル、市場環境などを分析して本質的な価値を見極める手法。</p>
                     <p className="mb-2"><strong>例：</strong>「この会社の新製品は市場を席巻するだろう」「この業界は今後10年伸びる」といった未来予測。</p>
                     <p><strong>T＋ではこちらを主に扱います。</strong></p>
                   </div>
-                  <div className="card-with-icon card-icon-trend card-pulse relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-sm transition-all duration-300">
+                  <div className="card-with-icon card-icon-trend relative bg-white border-2 border-gray-200 rounded-xl p-6 pt-8 hover:shadow-sm transition-all duration-300">
                     <h4 className="text-lg font-semibold mb-3">②テクニカル分析</h4>
                     <p className="mb-2"><strong>数値的な確率論に基づくもの</strong></p>
                     <p className="mb-2">過去の株価や出来高の動きから将来の株価を予測する手法。チャートのパターンや指標を使って売買タイミングを判断する。</p>
