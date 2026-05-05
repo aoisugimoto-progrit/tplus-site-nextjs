@@ -144,6 +144,8 @@ export default function ResourcesPage() {
     { title: 'トップ', id: 'hero' },
     { title: '参考書籍', id: 'books' },
     { title: 'YouTube動画', id: 'youtube' },
+    { title: '有用サイト', id: 'websites' },
+    { title: '有用ブログ', id: 'blogs' },
   ];
 
   return (
@@ -211,6 +213,90 @@ export default function ResourcesPage() {
                       <VideoGrid videos={videos} />
                     </div>
                   ))}
+                </Accordion>
+              </ScrollFade>
+            </section>
+
+            {/* ===== 有用サイト ===== */}
+            <section id="websites">
+              <ScrollFade delay={300}>
+                <Accordion title="有用サイト" defaultOpen={false}>
+                  <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
+                    企業分析・投資判断に役立つWebサイトをまとめました。<br />
+                    それぞれ特徴があるので、用途に応じて使い分けましょう。
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                      { name: 'カブタン', url: 'https://kabutan.jp/', desc: '株価情報・チャート分析に強い総合サイト' },
+                      { name: 'TDネット', url: 'https://www.release.tdnet.info/inbs/I_main_00.html', desc: '適時開示情報の公式サイト（リアルタイム）' },
+                      { name: 'ボトムフィッシャー', url: 'https://bottom-fisher.online/', desc: '割安株・逆張り投資のスクリーニングツール' },
+                      { name: 'バフェットコード', url: 'https://www.buffett-code.com/', desc: '財務データの可視化・比較分析に特化' },
+                      { name: '日経', url: 'https://www.nikkei.com/', desc: '経済ニュース・市場動向の総合メディア' },
+                      { name: 'Yahoo!ファイナンス', url: 'https://finance.yahoo.co.jp/', desc: '株価・掲示板・ニュースの定番サイト' },
+                      { name: 'マネックス銘柄スカウター', url: 'https://info.monex.co.jp/market-information/tool/expectation.html', desc: '業績予想・アナリストレポートが充実' },
+                      { name: '開示情報速報サービス', url: 'https://post.tokyoipo.com/visitor/news/', desc: 'TDnetの情報をいち早く通知' },
+                      { name: '四季報オンライン', url: 'https://shikiho.toyokeizai.net/', desc: '会社四季報のWeb版（一部有料）' },
+                      { name: '有報キャッチャー', url: 'https://ufocatch.com', desc: '有価証券報告書の検索・比較ツール' },
+                      { name: 'TDnet サーチ', url: 'https://tdnet-search.appspot.com', desc: 'TDnet情報の高速検索エンジン' },
+                    ].map((site, i) => (
+                      <a
+                        key={i}
+                        href={site.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-blue-300 transition-all duration-300 group"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex-1">
+                            <h4 className="text-lg font-semibold mb-2 group-hover:text-blue-600 transition-colors">{site.name}</h4>
+                            <p className="text-sm text-gray-600 leading-relaxed">{site.desc}</p>
+                          </div>
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </Accordion>
+              </ScrollFade>
+            </section>
+
+            {/* ===== 有用ブログ ===== */}
+            <section id="blogs">
+              <ScrollFade delay={400}>
+                <Accordion title="有用ブログ" defaultOpen={false}>
+                  <p className="mb-6 md:mb-8 text-base md:text-lg text-gray-600">
+                    投資・経済分析に役立つ専門家のブログです。<br />
+                    質の高い分析や独自の視点から学ぶことができます。
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {[
+                      { name: 'Shen Macro', url: 'https://www.shenmacro.com/', desc: 'マクロ経済分析・金融市場の深い洞察', author: 'Shen' },
+                      { name: '春山昇華の株ブログ', url: 'https://haruyama-shoka.blogspot.com/', desc: '企業分析・投資哲学の実践的な解説', author: '春山昇華' },
+                    ].map((blog, i) => (
+                      <a
+                        key={i}
+                        href={blog.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white border-2 border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-purple-300 transition-all duration-300 group"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <div className="flex-1">
+                            <h4 className="text-lg font-semibold mb-1 group-hover:text-purple-600 transition-colors">{blog.name}</h4>
+                            <p className="text-xs text-gray-500 mb-3">by {blog.author}</p>
+                            <p className="text-sm text-gray-600 leading-relaxed">{blog.desc}</p>
+                          </div>
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
                 </Accordion>
               </ScrollFade>
             </section>
