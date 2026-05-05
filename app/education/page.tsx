@@ -1190,7 +1190,7 @@ export default function EducationPage() {
                     { num: '⑨', title: '資産の負債化', desc: '競合の資産を負債に変えて優位に立つ', url: 'https://drive.google.com/open?id=0B17qnYcTZSAabEFibmdDTmNIelU&resourcekey=0-3aKyUWFdR5oD57hj90XbpA&usp=drive_copy', company: 'ドン・キホーテ' },
                     { num: '⑩', title: '業態転換', desc: 'バリューチェーン上の高収益ポジションへ移動', url: 'https://docs.google.com/presentation/d/1S61i76uwW8EJjzydCS6wmR4eq9WODxWe1a816V9uDSQ/edit?slide=id.p#slide=id.p', company: 'ジモティ' },
                     { num: '⑪', title: '内製化でコスト削減', desc: '外注していた業務を内製化してコスト減' },
-                    { num: '⑫', title: '紅ショウガ理論', desc: '原価率の低い商品で利益率を向上', url: 'https://docs.google.com/presentation/d/1ZvyUwUl_a6U6GDES4Pj8rJp1ZdbAQ6M49xfWz-KOYfc/edit?usp=sharing', company: 'rakumo' },
+                    { num: '⑫', title: '紅ショウガ理論', desc: '必需品かつ低コスト商材→供給者は値上げ交渉がしやすい', url: 'https://docs.google.com/presentation/d/1ZvyUwUl_a6U6GDES4Pj8rJp1ZdbAQ6M49xfWz-KOYfc/edit?usp=sharing', company: 'rakumo' },
                     { num: '⑬', title: '構造的な収益率向上', desc: 'ビジネスモデル変革で収益性が改善', url: 'https://docs.google.com/presentation/d/19Yj6zR72OidFrsQLMZAlvZlLLyVaV19JGFVE5R6xl_c/edit?usp=sharing', company: 'やまみ' },
                     { num: '⑭', title: '巨大市場を創出しうる新技術', desc: '革新的技術で新しい市場を創造' },
                     { num: '⑮', title: '有能な経営者', desc: '優れた経営者による企業価値向上' },
